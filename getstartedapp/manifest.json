@@ -1,0 +1,89 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.5.0",
+    "id": "05db8546-1517-4306-8dda-7278e8272226",
+    "packageName": "com.microsoft.teams.m365lp",
+    "developer": {
+        "name": "Karuana Gatimu, Microsoft Teams",
+        "websiteUrl": "https://aka.ms/MicrosoftAdoption",
+        "privacyUrl": "https://microsoft.com/privacy",
+        "termsOfUseUrl": "https://aka.ms/m365lpdocs"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Get Started",
+        "full": "Getting Started with Office 365"
+    },
+    "description": {
+        "short": "Training tools for Office 365 applications",
+        "full": "Get started with on demand training for Office 365"
+    },
+    "accentColor": "#DC3E15",
+    "staticTabs": [
+        {
+            "entityId": "20190621111",
+            "name": "Training Portal",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "20190621112",
+            "name": "Teams Training",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "20190621154",
+            "name": "OneDrive Basics",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-OneDrive.aspx",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-OneDrive.aspx",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "20190621113",
+            "name": "IT Helpdesk",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/ITandOps",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/ITandOps",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "20190821341",
+            "name": "Coffee in the Cloud",
+            "contentUrl": "https://aka.ms/CoffeeintheCloud",
+            "websiteUrl": "https://aka.ms/CoffeeintheCloud",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "201906211243",
+            "name": "Feedback",
+            "contentUrl": "https://aka.ms/AdoptionFeedback",
+            "websiteUrl": "https://aka.ms/AdoptionFeedback",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "vnextday.sharepoint.com"
+    ]
+}
