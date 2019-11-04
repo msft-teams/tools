@@ -2,7 +2,7 @@
 
 ## Summary
 
-This Microsoft Teams app is designed to highlight the [M365 Learning Pathways](https://aka.ms/M365LPDocs) training site inside of Microsoft Teams.  It can be used to highlight other secure web URL's from your SharePoint installation or outside of your tenant.  We recommend that you keep the tabs to a maximum of 5.  You may wish to remove the [feedback tab](https://aka.ms/AdoptionTools) that we include in our demonstration app.
+This Microsoft Teams app is designed to highlight the [M365 Learning Pathways](https://aka.ms/M365LPDocs) training site inside of Microsoft Teams.  It can be used to highlight other secure web URL's from your SharePoint installation.  We recommend that you keep the tabs to a maximum of 5.  You may wish to remove the [feedback tab](https://aka.ms/AdoptionTools) that we include in our demonstration app.
 
 ## First Steps
 Download the zip file for this app that contains the following files:
@@ -36,6 +36,5 @@ You must have rights to upload applications and configure app policies in your M
 1. Assign a Policy - Follow the instructions for [configuring a policy](https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies) to display this app. This app can be pinned to the left rail in Microsoft Teams for the general policy and all users will have access.  Alternatively you an create policies that pin this app based on their Teams onboarding group etc.  
 
 
-
 ## Version
-August 2019
+1.6 November 2019

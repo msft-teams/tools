@@ -1,11 +1,11 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
     "manifestVersion": "1.5",
-    "version": "1.5.0",
+    "version": "1.6.3",
     "id": "05db8546-1517-4306-8dda-7278e8272226",
     "packageName": "com.microsoft.teams.m365lp",
     "developer": {
-        "name": "Karuana Gatimu, Microsoft Teams",
+        "name": "Teams Customer Advocacy Group",
         "websiteUrl": "https://aka.ms/MicrosoftAdoption",
         "privacyUrl": "https://microsoft.com/privacy",
         "termsOfUseUrl": "https://aka.ms/m365lpdocs"
@@ -15,44 +15,44 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "Get Started",
+        "short": "Get Started (Beta)",
         "full": "Getting Started with Office 365"
     },
     "description": {
         "short": "Training tools for Office 365 applications",
-        "full": "Get started with on demand training for Office 365"
+        "full": "Get started with on demand training for Office 365.  Give feedback at https://aka.ms/AdoptionTools"
     },
     "accentColor": "#DC3E15",
     "staticTabs": [
         {
-            "entityId": "20190621111",
+            "entityId": "201911011330",
             "name": "Training Portal",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/M365LPV3",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/M365LPV3",
             "scopes": [
                 "personal"
             ]
         },
         {
-            "entityId": "20190621112",
+            "entityId": "201911011335",
             "name": "Teams Training",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-Microsoft-Teams.aspx",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-Microsoft-Teams.aspx",
             "scopes": [
                 "personal"
             ]
         },
         {
-            "entityId": "20190621154",
+            "entityId": "201911011340",
             "name": "OneDrive Basics",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-OneDrive.aspx",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/CLO365_Spring2019/SitePages/Get-started-with-OneDrive.aspx",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-OneDrive.aspx",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-OneDrive.aspx",
             "scopes": [
                 "personal"
             ]
         },
         {
-            "entityId": "20190621113",
+            "entityId": "201911011345",
             "name": "IT Helpdesk",
             "contentUrl": "https://vnextday.sharepoint.com/sites/ITandOps",
             "websiteUrl": "https://vnextday.sharepoint.com/sites/ITandOps",
@@ -62,18 +62,9 @@
         },
         {
             "entityId": "20190821341",
-            "name": "Coffee in the Cloud",
-            "contentUrl": "https://aka.ms/CoffeeintheCloud",
-            "websiteUrl": "https://aka.ms/CoffeeintheCloud",
-            "scopes": [
-                "personal"
-            ]
-        },
-        {
-            "entityId": "201906211243",
-            "name": "Feedback",
-            "contentUrl": "https://aka.ms/AdoptionFeedback",
-            "websiteUrl": "https://aka.ms/AdoptionFeedback",
+            "name": "Benefits Information",
+            "contentUrl": "https://vnextday.sharepoint.com/sites/hr-life",
+            "websiteUrl": "https://vnextday.sharepoint.com/sites/hr-life",
             "scopes": [
                 "personal"
             ]
