@@ -15,16 +15,28 @@ Download the zip file for this app that contains the following files:
 There are a few steps that you need to take to make the application work in your environment.  They are as follows:
 
 ### 1. Decision: What tabs / sites do you want to display?
-The app can display any secure web URL that you want to include.  What are the priority URL's that you'd like to show. In our demonstration we included the dedicated pages for Microsoft Teams and OneDrive training information, an example IT portal for additional assistance and our own feedback UserVoice instance.  Have handy the full URL that you want to use. 
+The app can display any secure web URL that you want to include.  What are the priority URL's that you'd like to show. In our demonstration we included the dedicated pages for Microsoft Teams and OneDrive training information; you can add sites and pages from anywhere in your tenant as long as they're modern.
+Have handy the full URL that you want to use. 
 
 
 ### 2. Update the JSON File - Tab Identifiers & URL's
 
-Inside the manifest.json there are segments that identify a unique tab ID and the target URL's for the tabs inside the app.  The unique tab ID's can be any set of idenfier text.  We simply used the numeric date and time I was updating that URL. You will need to update the URL's in each section of the JSON to match the active site URL's in your environment.  When you are done replace the JSON file within the demo zip file that you will use to upload this app to your Teams environment.  
+Inside the manifest.json there are segments that identify a unique tab ID and the target URL's for the tabs inside the app.  The unique tab ID's can be any set of idenfier text.  We simply used the numeric date and time I was updating that URL. 
 
-### 3. Update the JSON File - Valid Domains
+You will need to update the URL's in each section of the JSON to match the active site URL's in your environment. In the sample manifest.json:
 
-Replace our demonstration URL with the home URL for your Office 365 tenant. 
+ * Replace all instances of &lt;YOUR TENANT&gt; with your tenant name
+ * Replace all instances of &lt;LEARNING PATHWAYS SITE&gt; with your learning pathways site 
+
+Notice that the [sample tabs](manifest.json) have two URLs for each page, a contentUrl and a websiteUrl. Any modern SharePoint page in your tenant can be a tab, but you have to get those URLs right. The website URL is just the URL of the SharePoint site or page, but the contentUrl needs to include the teamslogon.aspx page. For example,
+
+https://contoso.sharepoint.com/sites/foo
+
+becomes
+
+https://contoso.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/foo",
+
+When you are done editing the manifest.json file, replace the manifest.json file within the GettingStarted.zip file that you will use to upload this app to your Teams environment.
 
 ## Installing in your tenant
 
@@ -37,4 +49,6 @@ You must have rights to upload applications and configure app policies in your M
 
 
 ## Version
+1.7.3 February 2020 - Added web SSO support and wildcard valid domains
+1.7 January 2020
 1.6 November 2019
