@@ -20,11 +20,13 @@ The app can display any secure web URL that you want to include.  What are the p
 
 ### 2. Update the JSON File - Tab Identifiers & URL's
 
-Inside the manifest.json there are segments that identify a unique tab ID and the target URL's for the tabs inside the app.  The unique tab ID's can be any set of idenfier text.  We simply used the numeric date and time I was updating that URL. You will need to update the URL's in each section of the JSON to match the active site URL's in your environment.  When you are done replace the JSON file within the demo zip file that you will use to upload this app to your Teams environment.  
+Inside the manifest.json there are segments that identify a unique tab ID and the target URL's for the tabs inside the app.  The unique tab ID's can be any set of idenfier text.  We simply used the numeric date and time I was updating that URL. You will need to update the URL's in each section of the JSON to match the active site URL's in your environment (vnextday is a sample tenant name you need to replace, along with the path to the site and page).
 
 ### 3. Update the JSON File - Valid Domains
 
-Replace our demonstration URL with the home URL for your Office 365 tenant. 
+The Valid Domains section is already set up for SharePoint use, and includes the login server and other resources SharePoint may need (based on the SharePoint Framework Teams manifest). If you want to show tabs in your tenant's SharePoint Online installation, you shouldn't need to change this.
+
+When you are done editing the manifest.json file, replace the manifest.json file within the GettingStarted.zip file that you will use to upload this app to your Teams environment.
 
 ## Installing in your tenant
 
@@ -37,4 +39,5 @@ You must have rights to upload applications and configure app policies in your M
 
 
 ## Version
+1.7 January 2020
 1.6 November 2019
