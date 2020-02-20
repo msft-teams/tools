@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
     "manifestVersion": "1.5",
-    "version": "1.6.3",
+    "version": "1.7.3",
     "id": "05db8546-1517-4306-8dda-7278e8272226",
     "packageName": "com.microsoft.teams.m365lp",
     "developer": {
@@ -27,8 +27,8 @@
         {
             "entityId": "201911011330",
             "name": "Training Portal",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/M365LPV3",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/M365LPV3",
+            "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>",
+            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/M365LPV3",
             "scopes": [
                 "personal"
             ]
@@ -36,8 +36,8 @@
         {
             "entityId": "201911011335",
             "name": "Teams Training",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-Microsoft-Teams.aspx",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-Microsoft-Teams.aspx",
             "scopes": [
                 "personal"
             ]
@@ -45,26 +45,8 @@
         {
             "entityId": "201911011340",
             "name": "OneDrive Basics",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-OneDrive.aspx",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-OneDrive.aspx",
-            "scopes": [
-                "personal"
-            ]
-        },
-        {
-            "entityId": "201911011345",
-            "name": "IT Helpdesk",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/ITandOps",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/ITandOps",
-            "scopes": [
-                "personal"
-            ]
-        },
-        {
-            "entityId": "20190821341",
-            "name": "Benefits Information",
-            "contentUrl": "https://vnextday.sharepoint.com/sites/hr-life",
-            "websiteUrl": "https://vnextday.sharepoint.com/sites/hr-life",
+            "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-OneDrive.aspx",
+            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-OneDrive.aspx",
             "scopes": [
                 "personal"
             ]
@@ -82,5 +64,9 @@
         "spoprod-a.akamaihd.net",
         "resourceseng.blob.core.windows.net",
         "msft.spoppe.com"
-      ]
+      ],
+      "webApplicationInfo": {
+        "id": "00000003-0000-0ff1-ce00-000000000000",
+        "resource": "https://<YOUR TENANT>.sharepoint.com"
+    }
 }
