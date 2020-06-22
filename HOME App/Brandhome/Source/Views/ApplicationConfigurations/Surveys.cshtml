@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/surveys.css" rel="stylesheet" />
+    <script src="~/lib/@@microsoft/teams-js/dist/MicrosoftTeams.min.js"></script>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script>
+        let accessToken;
+        function enableLogin() {
+            $("#login").show();
+            $("#loading").hide();
+            $("#content").hide();
+            $("#error").hide();
+        }
+        function surveyLogin() {
+            hideProfileAndError();
+            microsoftTeams.authentication.authenticate({
+                url: window.location.origin + "/Start",
+                width: 600,
+                height: 535,
+                successCallback: function (result) {
+                    accessToken = result.accessToken;
+                    successfulLogin();
+                    let date = new Date();
+                    date.setHours(date.getHours() + 1);
+                    microsoftTeams.getContext(function (context) {
+                        getShiftDetails(context.userObjectId);
+                    });
+                },
+                failureCallback: function (reason) {
+                    console.log("Login failed: " + reason);
+                }
+            });
+        }
+        function hideProfileAndError() {
+            $("#loading").hide();
+            $("#content").hide();
+            $("#error").hide();
+        }
+        function successfulLogin() {
+            $("#login").hide();
+            $("#loading").show();
+        }
+
+        $(document).ready(function () {
+            microsoftTeams.initialize();
+                enableLogin();
+        });
+
+        function getShiftDetails(objectId) {
+            if (objectId) {
+                let dateTimeNow = new Date().toISOString();
+                let shiftFromDate = new Date();
+                shiftFromDate.setDate(shiftFromDate.getDate() - 1);
+                let graphShiftsUrl = "https://graph.microsoft.com/beta/teams/" + '@ViewBag.TeamId' +"/schedule/shifts?$filter=sharedShift/startDateTime ge "+ shiftFromDate.toISOString();
+                let counter = 0;
+                let graphTemp = [];
+                do {
+                    $.ajax({
+                        url: graphShiftsUrl,
+                        type: "GET",
+                        async: false,
+                        beforeSend: function (request) {
+                            request.setRequestHeader("Authorization", "Bearer " + accessToken);
+                        },
+                        success: function (response) {
+                            if (response != null) {
+                                graphShiftsUrl = response["@@odata.nextLink"];
+                                graphTemp = graphTemp.concat(response.value);
+                            } else {
+                                console.log("Something went wrong");
+                            }
+                        },
+                        error: function () {
+                            console.log("Failed");
+                        }
+                    });
+                }
+                while (graphShiftsUrl)
+                graphTemp.sort(sortFunction);
+                let shift = graphTemp.find(s => (s.userId === objectId) && (s.sharedShift.startDateTime <= dateTimeNow && s.sharedShift.endDateTime >= dateTimeNow));
+                if (shift) {
+                    $('#loading').hide();
+                    $('#content').show();
+                }
+                else {
+                    $('#loading').hide();
+                    $('#error').show();
+                }
+            }
+        }
+
+        function sortFunction(a, b) {
+            let dateA = new Date(a.sharedShift.startDateTime);
+            let dateB = new Date(b.sharedShift.startDateTime);
+            return dateA > dateB ? 1 : -1;
+        };
+
+        function showSuccess() {
+            alert("submitted successfully");
+        }
+    </script>
+    <title>Surveys</title>
+</head>
+
+<body>
+    <button onclick="surveyLogin()" id="login" style="display:none;">Login</button>
+    <div id="loading" style="display:none;"></div>
+    <div id="content" style="display:none" class="container paystubpage">
+        <div class="head">
+            <img src="../images/logo.PNG" alt="logo" class="logo">
+            <span class="head-title">Contoso</span>
+        </div>
+        <div class="pay-head">
+            <div class="head-icon">
+                <img src="../images/Survey.png" alt="dollar" class="dollar-img">
+            </div>
+            <div class="pay-stub">Surveys</div>
+        </div>
+        <div class="questionssection">
+            <div class="survey-title">Daily Shift Feedback</div>
+            <div class="single-question">
+                <div>1.<span class="question-title">How was your shift today?<span class="text-danger">*</span></span></div>
+                <div class="star-block"><img src="../images/satisfied.png" alt="satisfied" /><img src="../images/average.png" alt="average" /><img src="../images/notsatisfied.png" alt="Not Satisfied" /></div>
+            </div>
+            <div class="single-question">
+                <div>2.<span class="question-title">Any customer feedback you would like to share?<span class="text-danger">*</span></span></div>
+                <div><input type="text" class="answer-input" placeholder="Enter your answer" /></div>
+            </div>
+            <div class="single-question">
+                <div>3.<span class="question-title">What went particularly well?<span class="text-danger">*</span></span></div>
+                <div><input type="text" class="answer-input" placeholder="Enter your answer" /></div>
+            </div>
+            <div class="single-question">
+                <div>4.<span class="question-title">What could we had done better?<span class="text-danger">*</span></span></div>
+                <div><input type="text" class="answer-input" placeholder="Enter your answer" /></div>
+            </div>
+            <button class="submitbutton" onclick="showSuccess()">Submit</button>
+        </div>
+    </div>
+    <div id="error" style="display:none" class="container error-bg">
+        <div class="error-logo">
+            <img src="~/images/ErrorLogo.svg" alt="logo" class="error-logo-ct">
+        </div>
+        <div class="error-red-dot">
+            <img src="~/images/ErrorReddot.svg" alt="red-dot" class="error-dot-red">
+        </div>
+        <div class="error-offshift">
+            <div class="error-off-head">You’re currently off shift</div>
+            <p class="error-off-desc">
+                You aren’t authorized to use Microsoft Teams during non-working hours and will only be
+                compensated for using Teams during approved working hours.<br /><br />
+                Please come back once you’re on the clock!
+            </p>
+        </div>
+    </div>
+</body>
+<script src="~/lib/popper.js/umd/popper.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>

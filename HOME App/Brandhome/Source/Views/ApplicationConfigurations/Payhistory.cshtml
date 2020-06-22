@@ -1,0 +1,104 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link href="~/css/payhistory.css" rel="stylesheet" />
+    <title>Pay-History</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <img src="../images/logo.PNG" alt="logo" class="logo">
+            <span class="head-title">Contoso</span>
+        </div>
+        <div class="card">
+            <div class="pay-stub">Paystub</div>
+            <div>
+                <div class="pay-date">@ViewBag.date.ToString("MMM dd,yyyy")</div>
+                <a href="javascript:history.go(-1)"><span class="back"><</span></a>
+                <div class="check">Check 23443</div>
+                <div class="border"></div>
+            </div>
+            <div>
+                <div class="employee">Employee ID</div>
+                <div class="emp-id">00045882</div>
+                <div class="mb-no">XXX-XX-4456</div>
+            </div>
+            <div class="gw">Gross wages</div>
+            <table class="ml">
+                <tr>
+                    <th>24.00</th>
+                    <th>20.00</th>
+                    <th>480.00</th>
+                </tr>
+                <tr>
+                    <td>Rate</td>
+                    <td>Hours</td>
+                    <td>Current total</td>
+                </tr>
+            </table>
+            <div class="deductions">Deductions</div>
+            <table class="ml">
+                <tr>
+                    <th>6.72</th>
+                    <th>29.45</th>
+                    <th>57.32</th>
+                </tr>
+                <tr>
+                    <td>FICA Med Tax</td>
+                    <td>FICA SS Tax</td>
+                    <td>FED Tax</td>
+                </tr>
+            </table>
+            <div class="deductions">Deductions (YTD)</div>
+            <table class="ml">
+                <tr>
+                    <th>20.16</th>
+                    <th>88.35</th>
+                    <th>171.96</th>
+                </tr>
+                <tr>
+                    <td>FICA Med Tax</td>
+                    <td>FICA SS Tax</td>
+                    <td>FED Tax</td>
+                </tr>
+            </table>
+            <div class="Current">Current</div>
+            <table class="ml">
+                <tr>
+                    <th>480.00</th>
+                    <th>93.49</th>
+                    <th>386.41</th>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>Deductions</td>
+                    <td>Net Pay</td>
+                </tr>
+            </table>
+            <div class="year">Year-to-date</div>
+            <table class="ml">
+                <tr>
+                    <th>2880.00</th>
+                    <th>529.44</th>
+                    <th>2317.40</th>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>Deductions</td>
+                    <td>Net Pay</td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</body>
+
+</html>

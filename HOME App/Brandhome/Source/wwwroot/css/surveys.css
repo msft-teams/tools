@@ -1,0 +1,222 @@
+﻿@font-face {
+    font-family: "Teams Assets";
+    src: url("TeamsAssets-Light.woff") format("woff"), url("TeamsAssets-Light.woff2") format("woff2");
+    font-style: normal;
+}
+.head {
+    height: 2rem;
+    width: auto;
+    background: #72a1c8;
+    text-align: center;
+}
+.head-title {
+    position: relative;
+    top: 0.063rem;
+    width: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.938rem;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.showprevious {
+    color: #ffffff !important;
+    cursor: pointer;
+}
+.logo {
+    height: 1.25rem;
+    width: auto;
+    margin-top: 0.188rem;
+}
+.pay-head {
+    height: 4.5rem;
+    width: auto;
+    background: #47637b;
+}
+.dollar-img {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    margin-top: 1%;
+}
+.pay-stub {
+    position: absolute;
+    margin-left: 4rem;
+    margin-top: 1%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #ffffff;
+}
+.custom-row {
+    margin: 0 0.5rem;
+}
+.sm-6:nth-child(n) {
+    padding-left: 0.5rem;
+}
+.sm-6:nth-child(n + 1) {
+    padding-right: 0.5rem;
+}
+.c-card {
+    position: static;
+    width: auto;
+    height: 5.75rem;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.188rem;
+    align-self: center;
+    border-bottom-color: #72a1c8;
+    border-bottom-width: 0.25rem;
+}
+.cb {
+    padding: 0.625rem;
+}
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.063rem;
+    color: black;
+}
+.sub-title {
+    font-size: 0.75rem;
+    color: #888c8b;
+}
+.dollars {
+    font-size: 0.875rem;
+    text-align: right;
+    color: #000000;
+}
+.show-prev {
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    color: #ffffff;
+    position: fixed;
+    bottom: 3%;
+    width: 97%;
+}
+.chev::before {
+    content: "\E421";
+    font-family: "Teams Assets";
+    color: #ffffff;
+    margin-right: 1rem;
+}
+.black-line {
+    position: fixed;
+    bottom: 0;
+    margin-left: 33%;
+}
+.star::before {
+    content: "\E40A";
+    font-family: "Teams Assets";
+    margin-right: 1rem;
+}
+.star-block {
+    margin-left: 6%;
+    margin-top: 2%;
+}
+.submitbutton {
+    background: #F4C86B;
+    border-radius: 1rem;
+    border: none;
+    color: #fff;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.188rem;
+    line-height: 1.125rem;
+    padding: 2%;
+    Width: 5.5rem;
+    display: table;
+    margin: 0 auto;
+}
+.line {
+    height: 0.313rem;
+    width: 12.125rem;
+    background: #000000;
+    border-radius: 6.25rem;
+    display: inline-block;
+}
+.questionssection {
+    padding-right: 3%;
+}
+.survey-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding-top: 6%;
+    padding-left: 6%;
+    padding-bottom: 4%;
+}
+.single-question {
+    padding-left: 8%;
+    margin-bottom: 4%;
+}
+.answer-input {
+    width: 90%;
+    border-radius: 0.313rem;
+    background-color: #fdf7f9;
+    margin-top: 2%;
+    margin-left: 5%;
+    border: none;
+    padding: 3%;
+}
+.question-title {
+    margin-left: 2%;
+}
+.star-block img {
+    margin-right: 10%;
+}
+@media screen and (max-width: 420.313rem) {
+    .container {
+        padding: 0;
+    }
+    .dollar-img {
+        margin-top: 2%;
+    }
+    .pay-stub {
+        margin-top: 2%;
+    }
+}
+.error-bg {
+    background: #72A1C8;
+    height: 120vh;
+}
+.error-logo {
+    text-align: center;
+}
+img.error-logo-ct {
+    width: 5.143rem;
+    height: 5.701rem;
+    margin-top: 4.625rem;
+}
+.error-red-dot {
+    float: left;
+    margin: 3.375rem 1rem 0 1rem;
+}
+.error-offshift {
+    margin: 3.375rem 1rem 0 0;
+    height: 4.5rem;
+    line-height: 1.1;
+}
+.error-off-head {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-top: 13%;
+}
+.error-off-desc {
+    height: 13.5rem;
+    margin: 1.25rem 1rem 0 4.5rem;
+    font-size: 1.313rem;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4;
+}
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('../Images/Preloader_2.gif') no-repeat center center;
+    z-index: 9999;
+}

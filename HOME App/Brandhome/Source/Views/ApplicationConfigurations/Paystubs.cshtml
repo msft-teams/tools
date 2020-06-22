@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "";
+}
+<script type="text/javascript">
+    
+    var payslipsdates = [];
+    var monthsarray=['Jan','Feb','March','April','May','Jun','July','Aug','Sep','Oct','Nov','Dec']
+    const lastFriday = new Date();
+    const t = new Date().getDate() + (6 - new Date().getDay() - 1) - 7;
+    lastFriday.setDate(t)
+    payslipsdates.push(new Date(lastFriday))
+    for (i = 0; i < 7; i++) {
+        payslipsdates.push(new Date(lastFriday.setDate(lastFriday.getDate()-7)));
+    }
+    var paysliphtml = ""
+    payslipsdates.forEach(x=>{
+        paysliphtml = paysliphtml + '<div class="col-6 sm-6 paystub" onclick="showPaystub(`'+x+'`)"><div class="card c-card"><div class="card-body cb"><div class="title">' + monthsarray[x.getMonth()] +' '+ x.getDate()
+                       + '</div> <div class="sub-title">'+x.getFullYear()+'</div><div class="dollars">$386.41</div></div></div></div>'
+    })
+    setTimeout(() => {
+        document.getElementById('payslipdiv').innerHTML = paysliphtml;
+       
+    }, 1000);
+    function showPaystub(date) {
+        window.location.href = '/payhistory/'+new Date(date).toDateString();
+    }
+    
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link href="~/css/paystubs.css" rel="stylesheet" />
+    <title>Paystubs</title>
+</head>
+
+<body>
+    <div class="container paystubpage">
+        <div class="head">
+            <img src="../images/logo.PNG" alt="logo" class="logo">
+            <span class="head-title">Contoso</span>
+        </div>
+        <div class="pay-head">
+            <div class="head-icon">
+                <img src="../images/paystubs-lob.png" alt="dollar" class="dollar-img">
+            </div>
+            <div class="pay-stub">Paystubs</div>
+        </div>
+
+        <div class="row custom-row" id="payslipdiv">
+
+        </div>
+        <a href="#" target="_blank">
+            <div class="show-prev">
+                <span class="showprevious">Show previous paystubs</span>
+            </div>
+        </a>
+        <!-- <div class="black-line">
+            <div class="line"></div>
+        </div> -->
+    </div>
+ 
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+
+</html>
