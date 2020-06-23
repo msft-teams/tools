@@ -20,24 +20,24 @@ currently not optimized for desktop clients.
 
 |           Home App Scenarios                                                                                                                                                                      |                                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-|           On Shift                                                                                                                                                                                |  https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/1.png      |
+|           On Shift                                                                                                                                                                                |[On Shift]https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/1.png |
 |           Employees can view   their current shift schedule and assigned tasks under the HOME app tab.                                                                                            |                                                                                                                     |
 |           Employees can see the latest company-wide   announcements.                                                                                                                              |                                                                                                                     |
 |           Team   members, on the same shift, can chat and communicate using Teams chat.                                                                                                           |                                                                                                                     |
 |           Employees can   communicate and greet new team members using Teams 1:1 chat.                                                                                                            |                                                                                                                     |
 |           Employees   can access other apps, such as PayStubs and Rewards, through   the HOME app.                                                                                                |                                                                                                                     |
-|     Employees   can access learning and training materials from the Learning tab.                                                                                                                 |  https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/2.png      |
+|           Employees   can access learning and training materials from the Learning tab.                                                                                                           |[Learning]https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/2.png |
 |                                                                                                                                                                                                   |                                                                                                                     |
 |           Off Shift                                                                                                                                                                               |                                                                                                                     |
-|           Off-shift   employees can view their upcoming shift schedule but   cannot view and access tasks.                                                                                        |  https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/3.png      |
-|     Off shifts employees do   not have access to the Learning tab.                                                                                                                                |  https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/4.png      |
+|           Off-shift   employees can view their upcoming shift schedule but   cannot view and access tasks.                                                                                        |[Off shift]https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/3.png|
+|     Off shifts employees do   not have access to the Learning tab.                                                                                                                                |[Off shift]https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/4.png|
 
 Solution overview
 =================
 
 ### Architecture
 
-https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/5.png
+[Architecture] https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/5.png
 
 Prerequisites
 -------------
@@ -71,7 +71,7 @@ Prerequisites
 
 5.  Install your desired custom apps.
 
-https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/6.png
+[note] https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/6.png
 
 Authentication and Single Sign on (SSO)
 ---------------------------------------
@@ -88,16 +88,12 @@ to the general public soon.
 more](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-flow-tab)
 about authentication for Microsoft Tabs and SSO in Teams.
 
- {#section-2}
-
 Capabilities overview
 ---------------------
 
 1.  HOME app is an ASP.NET Core MVC application.
 
-2.  Access employee Shifts schedules using [Microsoft Teams Shifts Graph
-    API
-    integration](https://docs.microsoft.com/en-us/graph/api/schedule-list-shifts?view=graph-rest-1.0&tabs=http).
+2.  Access employee Shifts schedules using [Microsoft Teams Shifts Graph API integration](https://docs.microsoft.com/en-us/graph/api/schedule-list-shifts?view=graph-rest-1.0&tabs=http).
 
 3.  Display employee tasks using [Microsoft Planner Tasks Graph API
     integration](https://docs.microsoft.com/en-us/graph/api/planneruser-list-tasks?view=graph-rest-1.0&tabs=http).
@@ -136,8 +132,6 @@ Capabilities overview
 8.  Get user profile information using the [Microsoft Graph Get User
     API](https://docs.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http).
 
- {#section-3}
-
 Deployment
 ----------
 
@@ -145,35 +139,23 @@ Deployment
 
 -   Sign in to the [Azure portal.](https://portal.azure.com)
 
--   If your account gives you access to more than one tenant, select
-    > your account in the upper right corner. Set your portal session to
-    > your desired Azure AD tenant
+-   If your account gives you access to more than one tenant, select your account in the upper right corner. Set your portal session to your desired Azure AD tenant
 
-```{=html}
-<!-- -->
-```
--   Under **Azure services** on the **Home** page, select **App
-    > registrations**.
+-   Under **Azure services** on the **Home** page, select **App registrations**.
 
--   Select **New registration** from the top navigation bar. You will be
-    > taken to the **Register an application** page.
+-   Select **New registration** from the top navigation bar. You will be taken to the **Register an application** page.
 
 -   Enter a meaningful application display name in the **Name** field.
 
 -   Specify **who can use the application**, as follows:
 
-**Accounts in any organizational directory (Any Azure Ad directory --
-Multitenant) and personal Microsoft accounts.**
+-  Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.**
 
--   Under **Redirect URI** select **Public client/native (mobile &
-    > desktop).** Then enter the destination URI that
-    > will be accepted when returning authentication responses (tokens)
-    > after successfully authenticating users. 
+-   Under **Redirect URI** select **Public client/native (mobile & desktop).Then enter the destination URI that will be accepted when returning authentication responses (tokens)
+    after successfully authenticating users. 
 
--   Select the **Register** button. You'll be taken to the app\'s
-    > **Overview** page. Copy the **Application (client) ID**; you'll
-    > need it later. Verify that **Supported account types** is set
-    > to **Multiple organizations** 
+-   Select the **Register** button. You'll be taken to the app\'s **Overview** page. Copy the **Application (client) ID**; you'll
+     need it later. Verify that **Supported account types** is set to **Multiple organizations** 
 
 ### Add Microsoft Graph API permissions
 
@@ -236,7 +218,7 @@ app package with their icons. You\'ll need an app package to upload and
 install your app in Teams, and to publish to either your Line of
 Business app catalog or to AppSource.
 
-https://github.com/msft-teams/tools/blob/master/HOME%20App/Brandhome/Source/wwwroot/images/readmeimages/7.png
+[Note] https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/7.png
 
 ### Install the HOME Teams app manifest into Teams
 
@@ -248,7 +230,7 @@ app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-an
 ----------------
 
 This app template is provided under the [MIT
-License](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/blob/master/LICENSE) terms.
+License](https://github.com/msft-teams/tools/blob/master/HOMEApp/LICENSE) terms.
 In addition to these terms, by using this app template you agree to the
 following:
 
