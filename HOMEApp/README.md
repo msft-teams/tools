@@ -37,7 +37,7 @@ Solution overview
 
 ### Architecture
 
-[Architecture] (https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/5.png)
+![Architecture](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/5.png)
 
 Prerequisites
 -------------
