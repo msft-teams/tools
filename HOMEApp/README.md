@@ -71,7 +71,7 @@ Prerequisites
 
 5.  Install your desired custom apps.
 
-![note](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/6.png)
+![note](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/6.PNG)
 
 Authentication and Single Sign on (SSO)
 ---------------------------------------
@@ -207,8 +207,6 @@ Graph notifications.
 
 -   When ready, select **Create**.
 
- {#section-4}
-
 ### Create a HOME Teams app manifest
 
 [Create an app package for the HOME
@@ -218,7 +216,7 @@ app package with their icons. You\'ll need an app package to upload and
 install your app in Teams, and to publish to either your Line of
 Business app catalog or to AppSource.
 
-![Note](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/7.png)
+![Note](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/7.PNG)
 
 ### Install the HOME Teams app manifest into Teams
 
