@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.3.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "adaptivecards@1.2.5",
+      "destination": "wwwroot/lib/adaptivecards/",
+      "files": [
+        "dist/adaptivecards.js"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "@microsoft/teams-js@1.4.1",
+      "destination": "wwwroot/lib/@microsoft/teams-js/",
+      "files": [
+        "dist/MicrosoftTeams.min.js"
+      ]
+    },
+    {
+      "library": "bluebird@3.3.4",
+      "destination": "wwwroot/lib/bluebird/",
+      "files": [
+        "bluebird.min.js"
+      ]
+    },
+    {
+      "library": "popper.js@1.16.0",
+      "destination": "wwwroot/lib/popper.js/",
+      "files": [
+        "umd/popper.min.js",
+        "umd/popper.min.js.map"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "bootstrap@4.4.1",
+      "destination": "wwwroot/lib/bootstrap/",
+      "files": [
+        "dist/css/bootstrap.min.css",
+        "dist/css/bootstrap.min.css.map",
+        "dist/js/bootstrap.min.js",
+        "dist/js/bootstrap.min.js.map"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "markdown-it@8.4.0",
+      "destination": "wwwroot/lib/markdown-it/",
+      "files": [
+        "dist/markdown-it.js"
+      ]
+    }
+  ]
+}
