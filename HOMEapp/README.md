@@ -18,19 +18,52 @@ experience for any user.
 The HOME app was primarily designed and built as a mobile app and is
 currently not optimized for desktop clients.
 
-|                                                                       Home App Scenarios                                                                                                                                                                                                                                |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-|           On Shift                                                                                                                                                                                 ![On Shift](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/1.png)|
-|           Employees can view   their current shift schedule and assigned tasks under the HOME app tab.                                                                                                                                                                                                                  |
-|           Employees can see the latest company-wide   announcements.                                                                                                                                                                                                                                                    |
-|           Team   members, on the same shift, can chat and communicate using Teams chat.                                                                                                                                                                                                                                 |
-|           Employees can   communicate and greet new team members using Teams 1:1 chat.                                                                                                                                                                                                                                  |
-|           Employees   can access other apps, such as PayStubs and Rewards, through   the HOME app.                                                                                                                                                                                                                      |
-|           Employees   can access learning and training materials from the Learning tab.                                                                                                           |![Learning](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/2.png) |
-|                                                                                                                                                                                                   |                                                                                                                     |
-|           Off Shift                                                                                                                                                                               |                                                                                                                     |
-|           Off-shift   employees can view their upcoming shift schedule but   cannot view and access tasks.                                                                                        |![Off shift](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/3.png)|
-|     Off shifts employees do   not have access to the Learning tab.                                                                                                                                |![Off shift](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/4.png)|
+<table>
+    <thead>
+        <tr>
+            <th colspan="2"> Home app Scenarios</th>
+         </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col-md-8" style="color:blue;" align="center">On Shift</td>
+            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/1.png" alt="Home App Screen" style="width: 100%;"></td>
+         </tr>
+       <tr>
+            <td>Employees can view their current shift schedule and current assigned tasks under the Home tab.</td>
+        </tr>
+       <tr>
+            <td>Employees can view the latest companywide announcements.</td>
+        </tr>
+       <tr>
+            <td>Team members in the same shift, can chat and communicate using Teams chat.</td>
+        </tr>
+       <tr>
+            <td>Employees can communicate and greet new team members using Teams 1:1 chat.</td>
+        </tr>
+       <tr>
+            <td>Employees can communicate and greet new team members using Teams 1:1 chat capability. </td>
+        </tr>
+       <tr>
+            <td>Employees can access other apps such as PayStubs and Rewards through the HOME application. </td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/2.png" alt="Home App Screen"></td>
+        </tr>
+         <tr>
+            <th colspan="2"></th>
+         </tr>
+        <tr>
+            <td align="center">Off Shift</td>
+            <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
+         </tr>
+       <tr>
+            <td>Off shift employees can view their upcoming shift schedule. Off shift employees cannot view and access tasks.</td>
+        </tr>
+       <tr>
+           <td>Off shifts employees do not have access to Learning tab.</td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/4.png" alt="Optional Title"></td>
+        </tr>
+      </tbody>
+</table>
 
 Solution overview
 =================
