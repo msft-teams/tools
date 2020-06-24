@@ -181,7 +181,7 @@ Deployment
 
 -   Specify who can use the application, as follows:
 
--  Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.
+-   Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.
 
 -   Under Redirect URI select Public client/native (mobile & desktop).Then enter the destination URI that will be accepted when returning authentication responses (tokens)
     after successfully authenticating users. 
@@ -232,9 +232,10 @@ Graph notifications.
     Name, Resource Group, and App Service Plan entry fields
     are populated. You can keep these names or change them. 
 -   Complete the necessary app setting values:
-        - Azure client Id (App id), 
-        - Deep Link URL and all required app Ids which we need to deep link.
-        - If you have share point framework app then provide the SharePoint client Id and List Id.
+
+        1. Azure client Id (App id).
+        2. Deep Link URL and all required app Ids which we need to deep link.
+        3. If you have share point framework app then provide the SharePoint client Id and List Id.        
 -   When ready, select Create.
 
 ### Create a HOME Teams app manifest
