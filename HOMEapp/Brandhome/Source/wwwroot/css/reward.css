@@ -1,0 +1,194 @@
+.rw-logo {
+    text-align: center;
+    height: 32px;
+    background: #72a1c8;
+    justify-content: center;
+    display: flex;
+}
+
+.rw-logo-ct {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-self: center;
+}
+
+.rw-head-title {
+    font-size: 15px;
+    display: flex;
+    font-weight: 600;
+    color: #ffffff;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.reward-title {
+    height: 72px;
+    background: #47637b;
+    text-align: center;
+    justify-content: left;
+    display: flex;
+}
+
+.reward-img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-self: center;
+    margin-left: 16px;
+}
+
+.reward-heading {
+    /* font-family: Montserrat; */
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    margin-left: 62px;
+}
+
+.cashback {
+    /* font-family: Montserrat; */
+    font-weight: 500;
+    font-size: 14px;
+    color: #2e3333;
+    margin: 24px 16px 8px 16px;
+}
+
+.cashback-amt {
+    /* font-family: Montserrat; */
+    font-weight: bold;
+    font-size: 28px;
+    color: #47637b;
+    margin: 0 16px 16px 16px;
+}
+
+.offers {
+    margin: 16px;
+}
+
+.offer-title {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #2e3333;
+}
+
+ul > li {
+    /* font-family: Montserrat; */
+    font-size: 14px;
+    color: #2e3333;
+    line-height: 2;
+}
+/* apps */
+.custom-row {
+    margin: 0 !important;
+}
+
+.discounts-apps {
+    height: 450px;
+}
+
+.dis-app-card:nth-child(1) {
+    margin-right: -8px;
+}
+
+.dis-app-card {
+    margin: 0px 30px;
+    text-align: center;
+    flex: 1;
+}
+
+.dis-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    height: 160px;
+}
+
+.cb {
+    padding: 0.25rem !important;
+}
+
+.ct {
+    /* font-family: Montserrat; */
+    font-size: 14px;
+    color: #2e3333;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.designation {
+    /* font-family: Montserrat; */
+    font-size: 12px;
+    color: #6f7372;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-img-top {
+    margin-top: 16px;
+}
+
+.app-img {
+    border-radius: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.app-head {
+    margin: 16px;
+}
+
+.app-desc {
+    /* padding: 0 14px; */
+    /* width: 220px; */
+    margin: 8px 16px;
+}
+
+/* new design card */
+.rw-card {
+    margin: 16px;
+    height: 114px;
+    border: 1px solid #e5e5e5;
+    flex-direction: row;
+}
+
+.tag-img {
+    height: 115px;
+    width: 45px;
+    margin: 0 30px;
+    padding-bottom: 15px;
+}
+
+.offer-img {
+    height: 68px;
+    width: 68px;
+    margin: 0 15px;
+}
+/* new design card end*/
+/* apps end */
+
+@media screen and (max-width: 425px) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .app-head,
+    .app-desc {
+        margin-top: 6px;
+    }
+
+    .dis-card {
+        height: 180px;
+    }
+}

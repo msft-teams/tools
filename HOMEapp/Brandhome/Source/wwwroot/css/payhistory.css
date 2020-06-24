@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Teams Assets";
+    src: url("TeamsAssets-Light.woff") format("woff"), url("TeamsAssets-Light.woff2") format("woff2");
+    font-style: normal;
+}
+body {
+  background: #47637b;
+}
+.head {
+  height: 32px;
+  width: auto;
+  background: #72a1c8;
+  text-align: center;
+}
+
+.head-title {
+  /* font-family: Montserrat; */
+  position: relative;
+  top: 1px;
+  width: 64px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.logo {
+  height: 20px;
+  width: auto;
+  margin-top: 3px;
+}
+.card {
+  margin: 0 16px;
+  width: auto;
+  margin-top: 16px;
+}
+.pay-stub {
+  margin-left: 16px;
+  margin-top: 24px;
+  /* font-family: Montserrat; */
+  font-weight: 500;
+  font-size: 12px;
+  color: #6f7372;
+}
+.pay-date,
+.employee {
+  margin-left: 16px;
+  margin-top: 1%;
+  /* font-family: Montserrat; */
+  font-weight: bold;
+  font-size: 17px;
+  color: #2e3333;
+  display: inline-block;
+}
+.check,
+.emp-id {
+  margin-top: 1%;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  float: right;
+  margin-right: 16px;
+  color: #2e3333;
+}
+.back {
+    color: black;
+    float: right;
+    top: 3px;
+    position: absolute;
+    right: 19px;
+    font-size: 30px;
+    font-family: Symbol;
+}
+.border {
+    height: 1px;
+    margin: 0 16px;
+    margin-top: 2%;
+    background: #c4c4c4;
+}
+.employee {
+  /* font-family: Montserrat; */
+  font-weight: 500;
+  font-size: 14px;
+}
+.mb-no {
+  margin-top: 1%;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  margin-left: 16px;
+  color: #2e3333;
+}
+.gw,
+.deductions,
+.Current,
+.year {
+  margin-top: 4%;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  margin-left: 16px;
+  color: #2e3333;
+}
+.ml {
+  margin-left: 16px;
+  margin-top: 2%;
+}
+th,td {
+  width: 33%;
+  font-size: 14px;
+  color: #2e3333;
+}
+table{
+    width:100%;
+}
+tbody,tr {
+    width: 100%;
+}
+td {
+  /* font-family: Montserrat; */
+  font-size: 12px;
+  color: #6f7372;
+}
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 0;
+  }
+    tbody,tr{
+        width:100%;
+    }
+    th,td {
+        width: 33%;
+        font-size: 14px;
+        color: #2e3333;
+    }
+}
