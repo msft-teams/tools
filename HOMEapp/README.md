@@ -255,9 +255,9 @@ Business app catalog or to AppSource.
 
 Install the HOME app manifest into Teams. [Learn how to distribute Microsoft Teams
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/overview).
-
-
-
+<br/>
+<br/>
+<br/>
 
 Legal notice
 ----------------
