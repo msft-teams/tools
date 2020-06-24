@@ -21,12 +21,12 @@ currently not optimized for desktop clients.
 <table>
     <thead>
         <tr>
-            <th colspan="2"> Home app Scenarios</th>
+            <th colspan="2" style="font-size:30px"> Home app Scenarios</th>
          </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="col-md-8" style="color:blue;" align="center">On Shift</td>
+            <td class="col-md-8" style="color:blue;" align="center"><b>On shift Scenarios</b></td>
             <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/1.png" alt="Home App Screen" style="width: 100%;"></td>
          </tr>
        <tr>
@@ -52,7 +52,7 @@ currently not optimized for desktop clients.
             <th colspan="2"></th>
          </tr>
         <tr>
-            <td align="center">Off Shift</td>
+            <td align="center"><b>Off shift Scenarios</b></td>
             <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
          </tr>
        <tr>
@@ -255,6 +255,9 @@ Business app catalog or to AppSource.
 
 Install the HOME app manifest into Teams. [Learn how to distribute Microsoft Teams
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/overview).
+
+
+
 
 Legal notice
 ----------------
