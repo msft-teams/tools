@@ -230,13 +230,11 @@ Graph notifications.
 
 -   In the Create Azure App Service (Windows) dialog, the App
     Name, Resource Group, and App Service Plan entry fields
-    are populated. You can keep these names or change them. Complete the
-    necessary app setting values: Azure client Id (App id)
-    SharePoint client Id, List Id, Deep
-
--   Link URL and all required app Ids which we need to deep
-    link.
-
+    are populated. You can keep these names or change them. 
+-   Complete the necessary app setting values:
+        - Azure client Id (App id), 
+        - Deep Link URL and all required app Ids which we need to deep link.
+        - If you have share point framework app then provide the SharePoint client Id and List Id.
 -   When ready, select Create.
 
 ### Create a HOME Teams app manifest
