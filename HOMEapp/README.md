@@ -18,15 +18,14 @@ experience for any user.
 The HOME app was primarily designed and built as a mobile app and is
 currently not optimized for desktop clients.
 
+Home app scenarios
+=================
+
+
 <table>
-    <thead>
-        <tr>
-            <th colspan="2" style="font-size:30px"> Home app Scenarios</th>
-         </tr>
-    </thead>
     <tbody>
         <tr>
-            <td class="col-md-8" style="color:blue;" align="center"><b>On shift Scenarios</b></td>
+            <td class="col-md-8" style="color:blue;" align="center"><b>On shift scenarios</b></td>
             <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/1.png" alt="Home App Screen" style="width: 100%;"></td>
          </tr>
        <tr>
@@ -52,7 +51,7 @@ currently not optimized for desktop clients.
             <th colspan="2"></th>
          </tr>
         <tr>
-            <td align="center"><b>Off shift Scenarios</b></td>
+            <td align="center"><b>Off shift scenarios</b></td>
             <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
          </tr>
        <tr>
