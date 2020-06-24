@@ -235,7 +235,7 @@ Graph notifications.
 
         1. Azure client Id (App id).
         2. Deep Link URL and all required app Ids which we need to deep link.
-        3. If you have share point framework app then provide the SharePoint client Id and List Id.        
+        3. If you have SharePoint Framework app then provide the SharePoint client Id and List Id.        
 -   When ready, select Create.
 
 ### Create a HOME Teams app manifest
