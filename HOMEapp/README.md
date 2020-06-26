@@ -183,10 +183,11 @@ Deployment
 
 -   Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.
 
--   Under Authentication, click on Add a platform and select Web. Then enter the redirect URI that will be accepted when returning authentication responses (tokens).
+-   Under Authentication, click on Add a platform and select Web. Then enter the redirect URI that will be accepted when returning authentication responses (tokens). 
 
--   After successfully authenticating users, make sure the redirect URI follows the following forma: https://%appDomain%.azurewebsites.net/End. Redirect URI can be set post         deployment also, if the appDomain is not available yet.
-        - Note, redirect URI can be set post deployment also, if the appDomain is not available yet.
+-   After successfully authenticating users, make sure the redirect URI follows the following format: https://%appDomain%.azurewebsites.net/End. 
+    
+        - Note, Redirect URI can be set post deployment also, if the appDomain is not available yet.
         
 -   Select the Register button. You'll be taken to the app\'s Overview page. Copy the Application (client) ID; you'll
      need it later. Verify that Supported account types is set to Multiple organizations 
