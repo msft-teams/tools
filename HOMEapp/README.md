@@ -183,9 +183,12 @@ Deployment
 
 -   Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.
 
--   Under Redirect URI select Public client/native (mobile & desktop).Then enter the destination URI that will be accepted when returning authentication responses (tokens)
-    after successfully authenticating users. 
+-   Under Authentication, click on Add a platform and select Web. Then enter the redirect URI that will be accepted when returning authentication responses (tokens). 
 
+-   After successfully authenticating users, make sure the redirect URI follows the following format: https://%appDomain%.azurewebsites.net/End. 
+    
+        - Note, Redirect URI can be set post deployment also, if the appDomain is not available yet.
+        
 -   Select the Register button. You'll be taken to the app\'s Overview page. Copy the Application (client) ID; you'll
      need it later. Verify that Supported account types is set to Multiple organizations 
 
@@ -261,7 +264,7 @@ Legal notice
 ----------------
 
 This app template is provided under the [MIT
-License](https://github.com/msft-teams/tools/blob/master/HOMEApp/LICENSE) terms.
+License](https://github.com/msft-teams/tools/blob/master/HOMEapp/LICENSE) terms.
 In addition to these terms, by using this app template you agree to the
 following:
 
