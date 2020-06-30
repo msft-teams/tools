@@ -8,7 +8,8 @@
     "name": "Microsoft",
     "websiteUrl": "https://www.microsoft.com",
     "privacyUrl": "https://www.microsoft.com/privacy",
-    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse",
+    "mpnId": "{your mpnID}"
   },
   "name": {
     "short": "HOME App",

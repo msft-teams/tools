@@ -18,26 +18,58 @@ experience for any user.
 The HOME app was primarily designed and built as a mobile app and is
 currently not optimized for desktop clients.
 
-|                                                                       Home App Scenarios                                                                                                                                                                                                                                |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-|           On Shift                                                                                                                                                                                 ![On Shift](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/1.png)|
-|           Employees can view   their current shift schedule and assigned tasks under the HOME app tab.                                                                                                                                                                                                                  |
-|           Employees can see the latest company-wide   announcements.                                                                                                                                                                                                                                                    |
-|           Team   members, on the same shift, can chat and communicate using Teams chat.                                                                                                                                                                                                                                 |
-|           Employees can   communicate and greet new team members using Teams 1:1 chat.                                                                                                                                                                                                                                  |
-|           Employees   can access other apps, such as PayStubs and Rewards, through   the HOME app.                                                                                                                                                                                                                      |
-|           Employees   can access learning and training materials from the Learning tab.                                                                                                           |![Learning](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/2.png) |
-|                                                                                                                                                                                                   |                                                                                                                     |
-|           Off Shift                                                                                                                                                                               |                                                                                                                     |
-|           Off-shift   employees can view their upcoming shift schedule but   cannot view and access tasks.                                                                                        |![Off shift](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/3.png)|
-|     Off shifts employees do   not have access to the Learning tab.                                                                                                                                |![Off shift](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/4.png)|
+Home app scenarios
+=================
+
+
+<table>
+    <tbody>
+        <tr>
+            <td class="col-md-8" style="color:blue;" align="center"><b>On shift scenarios</b></td>
+            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/1.png" alt="Home App Screen" style="width: 100%;"></td>
+         </tr>
+       <tr>
+            <td>Employees can view their current shift schedule and current assigned tasks under the Home tab.</td>
+        </tr>
+       <tr>
+            <td>Employees can view the latest companywide announcements.</td>
+        </tr>
+       <tr>
+            <td>Team members in the same shift, can chat and communicate using Teams chat.</td>
+        </tr>
+       <tr>
+            <td>Employees can communicate and greet new team members using Teams 1:1 chat.</td>
+        </tr>
+       <tr>
+            <td>Employees can communicate and greet new team members using Teams 1:1 chat capability. </td>
+        </tr>
+       <tr>
+            <td>Employees can access other apps such as PayStubs and Rewards through the HOME application. </td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/2.png" alt="Home App Screen"></td>
+        </tr>
+         <tr>
+            <th colspan="2"></th>
+         </tr>
+        <tr>
+            <td align="center"><b>Off shift scenarios</b></td>
+            <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
+         </tr>
+       <tr>
+            <td>Off shift employees can view their upcoming shift schedule. Off shift employees cannot view and access tasks.</td>
+        </tr>
+       <tr>
+           <td>Off shifts employees do not have access to Learning tab.</td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/4.png" alt="Optional Title"></td>
+        </tr>
+      </tbody>
+</table>
 
 Solution overview
 =================
 
 ### Architecture
 
-![Architecture](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/5.png)
+![Architecture](https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/5.png)
 
 Prerequisites
 -------------
@@ -71,7 +103,7 @@ Prerequisites
 
 5.  Install your desired custom apps.
 
-![note](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/6.PNG)
+![note](https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/6.PNG)
 
 Authentication and Single Sign on (SSO)
 ---------------------------------------
@@ -149,11 +181,14 @@ Deployment
 
 -   Specify who can use the application, as follows:
 
--  Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.
+-   Accounts in any organizational directory (Any Azure Ad directory --Multitenant) and personal Microsoft accounts.
 
--   Under Redirect URI select Public client/native (mobile & desktop).Then enter the destination URI that will be accepted when returning authentication responses (tokens)
-    after successfully authenticating users. 
+-   Under Authentication, click on Add a platform and select Web. Then enter the redirect URI that will be accepted when returning authentication responses (tokens). 
 
+-   After successfully authenticating users, make sure the redirect URI follows the following format: https://%appDomain%.azurewebsites.net/End. 
+    
+        - Note, Redirect URI can be set post deployment also, if the appDomain is not available yet.
+        
 -   Select the Register button. You'll be taken to the app\'s Overview page. Copy the Application (client) ID; you'll
      need it later. Verify that Supported account types is set to Multiple organizations 
 
@@ -216,18 +251,21 @@ app package with their icons. You\'ll need an app package to upload and
 install your app in Teams, and to publish to either your Line of
 Business app catalog or to AppSource.
 
-![Note](https://github.com/msft-teams/tools/blob/master/HOMEApp/Brandhome/Source/wwwroot/images/readmeimages/7.PNG)
+![Note](https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/7.PNG)
 
 ### Install the HOME Teams app manifest into Teams
 
 Install the HOME app manifest into Teams. [Learn how to distribute Microsoft Teams
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/overview).
+<br/>
+<br/>
+<br/>
 
 Legal notice
 ----------------
 
 This app template is provided under the [MIT
-License](https://github.com/msft-teams/tools/blob/master/HOMEApp/LICENSE) terms.
+License](https://github.com/msft-teams/tools/blob/master/HOMEapp/LICENSE) terms.
 In addition to these terms, by using this app template you agree to the
 following:
 
