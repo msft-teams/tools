@@ -259,7 +259,7 @@ function loadTeamMembers(mailId) {
                             return false;
                         }
                     });
-                    $('#groupChat').attr('onclick', "microsoftTeams.executeDeepLink('" + chatUrl + groupEmail.toString() + "&topicName=On-Shift Crew&message=Hi');");
+                    $('#groupChat').attr('onclick', "microsoftTeams.executeDeepLink('" + chatUrl + groupEmail.toString() + "&topicName=" + encodeURIComponent("On-Shift Crew")+"&message=Hi');");
                     $.each(newMembers, function (i, item) {
                         $('#newMemberName' + i).text(item.givenName);
                         $('#newMemberDesignation' + i).text(item.jobTitle);
