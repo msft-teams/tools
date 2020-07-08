@@ -3,7 +3,7 @@ Templates and tools from Microsoft Teams and our partner groups for open use in 
 
 # Summary
 
-This repository holds templates and tools from the Microsoft Teams group and our internal partners to accelerate customer usage of our product and other tools such a Microsoft 365 Learning Pathways end user training solution.  We will periodically publish new information here. 
+This hold the app template and instructions for the installation of the M365 Learning Pathways Microsoft Teams app to integrate learning content into Microsoft Teams. This app will require the installation of M365 Learning Pathways free training solution and to edit the default files with your particular site URL's prior to installation.  
 
 # Questions and Issues
 
