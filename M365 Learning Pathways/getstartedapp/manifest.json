@@ -20,7 +20,7 @@
     },
     "description": {
         "short": "Training tools for Office 365 applications",
-        "full": "Get started with on demand training for Office 365.  Give feedback at https://aka.ms/AdoptionTools"
+        "full": "Get started with on-demand training for Office 365.  Give feedback at https://aka.ms/AdoptionTools"
     },
     "accentColor": "#DC3E15",
     "staticTabs": [
