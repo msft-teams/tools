@@ -6,7 +6,7 @@
     padding: 0;
 }
 #annoucement {
-    width: 23.125rem;
+    width: auto;
 }
 #loading {
     position: fixed;
@@ -427,11 +427,12 @@
     background: #c7d9e8;
 }
 .announcement {
-    height: 26.875rem;
+    height: 52.813rem;
+    margin: 1rem;
 }
 .ac-container.ac-adaptiveCard {
     background-color: white;
-    margin: 10% 0 !important;
+    margin: 3% 0 !important;
     position: absolute;
 }
 .an-head {
@@ -439,7 +440,6 @@
     font-weight: bold;
     font-size: 1.063rem;
     color: #F6F6F6;
-    margin: 1rem;
 }
 .an-img {
     height: 19.375rem;
@@ -698,9 +698,6 @@
     .centage-block {
         height: 9.125rem;
     }
-    #annoucement {
-        width: 15.625rem;
-    }
     .ava {
         margin: 6% 2% 0 2%;
     }
@@ -724,10 +721,17 @@
         width: 18.75rem;
         font-size: 0.75rem;
     }
+    .announcement {
+        height: 28.75rem;
+        margin: 0 1rem;
+    }
 }
 @media screen and (max-width: 23.438rem) {
     .vertical .progress-bar {
         margin: 3%;
+    }
+    .announcement {
+        height: 28rem;
     }
 }
 @media screen and (max-width: 20rem) {
@@ -752,6 +756,9 @@
     }
     .apps {
         height: 30rem;
+    }
+    .announcement {
+        height: 25.875rem;
     }
 }
 .custom-control-label::before {
