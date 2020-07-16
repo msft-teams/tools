@@ -1,5 +1,5 @@
 # Get Started App
-Demonstration app for M365 Learning Pathways or other SharePoint site integration into Microsoft Teams
+Demonstration app for M365 Learning Pathways or other SharePoint site integration into Microsoft Teams.  View the ReadMe file for installation instructions
 
 # Questions and Issues
 
