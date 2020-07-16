@@ -15,12 +15,12 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "Get Started (Beta)",
-        "full": "Getting Started with Office 365"
+        "short": "Get Started",
+        "full": "Getting Started with Microsoft 365"
     },
     "description": {
-        "short": "Training tools for Office 365 applications",
-        "full": "Get started with on-demand training for Office 365.  Give feedback at https://aka.ms/AdoptionTools"
+        "short": "Training tools for Microsoft 365 applications",
+        "full": "Get started with on-demand training for Microsoft 365.  Give feedback at https://aka.ms/AdoptionTools"
     },
     "accentColor": "#DC3E15",
     "staticTabs": [
