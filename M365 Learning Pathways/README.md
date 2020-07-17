@@ -21,6 +21,9 @@ You may change the app icons from the default Microsoft icon by replacing the co
 When you are done with these edits you will need to rezip the files again 
 Follow the instructions for uploading a custom app to Microsoft Teams here:  https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-upload
 
+Further reference for modern SharePoint page embedding can be found here:
+https://docs.microsoft.com/sharepoint/dev/features/embed-pages-to-teams
+
 # Questions and Issues
 
 For questions or issues please file an issue within this repo and our team and the community will respond as we are available.  This repo does not have a response SLA. 
