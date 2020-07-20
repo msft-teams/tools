@@ -83,7 +83,7 @@ namespace BrandHome.Helper
         {
             this.telemetry.TrackEvent("GetNewsFromSharePoint");
             string token = await this.GetAuthenticationToken();
-            string endpoint = $"{this.configuration["TenantSharePointDomain"]}/sites/News/_api/Web/Lists(guid'{this.configuration["ListId"]}')/items";
+            string endpoint = $"{this.configuration["TenantSharePointDomain"]}/sites/{yoursitename}/_api/Web/Lists(guid'{this.configuration["ListId"]}')/items";
             News news = null;
             var client = this.httpClientFactory.CreateClient("SharePointWebClient");
             using (var request = new HttpRequestMessage(HttpMethod.Get, endpoint))
