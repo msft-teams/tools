@@ -191,6 +191,10 @@ Deployment
         
 -   Select the Register button. You'll be taken to the app\'s Overview page. Copy the Application (client) ID; you'll
      need it later. Verify that Supported account types is set to Multiple organizations 
+     
+-   On the side rail in the Manage section, navigate to the "Certificates & secrets" section. In the Client secrets section, click on "+ New client secret". Add a description      (Name of the secret) for the secret and select “Never” for Expires. Click "Add". Once the client secret is created, copy its Value; we will need it later.
+
+-   Navigate to the Authentication page that can be found in the left blade, Under the section that reads Implicit grant, make sure that the check boxes for Access tokens and    ID tokens are checked. 
 
 ### Add Microsoft Graph API permissions
 
