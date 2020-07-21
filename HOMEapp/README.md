@@ -219,6 +219,8 @@ Graph notifications.
 
 -   Select Application -\> Directory.Read.All
 
+Please make sure to grant the admin consent for the required permissions.
+
 ### Publish your HOME app to your Azure subscription using Visual Studio 
 
 -   Download the HOME code from the repository and open in Visual studio
