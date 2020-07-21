@@ -329,3 +329,15 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 *.sqlite
+/HOMEapp/Brandhome/Source/wwwroot/lib/popper.js/umd/popper.min.js.map
+/HOMEapp/Brandhome/Source/wwwroot/lib/popper.js/umd/popper.min.js
+/HOMEapp/Brandhome/Source/wwwroot/lib/markdown-it/dist/markdown-it.js
+/HOMEapp/Brandhome/Source/wwwroot/lib/jquery/jquery.min.map
+/HOMEapp/Brandhome/Source/wwwroot/lib/jquery/jquery.min.js
+/HOMEapp/Brandhome/Source/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map
+/HOMEapp/Brandhome/Source/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js
+/HOMEapp/Brandhome/Source/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map
+/HOMEapp/Brandhome/Source/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css
+/HOMEapp/Brandhome/Source/wwwroot/lib/bluebird/bluebird.min.js
+/HOMEapp/Brandhome/Source/wwwroot/lib/adaptivecards/dist/adaptivecards.js
+/HOMEapp/Brandhome/Source/wwwroot/lib/@microsoft/teams-js/dist/MicrosoftTeams.min.js
