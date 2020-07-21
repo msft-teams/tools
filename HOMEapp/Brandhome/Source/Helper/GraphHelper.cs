@@ -34,7 +34,7 @@ namespace BrandHome.Helper
         /// <summary>
         /// Application access token using client credentials.
         /// </summary>
-        private readonly string accessToken;
+        private string accessToken;
 
         /// <summary>
         /// IWebHostEnvironment instance
@@ -63,7 +63,6 @@ namespace BrandHome.Helper
             this.configuration = configuration;
             this.telemetry = telemetry;
             this.httpClientFactory = httpClientFactory;
-            accessToken = AuthenticationHelper.GetAccessTokenAsync(configuration, httpClientFactory, telemetry).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -121,6 +120,7 @@ namespace BrandHome.Helper
         public async Task<TeamMembers> GetTeamMembers()
         {
             this.telemetry.TrackEvent("GetTeamMembers");
+            accessToken = await AuthenticationHelper.GetAccessTokenAsync(configuration, httpClientFactory, telemetry);
             string endpoint = $"{this.configuration["GroupsEndPoint"]}{this.configuration["TeamId"]}/members?$top={this.configuration["TeamMembersCount"]}";
             TeamMembers teamMembers = null;
             var client = this.httpClientFactory.CreateClient("GraphWebClient");
