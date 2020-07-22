@@ -26,7 +26,7 @@ Sample hub app scenarios
     <tbody>
         <tr>
             <td class="col-md-8" style="color:blue;" align="center"><b>On shift scenarios</b></td>
-            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/1.png" alt="Sample hub Screen" style="width: 100%;"></td>
+            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/1.png" alt="Sample hub Screen" style="width: 100%;"></td>
          </tr>
        <tr>
             <td>Employees can view their current shift schedule and current assigned tasks under the Hub tab.</td>
@@ -45,21 +45,21 @@ Sample hub app scenarios
         </tr>
        <tr>
             <td>Employees can access other apps such as PayStubs and Rewards through the Sample hub application. </td>
-           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/2.png" alt="Sample hub App Screen"></td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/2.png" alt="Sample hub App Screen"></td>
         </tr>
          <tr>
             <th colspan="2"></th>
          </tr>
         <tr>
             <td align="center"><b>Off shift scenarios</b></td>
-            <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
+            <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
          </tr>
        <tr>
             <td>Off shift employees can view their upcoming shift schedule. Off shift employees cannot view and access tasks.</td>
         </tr>
        <tr>
            <td>Off shifts employees do not have access to Learning tab.</td>
-           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/4.png" alt="Optional Title"></td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/4.png" alt="Optional Title"></td>
         </tr>
       </tbody>
 </table>
@@ -69,7 +69,7 @@ Solution overview
 
 ### Architecture
 
-![Architecture](https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/5.png)
+![Architecture](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/5.png)
 
 Prerequisites
 -------------
@@ -103,7 +103,7 @@ Prerequisites
 
 5.  Install your desired custom apps.
 
-![note](https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/6.PNG)
+![note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/6.PNG)
 
 Authentication and Single Sign on (SSO)
 ---------------------------------------
@@ -256,7 +256,7 @@ app package with their icons. You\'ll need an app package to upload and
 install your app in Teams, and to publish to either your Line of
 Business app catalog or to AppSource.
 
-![Note](https://github.com/msft-teams/tools/blob/master/TeamsSamplehub/Samplehub/Source/wwwroot/images/readmeimages/7.PNG)
+![Note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/7.PNG)
 
 ### Install the Sample hub Teams app manifest into Teams
 
@@ -270,7 +270,7 @@ Legal notice
 ----------------
 
 This app template is provided under the [MIT
-License](https://github.com/msft-teams/tools/blob/master/Samplehub/LICENSE) terms.
+License](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/LICENSE) terms.
 In addition to these terms, by using this app template you agree to the
 following:
 
