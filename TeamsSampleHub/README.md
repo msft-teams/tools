@@ -9,7 +9,7 @@ value that it can deliver. 
 The Sample Hub is a personal-branded landing experience that is pinned to
 the Teams mobile app, allowing your organization to provide consolidated
 information and the functionality of important first-party and
-line-of-business apps to firstline worker employees. Sample hub can leverage
+line-of-business apps to firstline worker employees. Sample Hub can leverage
 multiple technologies and capabilities such as the SharePoint Framework
 in Teams (SPFx), Microsoft Graph APIs, PowerApps, Web
 Apps/HTML/JavaScript, and mobile app pinning to highlight a branded
@@ -26,7 +26,7 @@ Sample Hub scenarios
     <tbody>
         <tr>
             <td class="col-md-8" style="color:blue;" align="center"><b>On shift scenarios</b></td>
-            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/1.png" alt="Sample hub Screen" style="width: 100%;"></td>
+            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/1.png" alt="Sample Hub Screen" style="width: 100%;"></td>
          </tr>
        <tr>
             <td>Employees can view their current shift schedule and current assigned tasks under the Hub tab.</td>
@@ -173,7 +173,7 @@ Deployment
 
 -   If your account gives you access to more than one tenant, select your account in the upper right corner. Set your portal session to your desired Azure AD tenant
 
--   Under Azure services on the Sample hub page, select App registrations.
+-   Under Azure services on the Sample Hub page, select App registrations.
 
 -   Select New registration from the top navigation bar. You will be taken to the Register an application page.
 
@@ -223,7 +223,7 @@ Please make sure to grant the admin consent for the required permissions.
 
 ### Publish your Sample Hub to your Azure subscription using Visual Studio 
 
--   Download the Sample hub code from the repository and open in Visual studio
+-   Download the Sample Hub code from the repository and open in Visual studio
     explorer. 
 
 -   In Visual Studio Solution Explorer, right-click the project and
@@ -249,7 +249,7 @@ Please make sure to grant the admin consent for the required permissions.
 
 ### Create a Sample Hub Teams app manifest
 
-[Create an app package for the Sample hub
+[Create an app package for the Sample Hub
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/apps-package).
 Apps in Teams are defined by an app manifest JSON file and bundled in an
 app package with their icons. You\'ll need an app package to upload and
@@ -258,7 +258,7 @@ Business app catalog or to AppSource.
 
 ![Note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/7.PNG)
 
-### Install the Sample hub Teams app manifest into Teams
+### Install the Sample Hub Teams app manifest into Teams
 
 Install the Sample Hub manifest into Teams. [Learn how to distribute Microsoft Teams
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/overview).
