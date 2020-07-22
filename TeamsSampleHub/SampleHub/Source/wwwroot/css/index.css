@@ -1,0 +1,795 @@
+.pointer {
+    cursor: pointer;
+}
+.container {
+    background-color: #47637B;
+    padding: 0;
+}
+#annoucement {
+    width: auto;
+}
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('../Images/Preloader_2.gif') no-repeat center center;
+    z-index: 9999;
+}
+@font-face {
+    font-family: "Teams Assets";
+    src: url("../fonts/TeamsAssets-Light.woff") format("woff"), url("../fonts/TeamsAssets-Light.woff2") format("woff2");
+    font-style: normal;
+}
+.head {
+    height: 4rem;
+    width: auto;
+    background: #72a1c8;
+    text-align: center;
+}
+.head-title {
+    position: relative;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #ffffff;
+    vertical-align: middle;
+    display: inline-flex;
+}
+.logo {
+    height: 2.5rem;
+    width: auto;
+    margin-top: 0.75rem;
+}
+.banner-logo {
+    height: 15.625rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60.65%, #000000 125%), url('../images/logo-bg-img.svg') no-repeat;
+    background-size: cover;
+}
+.design-logo {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1.063rem;
+    margin-top: 11.125rem;
+}
+.design-logo-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    align-items: center;
+    margin-left: 4.375rem;
+    margin-top: 10.625rem;
+    position: absolute;
+}
+.wish-bg {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.greet {
+    margin-top: 0.5rem;
+    position: relative;
+    display: inline-flex;
+}
+.main-heading {
+    margin-left: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.188rem;
+    line-height: 2.25rem;
+    color: #F6F6F6;
+}
+.sub-heading {
+    margin-left: 1rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #F6F6F6;
+}
+.card {
+    background: #f6f6f6;
+    box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    margin: 0 1rem;
+    margin-top: 1%;
+    height: 3.938rem;
+    border: none;
+}
+.date {
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.188rem;
+    line-height: 1.5rem;
+    text-align: right;
+    color: #393f3e;
+}
+.day {
+    position: absolute;
+    width: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 2.313rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    text-align: center;
+    color: #393f3e;
+}
+.line {
+    position: absolute;
+    width: 0.188rem;
+    height: 2.938rem;
+    margin-left: 3.188rem;
+    margin-top: 0.5rem;
+    border-radius: 0.125rem;
+}
+.time {
+    position: absolute;
+    width: auto;
+    height: 1.125rem;
+    margin-left: 4.063rem;
+    margin-top: 0.813rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #2e3333;
+}
+.msg {
+    position: absolute;
+    width: auto;
+    height: 1.125rem;
+    margin-left: 4.063rem;
+    margin-top: 2.188rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #6f7372;
+    mix-blend-mode: normal;
+}
+.h-line {
+    width: auto;
+    height: 0.063rem;
+    margin: 0 1rem;
+    margin-top: 4.438rem;
+    background: #e5e5e5;
+}
+.lock-msg {
+    position: absolute;
+    width: 7.563rem;
+    height: 1.125rem;
+    margin-left: 1rem;
+    margin-top: 2%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #000000;
+}
+.lock-time {
+    width: 2.375rem;
+    height: 1.125rem;
+    margin-top: 2%;
+    margin-right: 1rem;
+    float: right;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: #2e3333;
+}
+.take-a-break {
+    position: absolute;
+    background: #f4c86b;
+    border-radius: 1rem;
+    width: 8rem;
+    height: 2rem;
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+}
+.br-msg {
+    position: absolute;
+    height: 1.125rem;
+    left: 1rem;
+    right: 1rem;
+    top: calc(50% - 1.125rem / 2);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: #ffffff;
+}
+.clock-out {
+    float: right;
+    width: 8rem;
+    height: 2rem;
+    margin-top: 0.75rem;
+    margin-right: 1rem;
+    background: #a2a5a5;
+    border-radius: 1rem;
+}
+.out-msg {
+    position: absolute;
+    margin: 0rem 2.125rem;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #ffffff;
+}
+.cd2 {
+    height: auto;
+}
+.cd2-time::before {
+    content: "\E449";
+    font-family: "Teams Assets";
+    font-size: 0.625rem;
+    color: #72a1c8;
+    float: right;
+}
+.custom-radio {
+    margin-left: 1rem;
+}
+.cs-radio {
+    margin-top: 1.5rem;
+    display: inline-flex;
+}
+.cs-radio1 {
+    margin-top: 0.625rem;
+    display: inline-flex;
+}
+.cd2-time {
+    font-size: 0.625rem;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    color: #6f7372;
+    line-height: 2;
+}
+.time2 {
+    margin-top: 0.625rem;
+}
+.lb {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #2e3333;
+}
+.lb-flow {
+    position: absolute;
+    max-width: 12.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.see-more {
+    position: relative;
+    margin: 0 0 1rem 1rem;
+    font-size: 0.75rem;
+    color: #72a1c8;
+}
+    .see-more::before {
+        content: "\E449";
+        font-family: "Teams Assets";
+        font-size: 0.875rem;
+        color: #72a1c8;
+        position: absolute;
+        left: 5rem;
+        line-height: 1.3;
+    }
+.feedback {
+    height: 7.875rem;
+    margin: 2% 1rem 0 1rem;
+    position: relative;
+}
+.fed-msg-head {
+    position: absolute;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.063rem;
+    color: #F6F6F6;
+}
+.hw-are-u-feeling {
+    width: 100%;
+    height: 8.125rem;
+}
+.sub-feb-msg {
+    position: absolute;
+    margin: 2.5rem 1rem 0 1rem;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+.smile1,
+.smile2,
+.smile3 {
+    height: 3.688rem;
+    width: 6.813rem;
+}
+.img-cls {
+    margin-top: 3.625rem;
+    position: absolute;
+}
+.img-th {
+    width: 48%;
+}
+.percentages {
+    height: 12.625rem;
+}
+.ht {
+    height: 1.25rem;
+}
+.percen-head {
+    position: absolute;
+    margin: 1rem 0 0 1rem;
+    font-weight: bold;
+    font-size: 1.063rem;
+    color: #F6F6F6;
+}
+.see-more2,
+.see-more3 {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #A2A5A5;
+    margin: 1rem 1rem 0 0;
+    float: right;
+}
+    .see-more2::before,
+    .see-more3::before {
+        content: "\E449";
+        font-family: "Teams Assets";
+        font-size: 1rem;
+        line-height: 1.1;
+        color: #A2A5A5;
+        float: right;
+    }
+.centage-block {
+    margin: 1rem;
+    height: auto;
+    background: #f6f6f6;
+    border: 0.063rem solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    margin-top: 1.875rem;
+}
+.box-tables {
+    width: 100%;
+}
+.head-rw {
+    display: block;
+    margin: 1rem 1rem 0 1rem;
+}
+.pro-card {
+    margin-top: 1rem;
+    margin-bottom: 0.313rem;
+    text-align: center;
+    flex: 1;
+}
+.percentage-head {
+    display: block;
+}
+.data-num {
+    position: relative;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #d93b3b;
+}
+.last-time {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #393f3e;
+    opacity: 0.6;
+    margin-left: 1rem;
+}
+.rounded {
+    position: relative;
+    margin: 1% 2%;
+}
+.vertical .progress-bar {
+    display: inline-flex;
+    width: 5.375rem;
+    height: 4.188rem;
+    position: relative;
+    margin: 0 4%;
+    margin-bottom: 4%;
+    border-radius: 0.5rem;
+}
+.progress-bar {
+    background-color: white;
+}
+.vertical .progress-track {
+    position: relative;
+    width: 5.375rem;
+    height: 4.188rem;
+    background: #efb9b8;
+    background: white;
+}
+.vertical .progress-fill {
+    position: relative;
+    font-weight: bold;
+    font-size: 1.313rem;
+    text-align: center;
+    color: #393f3e;
+}
+.rounded .progress-track,
+.rounded .progress-fill {
+    box-shadow: inset 0 0 0.313rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.188rem;
+}
+.bg-red {
+    background: #efb9b8;
+}
+.bg-gray {
+    background: #c7d9e8;
+}
+.announcement {
+    height: 52.813rem;
+    margin: 1rem;
+}
+.ac-container.ac-adaptiveCard {
+    background-color: white;
+    margin: 3% 0 !important;
+    position: absolute;
+}
+.an-head {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.063rem;
+    color: #F6F6F6;
+}
+.an-img {
+    height: 19.375rem;
+    display: block;
+}
+.ann-img {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 1.563rem;
+}
+.working {
+    height: 10.5rem;
+}
+.working-head {
+    font-weight: bold;
+    font-size: 1.063rem;
+    color: #F6F6F6;
+    margin: 1rem 1rem 0 1rem;
+    display: inline-block;
+}
+.start-cht {
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-align: right;
+    color: #A2A5A5;
+    float: right;
+    margin: 1rem 1rem 0 1rem;
+    line-height: 2;
+    display: block;
+}
+.working-img {
+    height: 6rem;
+    background: #f6f6f6;
+    border: 0.063rem solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    margin: 1rem;
+}
+.avatars {
+    text-align: center;
+}
+.ava {
+    display: inline-block;
+    margin: 1% 6% 0 6%;
+}
+.avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+.name {
+    display: block;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.card3 {
+    background: #f6f6f6;
+    border: 0.063rem solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+.new-team {
+    position: absolute;
+    margin: 0 1rem 1rem 1rem;
+    height: 1.25rem;
+    font-weight: bold;
+    font-size: 1.063rem;
+    line-height: 1.25rem;
+    color: #F6F6F6;
+}
+.custom-row {
+    margin: 0 !important;
+}
+.profile-card:nth-child(1) {
+    margin-right: 0rem;
+}
+.profile-card {
+    margin: 2.188rem 1rem 0 1rem;
+    width: 10.438rem;
+    height: 10.938rem;
+    text-align: center;
+    flex: 1;
+}
+.card-img-top {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+.cb {
+    padding: 0.25rem !important;
+}
+.ct {
+    font-size: 0.875rem;
+    color: #2e3333;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+.designation {
+    font-size: 0.75rem;
+    color: #6f7372;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+.hi {
+    background: #f4c86b;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2rem;
+    line-height: 1;
+    color: white;
+    margin: 3% 6% 6% 6%;
+}
+.news {
+    height: 42.5rem;
+    margin-top: 3%;
+}
+.news-head {
+    position: absolute;
+    margin: 1rem 1rem 0 1rem;
+    font-weight: bold;
+    font-size: 1.063rem;
+    color: #F6F6F6;
+}
+.carousel3 {
+    margin: 1rem;
+}
+.car-card {
+    background: #ffffff;
+    border: 0.063rem solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    position: absolute;
+    margin-top: 6%;
+}
+.car-head {
+    margin: 1rem 1rem 0 1rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #393f3e;
+}
+.car-date {
+    margin: 0 1rem 1rem 1rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #393f3e;
+    opacity: 0.6;
+}
+.car-desc {
+    width: 95%;
+    margin: 1.063rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #393f3e;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.carousel-indicators {
+    position: relative;
+    padding: 0;
+    top: 41.25rem;
+    width: 70%;
+}
+    .carousel-indicators li {
+        width: 0.438rem;
+        height: 0.438rem;
+        background: #C4C4C4;
+        border-radius: 50%;
+        border: none;
+    }
+.w-100 {
+    height: 25rem;
+}
+.apps {
+    height: 28.125rem;
+}
+.app-card:nth-child(1),
+.app-card2:nth-child(1) {
+    margin-right: 0rem;
+}
+.app-card {
+    margin: 1rem;
+    text-align: center;
+    flex: 1;
+}
+.card4 {
+    background: #ffffff;
+    border: 0.063rem solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    height: 11.875rem;
+}
+.app-img {
+    border-radius: 0;
+    width: 5rem;
+    height: 5rem;
+}
+.app-head,
+.app-desc {
+    margin-top: 0.313rem;
+}
+.app-desc {
+    padding: 0 0.875rem;
+}
+.app-card2 {
+    margin: 0 1rem;
+    text-align: center;
+    flex: 1;
+}
+.bt-brand {
+    height: 100%;
+}
+.brand-img {
+    width: 100%;
+}
+@media screen and (max-width: 26.563rem) {
+    .banner-logo {
+        height: 8.5rem;
+    }
+    .design-logo-title {
+        margin-top: 4.25rem;
+    }
+    .design-logo {
+        margin-top: 4.625rem;
+    }
+    .card {
+        margin-top: 0.75rem;
+    }
+    .feedback {
+        margin: 6% 1rem 0 1rem;
+    }
+    .img-th {
+        width: 45%;
+    }
+    .hw-are-u-feeling {
+        height: auto;
+    }
+    .centage-block {
+        height: 9.125rem;
+    }
+    .ava {
+        margin: 6% 2% 0 2%;
+    }
+    .name {
+        font-size: 0.625rem;
+    }
+    .news {
+        margin-top: 0%;
+        height: 30rem;
+    }
+    .car-card {
+        margin-top: 14%;
+    }
+    .w-100 {
+        height: 11.313rem;
+    }
+    .carousel-indicators {
+        top: 28.125rem;
+    }
+    .car-desc {
+        width: 18.75rem;
+        font-size: 0.75rem;
+    }
+    .announcement {
+        height: 28.75rem;
+        margin: 0 1rem;
+    }
+}
+@media screen and (max-width: 23.438rem) {
+    .vertical .progress-bar {
+        margin: 3%;
+    }
+    .announcement {
+        height: 28rem;
+    }
+}
+@media screen and (max-width: 20rem) {
+    .lb-flow {
+        max-width: 9.375rem;
+    }
+    .avatar {
+        height: 1.875rem;
+        width: 1.875rem;
+    }
+    .ava {
+        margin: 9% 2% 0 2%;
+    }
+    .carousel-indicators {
+        top: 26.875rem;
+    }
+    .fed-msg-head {
+        font-size: 0.938rem;
+    }
+    .card4 {
+        height: 13.125rem;
+    }
+    .apps {
+        height: 30rem;
+    }
+    .announcement {
+        height: 25.875rem;
+    }
+}
+.custom-control-label::before {
+    position: absolute;
+    top: 0.5rem;
+    left: -1rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #adb5bd solid 0.063rem;
+}
+.custom-radio .custom-control-label::before {
+    border-radius: 15%;
+    height: 0.5rem;
+    width: 0.5rem;
+}
+.custom-control-input:disabled ~ .lb1::before,
+.custom-control-input[disabled] ~ .lb1::before {
+    background-color: blue;
+    border: blue;
+}
+.custom-control-input:disabled ~ .lb2::before,
+.custom-control-input[disabled] ~ .lb2::before {
+    background-color: red;
+    border: red;
+}
+.custom-control-input:disabled ~ .lb3::before,
+.custom-control-input[disabled] ~ .lb3::before {
+    background-color: lightgreen;
+    border: lightgreen;
+}
