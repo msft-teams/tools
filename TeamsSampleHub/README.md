@@ -1,12 +1,12 @@
-Microsoft Teams Sample hub app overview
+Microsoft Teams Sample Hub overview
 =====================================
 
-The Teams Branded Experience (aka Sample hub app), together with custom
+The Teams Branded Experience (aka Sample Hub), together with custom
 line-of-business applications, enable you to quickly present the "art of
 the possible" by showcasing the Teams platform and articulating the
 value that it can deliver. 
 
-The Sample hub app is a personal-branded landing experience that is pinned to
+The Sample Hub is a personal-branded landing experience that is pinned to
 the Teams mobile app, allowing your organization to provide consolidated
 information and the functionality of important first-party and
 line-of-business apps to firstline worker employees. Sample hub can leverage
@@ -15,10 +15,10 @@ in Teams (SPFx), Microsoft Graph APIs, PowerApps, Web
 Apps/HTML/JavaScript, and mobile app pinning to highlight a branded
 experience for any user.
 
-The Sample hub app was primarily designed and built as a mobile app and is
+The Sample Hub was primarily designed and built as a mobile app and is
 currently not optimized for desktop clients.
 
-Sample hub app scenarios
+Sample Hub scenarios
 =================
 
 
@@ -44,8 +44,8 @@ Sample hub app scenarios
             <td>Employees can communicate and greet new team members using Teams 1:1 chat capability. </td>
         </tr>
        <tr>
-            <td>Employees can access other apps such as PayStubs and Rewards through the Sample hub application. </td>
-           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/2.png" alt="Sample hub App Screen"></td>
+            <td>Employees can access other apps such as PayStubs and Rewards through the Sample Hub application. </td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/2.png" alt="Sample Hub Screen"></td>
         </tr>
          <tr>
             <th colspan="2"></th>
@@ -108,7 +108,7 @@ Prerequisites
 Authentication and Single Sign on (SSO)
 ---------------------------------------
 
-The Sample hub app authentication flow is based on user profile information
+The Sample Hub authentication flow is based on user profile information
 stored in Azure AD and accessed using Microsoft Graph.
 
 The Teams [Single Sign-on
@@ -123,31 +123,31 @@ about authentication for Microsoft Tabs and SSO in Teams.
 Capabilities overview
 ---------------------
 
-1.  Sample hub app is an ASP.NET Core MVC application.
+1.  Sample Hub is an ASP.NET Core MVC application.
 
 2.  Access employee Shifts schedules using [Microsoft Teams Shifts Graph API integration](https://docs.microsoft.com/en-us/graph/api/schedule-list-shifts?view=graph-rest-1.0&tabs=http).
 
 3.  Display employee tasks using [Microsoft Planner Tasks Graph API
     integration](https://docs.microsoft.com/en-us/graph/api/planneruser-list-tasks?view=graph-rest-1.0&tabs=http).
 
-4.  Customize Sample hub app to create a tailored experience. For example:
+4.  Customize Sample Hub to create a tailored experience. For example:
 
-    -   The announcement feature of the Sample hub app can be integrated with
+    -   The announcement feature of the Sample Hub can be integrated with
         our [Company Communicator app
         template](https://docs.microsoft.com/en-us/microsoftteams/platform/samples/app-templates#company-communicator)
         to share your company's the information and notifications within
-        the Sample hub app.
+        the Sample Hub.
 
     -   [Create Power App
         applications](https://docs.microsoft.com/en-us/learn/modules/get-started-with-powerapps/5-powerapps-create-first)
         and
         [deep-link](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links)
-        to the Sample hub app.
+        to the Sample Hub.
 
     -   [Build SharePoint Framework application in
         Teams](https://aka.ms/spfx-teams) such as a News app and
         [deep-link](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links)
-        to the Sample hub app.
+        to the Sample Hub.
 
 5.  Retrieve a list of team members in the same shift by using the
     [Microsoft Graph List Members
@@ -155,7 +155,7 @@ Capabilities overview
 
 6.  Enhance the user chat experience by creating [deep
     links](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links#generating-a-deep-link-to-a-chat)
-    to private chats within the Sample hub app.
+    to private chats within the Sample Hub.
 
 7.  The [Microsoft Graph photo
     API](https://docs.microsoft.com/en-us/graph/api/profilephoto-get?view=graph-rest-1.0)
@@ -167,7 +167,7 @@ Capabilities overview
 Deployment
 ----------
 
-### Register your Sample hub app with Azure AD
+### Register your Sample Hub with Azure AD
 
 -   Sign in to the [Azure portal.](https://portal.azure.com)
 
@@ -221,7 +221,7 @@ Graph notifications.
 
 Please make sure to grant the admin consent for the required permissions.
 
-### Publish your Sample hub app to your Azure subscription using Visual Studio 
+### Publish your Sample Hub to your Azure subscription using Visual Studio 
 
 -   Download the Sample hub code from the repository and open in Visual studio
     explorer. 
@@ -247,7 +247,7 @@ Please make sure to grant the admin consent for the required permissions.
         3. If you have SharePoint Framework app then provide the SharePoint client Id and List Id.        
 -   When ready, select Create.
 
-### Create a Sample hub Teams app manifest
+### Create a Sample Hub Teams app manifest
 
 [Create an app package for the Sample hub
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/apps-package).
@@ -260,7 +260,7 @@ Business app catalog or to AppSource.
 
 ### Install the Sample hub Teams app manifest into Teams
 
-Install the Sample hub app manifest into Teams. [Learn how to distribute Microsoft Teams
+Install the Sample Hub manifest into Teams. [Learn how to distribute Microsoft Teams
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/overview).
 <br/>
 <br/>
