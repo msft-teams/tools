@@ -26,8 +26,8 @@
   "accentColor": "#60A18E",
   "staticTabs": [
     {
-      "entityId": "Sample Hub",
-      "name": "Sample Hub",
+      "entityId": "Hub",
+      "name": "Hub",
       "contentUrl": "{url}",
       "scopes": [ "personal" ]
     },
