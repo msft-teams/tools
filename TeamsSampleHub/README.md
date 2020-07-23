@@ -1,24 +1,24 @@
-Microsoft Teams HOME app overview
+Microsoft Teams Sample Hub overview
 =====================================
 
-The Teams Branded Experience (aka HOME app), together with custom
+The Teams Branded Experience (aka Sample Hub), together with custom
 line-of-business applications, enable you to quickly present the "art of
 the possible" by showcasing the Teams platform and articulating the
 value that it can deliver. 
 
-The HOME app is a personal-branded landing experience that is pinned to
+The Sample Hub is a personal-branded landing experience that is pinned to
 the Teams mobile app, allowing your organization to provide consolidated
 information and the functionality of important first-party and
-line-of-business apps to firstline worker employees. HOME can leverage
+line-of-business apps to firstline worker employees. Sample Hub can leverage
 multiple technologies and capabilities such as the SharePoint Framework
 in Teams (SPFx), Microsoft Graph APIs, PowerApps, Web
 Apps/HTML/JavaScript, and mobile app pinning to highlight a branded
 experience for any user.
 
-The HOME app was primarily designed and built as a mobile app and is
+The Sample Hub was primarily designed and built as a mobile app and is
 currently not optimized for desktop clients.
 
-Home app scenarios
+Sample Hub scenarios
 =================
 
 
@@ -26,10 +26,10 @@ Home app scenarios
     <tbody>
         <tr>
             <td class="col-md-8" style="color:blue;" align="center"><b>On shift scenarios</b></td>
-            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/1.png" alt="Home App Screen" style="width: 100%;"></td>
+            <td rowspan="6"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/1.png" alt="Sample Hub Screen" style="width: 100%;"></td>
          </tr>
        <tr>
-            <td>Employees can view their current shift schedule and current assigned tasks under the Home tab.</td>
+            <td>Employees can view their current shift schedule and current assigned tasks under the Hub tab.</td>
         </tr>
        <tr>
             <td>Employees can view the latest companywide announcements.</td>
@@ -44,22 +44,22 @@ Home app scenarios
             <td>Employees can communicate and greet new team members using Teams 1:1 chat capability. </td>
         </tr>
        <tr>
-            <td>Employees can access other apps such as PayStubs and Rewards through the HOME application. </td>
-           <td><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/2.png" alt="Home App Screen"></td>
+            <td>Employees can access other apps such as PayStubs and Rewards through the Sample Hub application. </td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/2.png" alt="Sample Hub Screen"></td>
         </tr>
          <tr>
             <th colspan="2"></th>
          </tr>
         <tr>
             <td align="center"><b>Off shift scenarios</b></td>
-            <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
+            <td rowspan="2"><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/3.png" alt="Optional Title"></td>
          </tr>
        <tr>
             <td>Off shift employees can view their upcoming shift schedule. Off shift employees cannot view and access tasks.</td>
         </tr>
        <tr>
            <td>Off shifts employees do not have access to Learning tab.</td>
-           <td><img src="https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/4.png" alt="Optional Title"></td>
+           <td><img src="https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/4.png" alt="Optional Title"></td>
         </tr>
       </tbody>
 </table>
@@ -69,7 +69,7 @@ Solution overview
 
 ### Architecture
 
-![Architecture](https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/5.png)
+![Architecture](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/5.png)
 
 Prerequisites
 -------------
@@ -103,12 +103,12 @@ Prerequisites
 
 5.  Install your desired custom apps.
 
-![note](https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/6.PNG)
+![note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/6.PNG)
 
 Authentication and Single Sign on (SSO)
 ---------------------------------------
 
-The HOME app authentication flow is based on user profile information
+The Sample Hub authentication flow is based on user profile information
 stored in Azure AD and accessed using Microsoft Graph.
 
 The Teams [Single Sign-on
@@ -123,31 +123,31 @@ about authentication for Microsoft Tabs and SSO in Teams.
 Capabilities overview
 ---------------------
 
-1.  HOME app is an ASP.NET Core MVC application.
+1.  Sample Hub is an ASP.NET Core MVC application.
 
 2.  Access employee Shifts schedules using [Microsoft Teams Shifts Graph API integration](https://docs.microsoft.com/en-us/graph/api/schedule-list-shifts?view=graph-rest-1.0&tabs=http).
 
 3.  Display employee tasks using [Microsoft Planner Tasks Graph API
     integration](https://docs.microsoft.com/en-us/graph/api/planneruser-list-tasks?view=graph-rest-1.0&tabs=http).
 
-4.  Customize HOME app to create a tailored experience. For example:
+4.  Customize Sample Hub to create a tailored experience. For example:
 
-    -   The announcement feature of the HOME app can be integrated with
+    -   The announcement feature of the Sample Hub can be integrated with
         our [Company Communicator app
         template](https://docs.microsoft.com/en-us/microsoftteams/platform/samples/app-templates#company-communicator)
         to share your company's the information and notifications within
-        the HOME app.
+        the Sample Hub.
 
     -   [Create Power App
         applications](https://docs.microsoft.com/en-us/learn/modules/get-started-with-powerapps/5-powerapps-create-first)
         and
         [deep-link](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links)
-        to the HOME app.
+        to the Sample Hub.
 
     -   [Build SharePoint Framework application in
         Teams](https://aka.ms/spfx-teams) such as a News app and
         [deep-link](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links)
-        to the HOME app.
+        to the Sample Hub.
 
 5.  Retrieve a list of team members in the same shift by using the
     [Microsoft Graph List Members
@@ -155,7 +155,7 @@ Capabilities overview
 
 6.  Enhance the user chat experience by creating [deep
     links](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links#generating-a-deep-link-to-a-chat)
-    to private chats within the HOME app.
+    to private chats within the Sample Hub.
 
 7.  The [Microsoft Graph photo
     API](https://docs.microsoft.com/en-us/graph/api/profilephoto-get?view=graph-rest-1.0)
@@ -167,13 +167,13 @@ Capabilities overview
 Deployment
 ----------
 
-### Register your HOME app with Azure AD
+### Register your Sample Hub with Azure AD
 
 -   Sign in to the [Azure portal.](https://portal.azure.com)
 
 -   If your account gives you access to more than one tenant, select your account in the upper right corner. Set your portal session to your desired Azure AD tenant
 
--   Under Azure services on the Home page, select App registrations.
+-   Under Azure services on the Sample Hub page, select App registrations.
 
 -   Select New registration from the top navigation bar. You will be taken to the Register an application page.
 
@@ -221,9 +221,9 @@ Graph notifications.
 
 Please make sure to grant the admin consent for the required permissions.
 
-### Publish your HOME app to your Azure subscription using Visual Studio 
+### Publish your Sample Hub to your Azure subscription using Visual Studio 
 
--   Download the HOME code from the repository and open in Visual studio
+-   Download the Sample Hub code from the repository and open in Visual studio
     explorer. 
 
 -   In Visual Studio Solution Explorer, right-click the project and
@@ -247,20 +247,20 @@ Please make sure to grant the admin consent for the required permissions.
         3. If you have SharePoint Framework app then provide the SharePoint client Id and List Id.        
 -   When ready, select Create.
 
-### Create a HOME Teams app manifest
+### Create a Sample Hub Teams app manifest
 
-[Create an app package for the HOME
+[Create an app package for the Sample Hub
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/apps-package).
 Apps in Teams are defined by an app manifest JSON file and bundled in an
 app package with their icons. You\'ll need an app package to upload and
 install your app in Teams, and to publish to either your Line of
 Business app catalog or to AppSource.
 
-![Note](https://github.com/msft-teams/tools/blob/master/HOMEapp/Brandhome/Source/wwwroot/images/readmeimages/7.PNG)
+![Note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/7.PNG)
 
-### Install the HOME Teams app manifest into Teams
+### Install the Sample Hub Teams app manifest into Teams
 
-Install the HOME app manifest into Teams. [Learn how to distribute Microsoft Teams
+Install the Sample Hub manifest into Teams. [Learn how to distribute Microsoft Teams
 app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/overview).
 <br/>
 <br/>
@@ -270,7 +270,7 @@ Legal notice
 ----------------
 
 This app template is provided under the [MIT
-License](https://github.com/msft-teams/tools/blob/master/HOMEapp/LICENSE) terms.
+License](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/LICENSE) terms.
 In addition to these terms, by using this app template you agree to the
 following:
 

@@ -36,7 +36,7 @@ namespace BrandHome.Controllers
         }
 
         /// <summary>
-        /// Home Tab
+        /// Sample Hub Tab
         /// </summary>
         /// <returns>current View</returns>
         public IActionResult Index()

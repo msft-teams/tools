@@ -6,13 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\images\ProfilePictures\**" />
-    <Content Remove="wwwroot\images\ProfilePictures\**" />
-    <EmbeddedResource Remove="wwwroot\images\ProfilePictures\**" />
-    <None Remove="wwwroot\images\ProfilePictures\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AdaptiveCards" Version="1.2.4" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.1.5" />
