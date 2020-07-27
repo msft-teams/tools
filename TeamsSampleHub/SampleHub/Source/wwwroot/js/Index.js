@@ -259,7 +259,7 @@ function loadTeamMembers(mailId) {
                             return false;
                         }
                     });
-                    $('#groupChat').attr('onclick', "microsoftTeams.executeDeepLink('" + chatUrl + groupEmail.toString() + "&topicName=" + encodeURIComponent("On-Shift Crew")+"&message=Hi');");
+                    $('#groupChat').attr('onclick', "microsoftTeams.executeDeepLink('" + chatUrl + groupEmail.toString() + "&topicName=" + encodeURIComponent("On-Shift Crew") + "&message=Hi');");
                     $.each(newMembers, function (i, item) {
                         $('#newMemberName' + i).text(item.givenName);
                         $('#newMemberDesignation' + i).text(item.jobTitle);
@@ -301,10 +301,10 @@ function loadAnnoucement() {
                         counter++;
                     }
                     if (item.partitionKey === 'SentNotifications' && !!item.teamsInString && item.rowKey === rowKey) {
-                        let teamsId = item.teamsInString;
-                        teamsId = teamsId.replace('["', "");
-                        teamsId = teamsId.replace('"]', "");
-                        $('#annoucement').attr('onclick', "microsoftTeams.executeDeepLink('" + channelUrl + encodeURIComponent(teamsId) + "/General?groupId=7efb60ac-63c6-46e2-8645-8ea283dbfd61&tenantId=c80f38d3-c04c-49bf-a48b-9d99278d4ac6');");
+                        let channelId = item.teamsInString;
+                        channelId = channelId.replace('["', "");
+                        channelId = channelId.replace('"]', "");
+                        $('#annoucement').attr('onclick', "microsoftTeams.executeDeepLink('" + channelUrl + encodeURIComponent(channelId) + "/General?groupId=" + teamId + "&tenantId=" + tenantId + "');");
                         counter++;
                     }
                     if (counter === 2) {

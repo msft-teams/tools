@@ -44,6 +44,7 @@ namespace BrandHome.Controllers
             this.telemetry.TrackEvent("Index");
             ViewBag.TeamId = this.configuration["TeamId"];
             ViewBag.TasksAppId = this.configuration["TeamsConfiguration:TasksAppId"];
+            ViewBag.TenantId = this.configuration["AzureAd:TenantId"];
             return this.View();
         }
 

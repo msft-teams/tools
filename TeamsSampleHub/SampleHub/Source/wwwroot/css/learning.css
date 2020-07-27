@@ -3,23 +3,28 @@
     src: url("../fonts/TeamsAssets-Light.woff") format("woff"), url("../fonts/TeamsAssets-Light.woff2") format("woff2");
     font-style: normal;
 }
+
 .bg {
     background-color: #eaeef3;
 }
+
 .light-text {
     color: gray;
     font-size: 0.75rem;
 }
+
 .img-survey {
     height: auto;
     width: 4%;
 }
+
 .carousel-indicators li {
     height: 0.625rem;
     width: 0.625rem;
     background-color: gray;
     border-radius: 50%;
 }
+
 .circle {
     width: 3.75rem;
     height: 3.75rem;
@@ -31,26 +36,32 @@
     line-height: 4.5;
     font-weight: bold;
 }
+
     .circle.crl2.mr-2 {
         align-self: center;
     }
+
 .cb {
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
 .training,
 .mt-0 {
     font-size: 0.875rem;
     font-weight: bold;
 }
+
 ol,
 ul {
     margin-bottom: 0rem;
 }
+
 .traing-img,
 .training {
     display: inline;
 }
+
 .goicon::before {
     float: right;
     content: "\E449";
@@ -59,31 +70,38 @@ ul {
     cursor: pointer;
     color: gray;
 }
+
 @media screen and (max-width: 31.25rem) {
     img.error-logo-ct {
         margin-top: 1.25rem;
     }
+
     .error-off-head {
         font-size: 1.375rem;
     }
+
     .error-off-desc {
         font-size: 1.125rem;
     }
 }
+
 @media screen and (max-width: 420.313rem) {
     .img-survey {
         height: auto;
         width: 13%;
     }
+
     .custom-card {
         position: relative !important;
         left: auto !important;
         top: auto !important;
     }
+
     .container {
         padding: 0;
     }
 }
+
 #loading {
     position: fixed;
     width: 100%;
@@ -91,60 +109,72 @@ ul {
     background: #fff url('../Images/Preloader_2.gif') no-repeat center center;
     z-index: 9999;
 }
+
 .custom-card {
     position: absolute;
     top: 10%;
     left: 40%;
 }
+
 .title {
     color: #24077b;
 }
+
 .pf {
     font-size: 0.75rem;
 }
+
 .img-logo {
     margin-left: 13%;
 }
+
 .error-bg {
     background: #72A1C8;
     height: 100vh;
 }
+
 .error-logo {
     text-align: center;
 }
+
 img.error-logo-ct {
     width: 5.143rem;
     height: 5.701rem;
-    margin-top: 3.125rem;
+    margin-top: 1.875rem;
 }
+
 .error-red-dot {
     float: left;
     margin: 3.375rem 1rem 0 1rem;
 }
+
 .error-offshift {
-    margin: 3.375rem 1rem 0 0;
+    margin: 2.125rem 1rem 0 0;
     height: 4.5rem;
     line-height: 1.1;
 }
+
 .error-off-head {
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #ffffff;
-    margin-top: 13%;
 }
+
 .error-off-desc {
     height: 13.5rem;
-    margin: 1.25rem 1rem 0 4.5rem;
+    margin: 0.625rem 1rem 0 4.5rem;
     font-size: 1.313rem;
     color: #ffffff;
     text-align: left;
     line-height: 1.4;
 }
+
 .banner-logo {
     height: 15.625rem;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60.65%, #000000 125%), url('../images/logo-bg-img.svg') no-repeat;
     background-size: cover;
 }
+
 .design-logo {
     position: absolute;
     height: 3rem;
@@ -152,6 +182,7 @@ img.error-logo-ct {
     margin-left: 1.063rem;
     margin-top: 11.125rem;
 }
+
 .design-logo-title {
     font-size: 1.621rem;
     font-weight: 600;
@@ -161,6 +192,7 @@ img.error-logo-ct {
     margin-top: 11.125rem;
     position: absolute;
 }
+
 .logo {
     text-align: center;
     height: 4rem;
@@ -168,12 +200,14 @@ img.error-logo-ct {
     justify-content: center;
     display: flex;
 }
+
 .logo-ct {
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
     align-self: center;
 }
+
 .head-title {
     font-weight: bold;
     font-size: 1.5rem;
@@ -182,14 +216,17 @@ img.error-logo-ct {
     align-items: center;
     margin-left: 0.313rem;
 }
+
 .quote-block {
     height: 10rem;
     margin: 1rem 1.5rem 0 1.688rem;
 }
+
 .quote-img {
     margin-left: 0.625rem;
     position: absolute;
 }
+
 .quote-desc {
     font-weight: 600;
     font-size: 0.875rem;
@@ -199,15 +236,18 @@ img.error-logo-ct {
     position: absolute;
     margin: 0 2.5rem 0 3.5rem;
 }
+
 .team-img {
     width: 100%;
     height: auto;
 }
+
 .head-blk {
     background: #47637b;
     height: 2.5rem;
     border-bottom: 0.063rem solid #496b88;
 }
+
 .headings {
     position: absolute;
     margin: 0.5rem 1.5rem;
@@ -215,10 +255,12 @@ img.error-logo-ct {
     font-size: 0.875rem;
     color: #ffffff;
 }
+
 .chev {
     margin: 0.5rem 0.75rem;
     float: right;
 }
+
     .chev::before {
         content: "\E449";
         font-family: "Teams Assets";
@@ -227,11 +269,13 @@ img.error-logo-ct {
         color: #ffffff;
         float: right;
     }
+
 .section4 {
     width: 100%;
     height: 16.625rem;
     background: #2e3333;
 }
+
 .video-head {
     margin: 0 1.5rem;
     padding-top: 1rem;
@@ -240,33 +284,40 @@ img.error-logo-ct {
     line-height: 1.25rem;
     color: #ffffff;
 }
+
 .video {
     height: 11.5rem;
     margin: 1rem 1.5rem;
     background: linear-gradient( 180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 100% ), #72a1c8;
     border-radius: 0.5rem;
 }
+
 .vd-stream {
     height: 100%;
     width: 100%;
     border-radius: 0.5rem;
 }
+
 .custom-row {
     margin: 0 !important;
 }
+
 .apps {
     background: #e5e5e5;
     height: 28.125rem;
 }
+
 .app-card:nth-child(1),
 .app-card2:nth-child(1) {
     margin-right: -0.5rem;
 }
+
 .app-card {
     margin: 1.25rem 1.875rem;
     text-align: center;
     flex: 1;
 }
+
 .card4 {
     background: #ffffff;
     border: 0.063rem solid #e5e5e5;
@@ -275,9 +326,11 @@ img.error-logo-ct {
     border-radius: 0.25rem;
     height: 11.875rem;
 }
+
 .cb {
     padding: 0.25rem !important;
 }
+
 .ct {
     font-size: 0.875rem;
     color: #2e3333;
@@ -286,6 +339,7 @@ img.error-logo-ct {
     flex-wrap: nowrap;
     text-overflow: ellipsis;
 }
+
 .designation {
     font-size: 0.75rem;
     color: #6f7372;
@@ -294,49 +348,104 @@ img.error-logo-ct {
     flex-wrap: nowrap;
     text-overflow: ellipsis;
 }
+
 .card-img-top {
     margin-top: 1rem;
 }
+
 .app-img {
     border-radius: 0;
     width: 5rem;
     height: 5rem;
 }
+
 .app-head,
 .app-desc {
     margin-top: 0.313rem;
 }
+
 .app-desc {
     padding: 0 0.875rem;
 }
+
 .app-card2 {
     margin: 0 1.875rem;
     text-align: center;
     flex: 1;
 }
+
 .bt-brand {
     height: 100%;
 }
+
 .brand-img {
     width: 100%;
 }
+
 @media screen and (max-width: 26.563rem) {
     .container {
         padding: 0;
     }
+
     .banner-logo {
         height: 8.5rem;
     }
-    .design-logo,
+
     .design-logo-title {
-        margin-top: 4.625rem;
+        margin-top: 4rem;
     }
+
+    .design-logo {
+        margin-top: 4.375rem;
+    }
+
+    .img-survey {
+        height: auto;
+        width: 13%;
+    }
+
+    .custom-card {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .error-off-head {
+        margin-top: 10%;
+    }
+
     .team-img {
         height: 12.5rem;
     }
+
+    .section4 {
+        height: 16.625rem;
+    }
+
+    .video {
+        height: 11.5rem;
+    }
 }
+
 @media screen and (max-width: 20rem) {
+
     .quote-block {
-        height: 15rem;
+        height: 11.25rem;
+    }
+
+    img.error-logo-ct {
+        margin-top: 1.25rem;
+    }
+
+    .error-off-head {
+        font-size: 0.75rem;
+    }
+
+    .error-off-desc {
+        font-size: 0.625rem;
     }
 }
