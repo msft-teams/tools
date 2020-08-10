@@ -26,5 +26,12 @@ namespace BrandHome.Interfaces
         /// <param name="token">TokenResponse instance</param>
         /// <returns>task TeamMembers</returns>
         Task<TeamMembers> GetTeamMembers();
+
+        /// <summary>
+        /// Declaration of method
+        /// </summary>
+        /// <param name="idToken">User id Token instance</param>
+        /// <returns>task GetAccessTokenOnBehalfUserAsync</returns>
+        Task<string> GetAccessTokenOnBehalfUserAsync(string idToken);
     }
 }

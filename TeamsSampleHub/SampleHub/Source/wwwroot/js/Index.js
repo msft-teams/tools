@@ -11,24 +11,10 @@ function successfulLogin() {
     $("#login").hide();
     $("#loading").show();
     $("#content").show();
-    microsoftTeams.getContext(function (context) {
-        getUserInfo(context.userPrincipalName);
-        getShiftDetails(context.userObjectId);
-        loadTeamMembers(context.userPrincipalName);
-    });
-    getTeamsConfiguration();
-    loadNewsData();
-    loadAnnoucement();
-}
-
-function enableLogin() {
-    $("#login").show();
-    $("#loading").hide();
-    $("#content").hide();
+    
 }
 
 $(document).ready(function () {
-    microsoftTeams.initialize();
     $(".horizontal .progress-fill span").each(function () {
         let percent = $(this).html();
         $(this).parent().css("width", percent);
@@ -41,7 +27,6 @@ $(document).ready(function () {
             top: pTop,
         });
     });
-    enableLogin();
     $(document).ajaxStop(function () {
         $('#loading').hide();
     });

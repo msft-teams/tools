@@ -147,5 +147,13 @@ namespace BrandHome.Helper
 
             return teamMembers;
         }
+
+         public async Task<string> GetAccessTokenOnBehalfUserAsync(string idToken)
+        {
+            this.telemetry.TrackEvent("GetAccessTokenOnBehalfUserAsync");
+            accessToken = await AuthenticationHelper.GetAccessTokenOnBehalfUserAsync(configuration, httpClientFactory, telemetry,idToken);
+            return accessToken;
+        }
+
     }
 }
