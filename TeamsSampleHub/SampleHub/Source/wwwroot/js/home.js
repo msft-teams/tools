@@ -4,10 +4,8 @@
         .then((clientSideToken) => {
             return getServerSideToken(clientSideToken);
         })
-        .then((serverSideToken) => {
-            //return useServerSideToken(serverSideToken);
-        })
         .catch((error) => {
+            console.log(error);
             if (error === "invalid_grant") {
                 // Display in-line button so user can consent
                 $("#login").show();
