@@ -92,7 +92,7 @@ namespace BrandHome.Helper
                             using (var memoryStream = new MemoryStream())
                             {
                                 photo.CopyTo(memoryStream);
-                                return profilePhotoUrl = "data:image/png; base64," + Convert.ToBase64String(memoryStream.ToArray());
+                                return profilePhotoUrl = "data:image/png;base64," + Convert.ToBase64String(memoryStream.ToArray());
                             }
 
                         }
