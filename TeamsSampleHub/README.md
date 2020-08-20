@@ -171,12 +171,12 @@ Deployment
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 2. Select **New Registration** and on the *register an application page*, set following values:
     * Set **name** to your app name.
-    * Choose the **supported account types** (any account type will work) ¹
+    * Choose the **supported account types** (any account type will work)
     * Leave **Redirect URI** empty.
     * Choose **Register**.
 3. On the overview page, copy and save the **Application (client) ID, Directory (tenant) ID**. You’ll need those later when updating your Teams application manifest and in the appsettings.json.
 4. Under **Manage**, select **Expose an API**. 
-5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}` ²
+5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}`
     * ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`.
 6. Select the **Add a scope** button. In the panel that opens, enter `access_as_user` as the **Scope name**.
 7. Set **Who can consent?** to `Admins and users`
