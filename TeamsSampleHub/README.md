@@ -112,8 +112,7 @@ The Sample Hub authentication flow is based on user profile information
 stored in Azure AD and accessed using Microsoft Graph.
 
 The Teams [Single Sign-on
-API](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)
-is now available to the general public.
+API](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) is supported now.
 
 [Learn
 more](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-flow-tab)
