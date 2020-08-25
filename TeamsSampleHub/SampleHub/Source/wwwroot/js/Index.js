@@ -11,24 +11,10 @@ function successfulLogin() {
     $("#login").hide();
     $("#loading").show();
     $("#content").show();
-    microsoftTeams.getContext(function (context) {
-        getUserInfo(context.userPrincipalName);
-        getShiftDetails(context.userObjectId);
-        loadTeamMembers(context.userPrincipalName);
-    });
-    getTeamsConfiguration();
-    loadNewsData();
-    loadAnnoucement();
-}
-
-function enableLogin() {
-    $("#login").show();
-    $("#loading").hide();
-    $("#content").hide();
+    
 }
 
 $(document).ready(function () {
-    microsoftTeams.initialize();
     $(".horizontal .progress-fill span").each(function () {
         let percent = $(this).html();
         $(this).parent().css("width", percent);
@@ -41,7 +27,6 @@ $(document).ready(function () {
             top: pTop,
         });
     });
-    enableLogin();
     $(document).ajaxStop(function () {
         $('#loading').hide();
     });
@@ -343,12 +328,12 @@ function loadNewsData() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (response) {
-            $('#newsTitle1').text(response.value[3].title);
-            $('#newsDescription1').text(response.value[3].description);
-            $('#newsTitle2').text(response.value[4].title);
-            $('#newsDescription2').text(response.value[4].description);
-            $('#newsTitle3').text(response.value[5].title);
-            $('#newsDescription3').text(response.value[5].description);
+            $('#newsTitle1').text(response.value[0].title);
+            $('#newsDescription1').text(response.value[0].description);
+            $('#newsTitle2').text(response.value[1].title);
+            $('#newsDescription2').text(response.value[1].description);
+            $('#newsTitle3').text(response.value[2].title);
+            $('#newsDescription3').text(response.value[2].description);
         },
         failure: function (response) {
             console.log(response.responseText);

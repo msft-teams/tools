@@ -182,5 +182,50 @@ namespace BrandHome.Helper
                 return null;
             }
         }
+
+
+        /// <summary>
+        /// Get token using client credentials flow
+        /// </summary>
+        /// <param name="configuration">IConfiguration instance.</param>
+        /// <param name="clientfactory"></param>
+        /// <returns>App access token on behalf of user.</returns>
+        public static async Task<string> GetAccessTokenOnBehalfUserAsync(IConfiguration configuration, IHttpClientFactory clientfactory, TelemetryClient telemetry,string idToken)
+        {
+            telemetry.TrackEvent("GetAccessToken User");
+            var accessToken = string.Empty;
+            var body = $"assertion={idToken}&requested_token_use=on_behalf_of&grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&client_id={configuration[ClientIdConfigurationSettingsKey]}@{configuration[TenantIdConfigurationSettingsKey]}&client_secret={configuration[AppsecretConfigurationSettingsKey]}&scope=https://graph.microsoft.com/User.Read";
+            try
+            {
+                var client = clientfactory.CreateClient("GraphWebClient");
+                string responseBody;
+                using (var request = new HttpRequestMessage(HttpMethod.Post, configuration[AzureInstanceConfigurationSettingsKey] + configuration[TenantIdConfigurationSettingsKey] + configuration[AzureAuthUtrlConfigurationSettingsKey]))
+                {
+                    request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    request.Content = (new StringContent(body, Encoding.UTF8, "application/x-www-form-urlencoded"));
+                    using (HttpResponseMessage response = await client.SendAsync(request))
+                    {
+                        if (response.IsSuccessStatusCode)
+                        {
+                            responseBody = await response.Content.ReadAsStringAsync();
+                        }
+                        else
+                        {
+                            responseBody = await response.Content.ReadAsStringAsync();
+                            throw new Exception(responseBody);
+                        }
+                    }
+                }
+                accessToken = JsonConvert.DeserializeObject<TokenResponse>(responseBody).Access_token;
+                return accessToken;
+            }
+            catch (Exception ex)
+            {
+                telemetry.TrackException(ex);
+                return ex.Message.ToString();
+            }
+        }
+
+
     }
 }

@@ -7,6 +7,7 @@ namespace BrandHome.Controllers
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using BrandHome.Helper;
     using BrandHome.Interfaces;
     using BrandHome.Models;
     using Microsoft.ApplicationInsights;
@@ -124,6 +125,26 @@ namespace BrandHome.Controllers
                 }
 
                 return teamMemberDetails;
+            }
+            catch (Exception ex)
+            {
+                this.telemetry.TrackException(ex);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve team members along with profile pictures
+        /// </summary>
+        /// <param name="idToken">User Access token</param>
+        /// <returns>Returns Team members details</returns>
+        [HttpGet("GetUserAccessToken")]
+        public async Task<ActionResult<string>> GetUserAccessToken()
+        {
+            this.telemetry.TrackEvent("GetUserAccessToken");
+            try
+            {   var idToken=Request.Headers["Authorization"].ToString()?.Split(" ")[1];
+                return await this.graph.GetAccessTokenOnBehalfUserAsync(idToken);
             }
             catch (Exception ex)
             {

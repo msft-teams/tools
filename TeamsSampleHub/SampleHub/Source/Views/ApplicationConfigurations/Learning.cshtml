@@ -15,13 +15,6 @@
     <script>
         let accessToken;
         let idToken;
-        function enableLogin() {
-            $("#login").show();
-            $("#loading").hide();
-            $("#content").hide();
-            $("#error").hide();
-        }
-
         function hideProfileAndError() {
             $("#loading").hide();
             $("#content").hide();
@@ -37,10 +30,6 @@
             });
         }
 
-        $(document).ready(function () {
-            microsoftTeams.initialize();
-                enableLogin();
-        });
 
         function getShiftDetails(objectId) {
             if (objectId) {
