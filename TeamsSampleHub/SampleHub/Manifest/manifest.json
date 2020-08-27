@@ -47,7 +47,7 @@
   "token.botframework.com",    
   "{{spDomain}}.sharepoint.com"],
    "webApplicationInfo": {
-        "id": "{{clientid}}"
+        "id": "{{clientid}}",
         "resource": "api://{{appdomain}}.azurewebsites.net/{{clientid}}"
     }
 }
