@@ -323,8 +323,6 @@ app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-an
 <br/>
 <br/>
 
-
-
 Legal notice
 ----------------
 
