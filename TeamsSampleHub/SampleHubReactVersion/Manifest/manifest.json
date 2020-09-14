@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.1.1",
+   "id": "e197a778-9520-4019-9894-7adac76d5397",
+  "packageName": "com.contoso.helloworld",
+  "developer": {
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse",
+    "mpnId": "{your mpnID}"
+  },
+  "name": {
+    "short": "Sample Hub",
+    "full": "Sample Hub"
+  },
+  "description": {
+    "short": "Sample Hub",
+    "full": "The Sample Hub is a personal-branded landing experience that is pinned to the Teams mobile app, allowing your organization to provide consolidated information and the functionality of important first-party and line-of-business apps to firstline worker employees."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "Hub",
+      "name": "Hub",
+      "contentUrl": "https://{{appdomain}}.azurewebsites.net",
+      "scopes": [ "personal" ]
+    },
+    {
+      "entityId": "Learning",
+      "name": "Learning",
+      "contentUrl": "https://{{appdomain}}.azurewebsites.net/learning",
+      "scopes": [ "personal" ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [ "*.ngrok.io",    
+  "*.powerapps.com",    
+  "youtu.be",    
+  "*.youtube.com",    
+  "{{appDomain}}.azurewebsites.net",    
+  "token.botframework.com",    
+  "{{spDomain}}.sharepoint.com"],
+   "webApplicationInfo": {
+        "id": "{{clientid}}",
+        "resource": "api://{{appdomain}}.azurewebsites.net/{{clientid}}"
+    }
+}

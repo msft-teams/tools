@@ -1,0 +1,34 @@
+.shiftToday {
+  position: absolute;
+  height: 1.25rem;
+  left: 2rem;
+  right: 1rem;
+  top: 31.25rem;
+  font-weight: bold;
+  font-size: 1.063rem;
+  line-height: 1.25rem;
+  color: #f6f6f6;
+}
+
+.tellUs {
+  position: absolute;
+  left: 6.688rem;
+  right: 9.188rem;
+  top: 33.75rem;
+  bottom: 33.75rem;
+  background: #eabb57;
+  border-radius: 1.326rem;
+}
+
+.tellText {
+  position: absolute;
+  height: 1.5rem;
+  left: 1.326rem;
+  right: 1.326rem;
+  top: calc(50% - 1.5rem / 2 + 0.07px);
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-align: center;
+  color: #ffffff;
+}

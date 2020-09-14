@@ -1,0 +1,91 @@
+.working-head {
+  font-weight: bold;
+  font-size: 1.063rem;
+  color: #f6f6f6;
+  margin: 1rem 1rem 0 1rem;
+  display: inline-block;
+}
+
+.start-cht {
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-align: right;
+  color: #a2a5a5;
+  float: right;
+  margin: 1rem 1rem 0 1rem;
+  line-height: 2;
+  display: block;
+}
+
+.working-img {
+  height: 6rem;
+  background: #f6f6f6;
+  border: 0.063rem solid #e5e5e5;
+  box-sizing: border-box;
+  box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  margin: 1rem;
+}
+
+.avatars {
+  text-align: center;
+}
+
+.ava {
+  display: inline-block;
+  margin: 1rem 6% 0 6%; /* to align center used 1rem */
+}
+
+.avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.name {
+  display: block;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.card3 {
+  background: #f6f6f6;
+  border: 0.063rem solid #e5e5e5;
+  box-sizing: border-box;
+  box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.new-team {
+  position: absolute;
+  margin: 0 1rem 1rem 1rem;
+  height: 1.25rem;
+  font-weight: bold;
+  font-size: 1.063rem;
+  line-height: 1.25rem;
+  color: #f6f6f6;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .ava {
+    margin: 6% 2% 0 2%;
+  }
+
+  .name {
+    font-size: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .avatar {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .ava {
+    margin: 9% 4% 0 4%;
+  }
+}
