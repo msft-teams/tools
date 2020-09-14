@@ -223,7 +223,7 @@ Deployment
 
 
 
-### Publish your Sample Hub to your Azure subscription using Visual Studio 
+### Publish your Sample Hub API to your Azure subscription using Visual Studio 
 
 -   Download the Sample Hub code from the repository and open in Visual studio
     explorer. 
@@ -246,11 +246,14 @@ Deployment
 
         1. Azure client Id (App id).
         2. Deep Link URL and all required app Ids which we need to deep link.
-        3. If you have SharePoint Framework app then provide the SharePoint client Id and List Id.        
+        3. If you have SharePoint Framework app then provide the SharePoint client Id and List Id.  
+        4. Update the app ids in the appsettings.config file in the api before deployment
+	    5. Update the apiendpoint in the links.tsx file in ClientApp folder
+
 -   When ready, select Create.
 -  	Please use the sample hub endpoint to configure the client react app.
 
-###Publish your Sample Hub Client App.
+### Publish your Sample Hub Client App.
 
 Sample hub client app is configured to consume the endpoint created in the previous steps.This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -292,11 +295,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+
+Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 
 ### Create a Sample Hub Teams app manifest
 
@@ -316,6 +321,9 @@ app](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-an
 <br/>
 <br/>
 <br/>
+<br/>
+
+
 
 Legal notice
 ----------------
@@ -370,37 +378,3 @@ FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact <opencode@microsoft.com> with any additional questions or
 comments.
 
-Generalized steps
----------------------
-		Please update the app ids in the appsettings.config file in the api before deployment
-		Please update the apiendpoint in the links.tsx file in ClientApp folder
-
-### Deploying the Sample Hub Client [To be reviewed]
-
--   Sign in to the [Azure portal.](https://portal.azure.com)
-
--   Create app service with the client uri
-
--   Under Azure services on the Sample Hub page, select App registrations.
-
--   Select New registration from the top navigation bar. You will be taken to the Register an application page.
-
--   Enter a meaningful application display name in the Name field.
-
--   Goto the azure app service deployment center
-
--   Deployment Center on the Azure portal and choosing a source control as the first step in deploying a new App Service. Post selecting the same would be navigated to the build Provider section in the Deployment Center on Azure portal
-
--  As a next step, Azure generates a local git repo for you. And it gives you a remote link to point your react app to.
-
--  Build the app with 'npm run build' command
-
-- Initialize the repo with the help of the listed commands inline
-
-   - git init
-   - git add .
-   - git commit -m "Initial Commit"
-   - git remote add azure <git clone url>
-   - git push azure master
-
-- Add the client url in the redirection url to the respected App
