@@ -6,7 +6,7 @@ class TellUs extends React.Component {
   handleClick() {
     microsoftTeams.initialize();
     microsoftTeams.executeDeepLink(
-      "https://teams.microsoft.com/_#/apps/c1e14ebc-36ee-406c-a223-cd902f683c22/sections/surveys"
+      "https://teams.microsoft.com/_#/apps/{teamid}/sections/surveys"
     );
   }
   render() {
