@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-		
+		<ApplicationInsightsResourceId>/subscriptions/{subscriptionId}/resourcegroups/{resourcegroupname}/providers/microsoft.insights/components/ConflwTratorUser</ApplicationInsightsResourceId>
 	</PropertyGroup>
 
 	<ItemGroup>

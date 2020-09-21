@@ -70,7 +70,7 @@ namespace SampleHubApi.Helper
                         throw new Exception(responseBody);
                     }
 
-                    return JsonConvert.DeserializeObject<TokenResponse>(responseBody).AccessToken;
+                    return JsonConvert.DeserializeObject<TokenResponse>(responseBody).Access_token;
                 }
             }
         }

@@ -64,8 +64,8 @@ class WorkingNow extends React.Component<IProps, IState> {
 
     let TeamMember: any, TeamMemberValue: any;
     //getting new team member details
-    TeamMemberValue = await GetTeamMemberDetails().catch((err: any) => {
-      console.log(err);
+    TeamMemberValue = await GetTeamMemberDetails().then(function(res){debugger;console.log(res);}).catch((err: any) => {
+       console.log(err);
     });
     if (TeamMemberValue != null) {
       if (TeamMemberValue) {
@@ -130,7 +130,7 @@ class WorkingNow extends React.Component<IProps, IState> {
         >
           Start chat
         </div>
-        {workingNowData.length > 0 ? (
+        {workingNowData?.length > 0 ? (
           <div className="working-img">
             <div className="avatars">
               <span className="ava">

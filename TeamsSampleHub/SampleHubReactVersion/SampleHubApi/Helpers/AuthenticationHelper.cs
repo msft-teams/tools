@@ -173,7 +173,7 @@ namespace SampleHubApi.Helper
                         }
                     }
                 }
-                accessToken = JsonConvert.DeserializeObject<TokenResponse>(responseBody).AccessToken;
+                accessToken = JsonConvert.DeserializeObject<TokenResponse>(responseBody).Access_token;
                 return accessToken;
             }
             catch (Exception ex)
@@ -215,7 +215,7 @@ namespace SampleHubApi.Helper
                         }
                     }
                 }
-                accessToken = JsonConvert.DeserializeObject<TokenResponse>(responseBody).AccessToken;
+                accessToken = JsonConvert.DeserializeObject<TokenResponse>(responseBody).Access_token;
                 return accessToken;
             }
             catch (Exception ex)

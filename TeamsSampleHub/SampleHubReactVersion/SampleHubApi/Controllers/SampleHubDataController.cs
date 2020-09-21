@@ -23,7 +23,7 @@ namespace SampleHubApi.Controllers
     /// <summary>
     /// Sample hub data controller class
     /// </summary>
-    [Authorize, Route("Sample Hub"), EnableCors("AllowAll"), ApiController]
+    [Authorize, Route("samplehub"), EnableCors("AllowAll"), ApiController]
     public class SampleHubDataController : AuthorizedApiControllerBase
     {
         /// <summary>

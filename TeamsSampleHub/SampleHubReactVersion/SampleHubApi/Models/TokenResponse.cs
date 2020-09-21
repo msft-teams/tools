@@ -12,6 +12,6 @@ namespace SampleHubApi.Models
         /// <summary>
         /// Gets or sets Access token
         /// </summary>
-        public string AccessToken { get; set; }
+        public string Access_token { get; set; }
     }
 }

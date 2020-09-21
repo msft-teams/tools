@@ -61,7 +61,7 @@ class TeamMember extends React.Component<IProps, IState> {
     TeamMemberValue = await GetTeamMemberDetails().catch((err: any) => {
       console.log(err);
     });
-    if (TeamMemberValue !== null && TeamMemberValue.length !== 0) {
+    if (TeamMemberValue !== null && TeamMemberValue?.length !== 0) {
       TeamMember = TeamMemberValue;
     }
     let teamsConfigfromApi = await GetTeamsConfig().catch((err: any) => {
@@ -98,7 +98,7 @@ class TeamMember extends React.Component<IProps, IState> {
     return (
       <Fragment>
         <div className="new-team">${NewTeamMembers_Title}</div>
-        {TeamMember.length > 0 ? (
+        {TeamMember?.length > 0 ? (
           <div className="profile-card">
             <div className="card3">
               <img
@@ -129,7 +129,7 @@ class TeamMember extends React.Component<IProps, IState> {
         ) : (
           ""
         )}
-        {TeamMember.length > 1 ? (
+        {TeamMember?.length > 1 ? (
           <div className="profile-card">
             <div className="card3">
               <img

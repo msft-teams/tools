@@ -1,16 +1,17 @@
 import axios from "axios";
 import { getIdToken, getAccessToken } from "../services/authService";
-import { Task_Link1 } from "../links";
-const apiurl = "https://localhost:44368/api/CommunityData/";
+import { TeamsConfig,Task_Link1, NewsData,TeamMemberDetails,AnnouncementAdaptiveCardDetails} from "../links";
 
 export const GetAnnouncementAdaptiveCardDetails = async () => {
-  const config = {
-    headers: { Authorization: `Bearer ${getIdToken()}` },
-  };
-
+  
   let data: Array<any> = [];
   await axios
-    .get(`${apiurl}AnnouncementAdaptiveCardDetails`, config)
+      .get(`${AnnouncementAdaptiveCardDetails}`, {
+      headers: {
+        "Content-Type": "application/text",
+        Authorization: "Bearer " + getIdToken(),
+      },
+    })    
     .then((res) => {
       if (res.status === 200) {
         data = res.data.value;
@@ -22,11 +23,14 @@ export const GetAnnouncementAdaptiveCardDetails = async () => {
 };
 
 export const GetTeamsConfig = async () => {
-  const config = {
-    headers: { Authorization: `Bearer ${getIdToken()}` },
-  };
   let data: any;
-  await axios.get(`${apiurl}GetTeamsConfig`, config).then((res) => {
+  await await axios
+  .get(`${TeamsConfig}`, {
+  headers: {
+    "Content-Type": "application/text",
+    Authorization: "Bearer " + getIdToken(),
+  },
+}).then((res) => {
     if (res.status === 200) {
       data = res.data;
     }
@@ -53,30 +57,30 @@ export const GraphHomeapi = async () => {
 };
 export const GetNewsData = async () => {
   let data: Array<any> = [];
-  const config = {
-    headers: { Authorization: `Bearer ${getIdToken()}` },
-  };
-  await axios.get(`${apiurl}NewsData`, config).then((res: { data: any }) => {
-    if (res.data.status === 200) {
+  await await axios
+  .get(`${NewsData}`, {
+  headers: {
+    "Content-Type": "application/text",
+    Authorization: "Bearer " + getIdToken(),
+  },
+}).then((res: { data: any }) => {
       data = res.data.value;
-    } else {
-      data = [];
-    }
   });
   return data;
 };
 
 export const GetTeamMemberDetails = async () => {
   let data: any;
-  const config = {
-    headers: { Authorization: `Bearer ${getIdToken()}` },
-  };
-  await axios
-    .get(`${apiurl}TeamMemberDetails`, config)
+  
+  await await axios
+  .get(`${TeamMemberDetails}`, {
+  headers: {
+    "Content-Type": "application/text",
+    Authorization: "Bearer " + getIdToken(),
+  },
+})
     .then((res: { data: any }) => {
-      if (res.data.status === 200) {
-        data = res.data;
-      }
+        data = res.data
     });
   return data;
 };

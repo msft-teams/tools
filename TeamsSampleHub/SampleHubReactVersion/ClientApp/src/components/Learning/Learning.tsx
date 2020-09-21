@@ -59,7 +59,7 @@ class Learning extends React.Component<IProps, IState> {
         {data?.configuredData?.learningVideoUrl && (
           <div className="section4">
             <MeetingVideo
-              viedoUrl={data.configuredData.learningVideoUrl}
+              videoUrl={data.configuredData.learningVideoUrl}
               title={"CEO Company Meeting"}
             />
           </div>
