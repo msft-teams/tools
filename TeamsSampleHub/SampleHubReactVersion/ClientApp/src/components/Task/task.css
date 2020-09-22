@@ -1,0 +1,145 @@
+.custom-radio {
+  margin-left: 1rem;
+}
+
+.cs-radio1 {
+  margin-top: 0.625rem;
+  display: inline-flex;
+}
+
+.time2 {
+  margin-top: 0.625rem;
+}
+
+.lb {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #2e3333;
+}
+
+.lb-flow {
+  position: absolute;
+  max-width: 12.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-head {
+  margin-left: 16px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #f6f6f6;
+  display: inline-flex;
+}
+
+.percen-head {
+  margin-left: 16px;
+  font-weight: bold;
+  font-size: 1.063rem;
+  color: #f6f6f6;
+  display: inline-block;
+}
+
+.cd2-time {
+  font-size: 0.625rem;
+  float: right;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  color: #6f7372;
+  line-height: 2;
+}
+.cd2-time::before {
+  content: "\E449";
+  font-family: "Teams Assets";
+  font-size: 0.8rem;
+  color: #72a1c8;
+  float: right;
+  line-height: 1.6;
+}
+
+.cs-radio {
+  margin-top: 0.5rem;
+  display: inline-flex;
+}
+
+.task-header {
+  margin-top: 0.5rem;
+}
+
+.see-more2 {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #a2a5a5;
+  margin: 4px 16px 0 0;
+  float: right;
+}
+
+.see-more2::before {
+  content: "\E449";
+  font-family: "Teams Assets";
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #a2a5a5;
+  float: right;
+}
+
+.custom-control-label::before {
+  position: absolute;
+  top: 0.5rem;
+  left: -1rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #adb5bd solid 0.063rem;
+}
+
+.custom-radio .custom-control-label::before {
+  border-radius: 15%;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.custom-control-input:disabled ~ .lb1::before,
+.custom-control-input[disabled] ~ .lb1::before {
+  background-color: #72a1c8;
+  border: #72a1c8;
+}
+
+.custom-control-input:disabled ~ .lb2::before,
+.custom-control-input[disabled] ~ .lb2::before {
+  background-color: #72a1c8;
+  border: #72a1c8;
+}
+
+.custom-control-input:disabled ~ .lb3::before,
+.custom-control-input[disabled] ~ .lb3::before {
+  background-color: #72a1c8;
+  border: #72a1c8;
+}
+
+@media screen and (max-width: 20rem) {
+  .lb-flow {
+    max-width: 9.375rem;
+  }
+
+  .banner-logo {
+    height: 7.25rem;
+  }
+
+  .fed-msg-head {
+    font-size: 0.938rem;
+  }
+
+  .car-head {
+    height: auto;
+  }
+
+  .car-desc {
+    width: auto;
+  }
+}

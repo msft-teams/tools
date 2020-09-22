@@ -1,0 +1,25 @@
+.head-blk {
+  background: #47637b;
+  height: 2.5rem;
+  border-bottom: 0.063rem solid #496b88;
+}
+.headings {
+  position: absolute;
+  margin: 0.5rem 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+.chev {
+  margin: 0.5rem 0.75rem;
+  float: right;
+}
+.chev::before {
+  content: "\E449";
+  font-family: "Teams Assets";
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #ffffff;
+  float: right;
+}
