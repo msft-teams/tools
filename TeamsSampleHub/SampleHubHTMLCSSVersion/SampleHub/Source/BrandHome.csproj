@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ApplicationInsightsResourceId></ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>update your appinsight id</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
