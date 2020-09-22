@@ -1,0 +1,40 @@
+.video-head {
+  margin: 0 1.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  font-size: 1.063rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+}
+
+.video {
+  height: 25rem;
+  margin: 1rem 1.5rem;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    #72a1c8;
+  border-radius: 0.5rem;
+}
+
+.vd-stream {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .team-img {
+    height: 12.5rem;
+  }
+
+  .section4 {
+    height: 16.625rem;
+  }
+
+  .video {
+    height: 11.5rem;
+  }
+}

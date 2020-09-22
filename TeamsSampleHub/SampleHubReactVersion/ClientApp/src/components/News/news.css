@@ -1,0 +1,116 @@
+.news-head {
+  position: absolute;
+  margin: 0 1rem 0 1rem;
+  font-weight: bold;
+  font-size: 1.063rem;
+  color: #f6f6f6;
+}
+.carousel3 {
+  margin: 1rem;
+}
+
+.car-card {
+  background: #ffffff;
+  border: 0.063rem solid #e5e5e5;
+  box-sizing: border-box;
+  box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  position: absolute;
+  margin-top: 4%;
+}
+
+.car-head {
+  height: auto;
+  margin: 1rem 1rem 0 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #393f3e;
+}
+
+.car-date {
+  margin: 0 1rem 1rem 1rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #393f3e;
+  opacity: 0.6;
+}
+
+.car-desc {
+  width: auto;
+  height: 50px;
+  margin: 1.063rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #393f3e;
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+  overflow: auto;
+}
+
+.carousel-indicators {
+  position: relative;
+  padding: 0;
+  top: 38.5rem;
+  width: 70%;
+}
+
+.carousel-indicators li {
+  width: 0.438rem;
+  height: 0.438rem;
+  background: #c4c4c4;
+  border-radius: 50%;
+  border: none;
+}
+
+.w-100 {
+  height: 25rem;
+  object-fit: scale-down;
+}
+
+.see-more3 {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #a2a5a5;
+  margin: 4px 16px 0 0;
+  float: right;
+}
+
+.see-more3::before {
+  content: "\E449";
+  font-family: "Teams Assets";
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #a2a5a5;
+  float: right;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .car-card {
+    margin-top: 11%;
+  }
+
+  .w-100 {
+    height: 11.313rem;
+    object-fit: cover;
+  }
+
+  .carousel-indicators {
+    top: 28.75rem;
+  }
+
+  .car-desc {
+    height: 6.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .carousel-indicators {
+    top: 29.5rem;
+  }
+}

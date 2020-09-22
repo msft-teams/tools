@@ -1,0 +1,68 @@
+.sub-heading {
+  margin-left: 1rem;
+
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #f6f6f6;
+}
+.date {
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 0.75rem;
+
+  font-weight: bold;
+  font-size: 1.188rem;
+  line-height: 1.5rem;
+  text-align: right;
+  color: #393f3e;
+}
+
+.day {
+  position: absolute;
+  width: 1.5rem;
+  margin-left: 1rem;
+  margin-top: 2.313rem;
+
+  font-weight: normal;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  text-align: center;
+  color: #393f3e;
+}
+
+.time {
+  position: absolute;
+  width: auto;
+  height: 1.125rem;
+  margin-left: 4.063rem;
+  margin-top: 0.813rem;
+
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #2e3333;
+}
+
+.line {
+  position: absolute;
+  width: 0.188rem;
+  height: 2.938rem;
+  margin-left: 3.188rem;
+  margin-top: 0.5rem;
+  border-radius: 0.125rem;
+  background: cadetblue;
+}
+.msg {
+  position: absolute;
+  width: auto;
+  height: 1.125rem;
+  margin-left: 4.063rem;
+  margin-top: 2.188rem;
+
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6f7372;
+  mix-blend-mode: normal;
+}

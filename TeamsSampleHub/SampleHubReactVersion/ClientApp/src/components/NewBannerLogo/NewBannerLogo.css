@@ -1,0 +1,72 @@
+.design-logo {
+  position: absolute;
+  height: 3rem;
+  width: auto;
+  margin-left: 1.063rem;
+  margin-top: 11.125rem;
+  -webkit-animation: rotation 20s infinite linear;
+  animation: rotation 20s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.design-logo-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 4.375rem;
+  margin-top: 10.625rem;
+  position: absolute;
+  animation: linear;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 26.563rem) {
+  .design-logo-title {
+    margin-top: 4.25rem;
+    width: calc(100% - 100px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .design-logo {
+    margin-top: 4.625rem;
+  }
+}

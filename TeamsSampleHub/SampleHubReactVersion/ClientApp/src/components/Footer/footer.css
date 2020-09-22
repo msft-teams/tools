@@ -1,0 +1,63 @@
+.bt-brand {
+  height: 14.375rem;
+}
+
+.footer-text {
+  position: absolute;
+  width: 30rem;
+  height: 4rem;
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+  margin: 5rem;
+}
+
+.brand-img {
+  width: 20rem;
+  float: right;
+  height: auto;
+  margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .footer-text {
+    position: absolute;
+    width: 9rem;
+    height: auto;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 2rem 3rem;
+  }
+
+  .bt-brand {
+    height: 8rem;
+  }
+
+  .brand-img {
+    width: 11.1rem;
+    float: right;
+    height: auto;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 23.438rem) {
+  .footer-text {
+    margin: 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .footer-text {
+    margin: 1rem 1rem 0rem 1rem;
+  }
+
+  .bt-brand {
+    height: 5.9rem;
+  }
+
+  .brand-img {
+    width: 8.1rem;
+  }
+}

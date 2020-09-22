@@ -1,0 +1,47 @@
+.announcement {
+  height: 52.813rem;
+  margin: 16px;
+}
+
+.ac-container.ac-adaptiveCard {
+  background-color: white;
+  margin: 2.5rem 0 !important;
+  position: absolute;
+}
+
+.an-head {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.063rem;
+  color: #f6f6f6;
+}
+
+.an-img {
+  height: 19.375rem;
+  display: block;
+}
+
+.ann-img {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .announcement {
+    height: 28rem;
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 23.438rem) {
+  .announcement {
+    height: 27rem;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .announcement {
+    height: 25rem;
+  }
+}

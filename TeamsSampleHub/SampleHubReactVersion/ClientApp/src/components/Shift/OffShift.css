@@ -1,0 +1,47 @@
+.offshift-container {
+  background-color: #72a1c8 !important;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.offshift-heading {
+  display: flex;
+  padding-top: 4rem;
+  color: white;
+}
+
+.offshift-logo {
+  height: 5rem;
+  width: 5rem;
+}
+.offshift-red-dot {
+  height: 25px;
+  width: 25px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  flex-basis: 30%;
+  background: radial-gradient(
+      67.64% 67.64% at 33.16% 22.34%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0.69%, rgba(0, 0, 0, 0.26) 103.5%),
+    #d93b3b;
+  border: 1.52649px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 3.05299px 6.10598px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.offshift-sub-heading {
+  padding-top: 1rem;
+  color: white;
+}
+
+@media screen and (max-width: 26.563rem) {
+}

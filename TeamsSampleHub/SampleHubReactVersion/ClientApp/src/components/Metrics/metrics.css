@@ -1,0 +1,140 @@
+.ht {
+  height: 1.25rem;
+}
+
+.box-tables {
+  width: 100%;
+}
+
+.head-rw {
+  display: block;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.data-num {
+  position: relative;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #d93b3b;
+}
+
+.last-time {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #393f3e;
+  opacity: 0.6;
+  margin-left: 1rem;
+}
+.centage-block {
+  margin: 1rem;
+  height: auto;
+  background: #f6f6f6;
+  border: 0.063rem solid #e5e5e5;
+  box-sizing: border-box;
+  box-shadow: 0rem 0.063rem 0.125rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.custom-row {
+  margin: 0 !important;
+}
+
+.rounded {
+  position: relative;
+  margin: 1% 2%;
+}
+
+.vertical .progress-bar {
+  display: inline-flex;
+  width: 5.375rem;
+  height: 4.188rem;
+  position: relative;
+  margin: 0 4%;
+  margin-bottom: 4%;
+  border-radius: 0.5rem;
+}
+
+.progress-bar {
+  background-color: white;
+}
+
+.vertical .progress-track {
+  position: relative;
+  width: 5.375rem;
+  height: 4.188rem;
+  background: #efb9b8;
+  background: white;
+}
+
+.vertical .progress-fill {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.313rem;
+  text-align: center;
+  color: #393f3e;
+}
+
+.rounded .progress-track,
+.rounded .progress-fill {
+  box-shadow: inset 0 0 0.313rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.188rem;
+}
+
+.pro-card {
+  margin-top: 1rem;
+  margin-bottom: 0.313rem;
+  text-align: center;
+  flex: 1;
+}
+
+.bg-red {
+  background: #efb9b8;
+}
+
+.bg-gray {
+  background: #c7d9e8;
+}
+
+.percentage-head {
+  display: block;
+}
+
+.see-more2 {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #a2a5a5;
+  margin: 4px 16px 0 0;
+  float: right;
+}
+
+.see-more2::before {
+  content: "\E449";
+  font-family: "Teams Assets";
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #a2a5a5;
+  float: right;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .centage-block {
+    height: 9.125rem;
+  }
+
+  .bt-brand {
+    height: 8rem;
+  }
+
+  .brand-img {
+    width: 10.8rem;
+    float: right;
+    height: auto;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 23.438rem) {
+  .vertical .progress-bar {
+    margin: 3%;
+  }
+}

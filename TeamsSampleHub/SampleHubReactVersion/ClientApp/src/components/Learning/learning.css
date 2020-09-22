@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Teams Assets";
+  src: url("../../assets/fonts/TeamsAssets-Light.woff") format("woff"),
+    url("../../assets/fonts/TeamsAssets-Light.woff2") format("woff2");
+  font-style: normal;
+}
+
+.banner-logo {
+  height: 15.625rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60.65%, #000000 125%),
+    url("../../assets/images/logo-bg-img.svg") no-repeat center;
+  background-size: cover;
+}
+
+.quote-img {
+  position: absolute;
+}
+
+.quote-desc {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #2e3333;
+  width: auto;
+  height: 8.75rem;
+  position: absolute;
+  margin: 0rem 1rem 0rem 3.2rem;
+}
+
+.quote-block {
+  width: 100%;
+  background-color: #ffffff;
+  height: 8rem;
+  padding: 1rem 1.5rem 0 1.688rem;
+}
+
+.team-img {
+  width: 100%;
+  height: 25rem;
+}
+
+.head-blk {
+  background: #47637b;
+  height: 2.5rem;
+  border-bottom: 0.063rem solid #496b88;
+}
+
+.section4 {
+  width: 100%;
+  height: 29.375rem;
+  background: #2e3333;
+}
+
+@media screen and (max-width: 26.563rem) {
+  .banner-logo {
+    height: 8rem;
+  }
+
+  .quote-block {
+    height: 11rem;
+  }
+
+  .team-img {
+    height: auto;
+  }
+}

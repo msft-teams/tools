@@ -1,0 +1,60 @@
+.new-team {
+  position: absolute;
+  margin: 0 1rem 1rem 1rem;
+  height: 1.25rem;
+  font-weight: bold;
+  font-size: 1.063rem;
+  line-height: 1.25rem;
+  color: #f6f6f6;
+}
+
+.profile-card:nth-child(1) {
+  margin-right: 0rem;
+}
+
+.profile-card {
+  margin: 2.188rem 1rem 0 1rem;
+  text-align: center;
+  flex: 1;
+}
+
+.card-img-top {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.cb {
+  padding: 0.25rem !important;
+}
+
+.ct {
+  font-size: 0.875rem;
+  color: #2e3333;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.designation {
+  font-size: 0.75rem;
+  color: #6f7372;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hi {
+  background: #f4c86b;
+  border-radius: 1rem;
+  width: 6rem;
+  height: 2rem;
+  line-height: 1;
+  color: white;
+  margin: 3% 6% 6% 6%;
+}
