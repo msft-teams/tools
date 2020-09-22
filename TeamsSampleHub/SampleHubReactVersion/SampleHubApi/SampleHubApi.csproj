@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-		<ApplicationInsightsResourceId>/subscriptions/{subscriptionId}/resourcegroups/{resourcegroupname}/providers/microsoft.insights/components/ConflwTratorUser</ApplicationInsightsResourceId>
+		<ApplicationInsightsResourceId>update your appinsight id</ApplicationInsightsResourceId>
 	</PropertyGroup>
 
 	<ItemGroup>
