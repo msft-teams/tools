@@ -103,7 +103,7 @@ Prerequisites
 
 5.  Install your desired custom apps.
 
-![note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/Source/wwwroot/images/readmeimages/6.PNG)
+![note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHubHTMLCSSVersion/SampleHub/Source/wwwroot/images/readmeimages/6.PNG)
 
 Authentication and Single Sign on (SSO)
 ---------------------------------------
@@ -256,7 +256,7 @@ app package with their icons. You\'ll need an app package to upload and
 install your app in Teams, and to publish to either your Line of
 Business app catalog or to AppSource.
 
-![Note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHub/SampleHubHTMLCSSVersion/Source/wwwroot/images/readmeimages/7.PNG)
+![Note](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/SampleHubHTMLCSSVersion/SampleHub/Source/wwwroot/images/readmeimages/7.PNG)
 
 ### Install the Sample Hub Teams app manifest into Teams
 
