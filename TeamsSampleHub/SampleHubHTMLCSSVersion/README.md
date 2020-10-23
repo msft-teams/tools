@@ -219,7 +219,7 @@ Deployment
     * Select **web**.
     * Enter the **redirect URI** for the app in the following format: https://%appDomain%.azurewebsites.net/End. This will be the page where a successful implicit grant flow will redirect the user.
      
-        * Note: Redirect URI can be set post deployment also, if the appDomain is not available.`
+        * Note: Redirect URI can be set post deployment also, if the appDomain is not available.
          
     Enable implicit grant by checking the following boxes:  
     ✔ ID Token  
