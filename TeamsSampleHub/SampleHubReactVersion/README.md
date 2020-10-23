@@ -175,7 +175,7 @@ Deployment
     * Choose **Register**.
 3. On the overview page, copy and save the **Application (client) ID, Directory (tenant) ID**. You’ll need those later when updating your Teams application manifest and in the appsettings.json.
 4. Under **Manage**, select **Expose an API**. 
-5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}`
+5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name/{AppID}`
     * ex: `api://%appDomain%.azurewebsites.net/00000000-0000-0000-0000-000000000000`.
 
         * `Note, Application ID URI can be set post deployment also, if the appDomain is not available yet.`

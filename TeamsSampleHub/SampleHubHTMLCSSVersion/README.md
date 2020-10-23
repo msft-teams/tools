@@ -175,7 +175,7 @@ Deployment
     * Choose **Register**.
 3. On the overview page, copy and save the **Application (client) ID, Directory (tenant) ID**. You’ll need those later when updating your Teams application manifest and in the appsettings.json.
 4. Under **Manage**, select **Expose an API**. 
-5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}`
+5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name/{AppID}`
     * ex: `api://%appDomain%.azurewebsites.net/00000000-0000-0000-0000-000000000000`.
 
         * `Note, Application ID URI can be set post deployment also, if the appDomain is not available yet.
@@ -192,7 +192,7 @@ Deployment
     * The domain part of the **Scope name** displayed just below the text field should automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end:
         * `api://%appDomain%.azurewebsites.net/00000000-0000-0000-0000-000000000000/access_as_user.
 
-            * `Note, Redirect URI can be set post deployment also, if the appDomain is not available yet
+            * `Note, Application ID URI can be set post deployment also, if the appDomain is not available yet
 
 11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Each of the following IDs needs to be entered:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
