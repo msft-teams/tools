@@ -45,7 +45,8 @@ You must have rights to upload applications and configure app policies in your M
 
 ### Next Steps
 1.  Upload the app package - Follow the instructions to [upload an app package into Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload)
-1. Assign a Policy - Follow the instructions for [configuring a policy](https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies) to display this app. This app can be pinned to the left rail in Microsoft Teams for the general policy and all users will have access.  Alternatively you an create policies that pin this app based on their Teams onboarding group etc.  
+2. Assign a Policy - Follow the instructions for [configuring a policy](https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies) to display this app. This app can be pinned to the left rail in Microsoft Teams for the general policy and all users will have access.  Alternatively you an create policies that pin this app based on their Teams onboarding group etc.  
+NOTE:  At this time automatically pinned apps do not appear for Guest users in your tenant.  
 
 
 ## Version
