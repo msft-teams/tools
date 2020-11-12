@@ -7,7 +7,7 @@
     "developer": {
         "name": "Teams Customer Advocacy Group",
         "websiteUrl": "https://aka.ms/MicrosoftAdoption",
-        "privacyUrl": "https://microsoft.com/privacy",
+        "privacyUrl": "https://aka.ms/privacy",
         "termsOfUseUrl": "https://aka.ms/m365lpdocs"
     },
     "icons": {
@@ -28,7 +28,7 @@
             "entityId": "201911011330",
             "name": "Training Portal",
             "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>",
-            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/M365LPV3",
+            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/<LEARNING PATHWAYS SITE>",
             "scopes": [
                 "personal"
             ]
@@ -37,7 +37,7 @@
             "entityId": "201911011335",
             "name": "Teams Training",
             "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-Microsoft-Teams.aspx",
-            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-Microsoft-Teams.aspx",
             "scopes": [
                 "personal"
             ]
@@ -46,7 +46,7 @@
             "entityId": "201911011340",
             "name": "OneDrive Basics",
             "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-OneDrive.aspx",
-            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/M365LPV3/SitePages/Get-started-with-OneDrive.aspx",
+            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-OneDrive.aspx",
             "scopes": [
                 "personal"
             ]
