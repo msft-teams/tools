@@ -8,7 +8,8 @@
         "name": "Teams Customer Advocacy Group",
         "websiteUrl": "https://aka.ms/MicrosoftAdoption",
         "privacyUrl": "https://microsoft.com/privacy",
-        "termsOfUseUrl": "https://aka.ms/m365lpdocs"
+        "termsOfUseUrl": "https://aka.ms/m365lpdocs",
+        "mpnId": "CA01101011"
     },
     "icons": {
         "color": "color.png",
