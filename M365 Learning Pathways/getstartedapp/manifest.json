@@ -9,6 +9,7 @@
         "websiteUrl": "https://aka.ms/MicrosoftAdoption",
         "privacyUrl": "https://aka.ms/privacy",
         "termsOfUseUrl": "https://aka.ms/m365lpdocs"
+        "mpnId": "CA01101011"
     },
     "icons": {
         "color": "color.png",
