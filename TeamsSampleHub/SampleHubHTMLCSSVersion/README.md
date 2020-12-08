@@ -326,3 +326,8 @@ information see the [Code of Conduct
 FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact <opencode@microsoft.com> with any additional questions or
 comments.
+
+
+# Disclaimer
+
+THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
