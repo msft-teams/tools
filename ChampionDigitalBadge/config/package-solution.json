@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "digital-badge-client-side-solution",
+    "id": "765b2a65-b0b3-47b6-8ce9-f025244abcd2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [    
+      {    
+         "resource": "Microsoft Graph",    
+         "scope": "User.ReadWrite"    
+      },
+      {    
+        "resource": "Microsoft Graph",    
+        "scope": "Sites.ReadWrite.All"    
+     },   
+     {    
+      "resource": "Microsoft Graph",    
+      "scope": "Sites.Manage.All"    
+   }     
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/digital-badge.sppkg"
+  }
+}
