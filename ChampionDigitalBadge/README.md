@@ -1,17 +1,5 @@
 # Digital Badge App
 
-## Contents
-* [Introduction](#Introduction)
-* [How it works](#How )
-* [Prerequisites](#Prerequisites)
-* [Install Digital Badge SPFx Package](#Install)
-* [Customize configuration](#Customize)
-* [Deploy your package to SharePoint](#Deploy)
-* [Add Digital Badge tab in Teams](#Add)
-* [Add Champions](#Add)
-* [Legal](#Legal)
-
-
 
 ## Introduction / Overview
 
