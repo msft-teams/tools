@@ -20,13 +20,23 @@ The user will be sent a request to accept the badge and update their profile ima
 
 3. The app installation process will create a SharePoint list, Champions List, to store all users, who are eligible for a digital badge. A local admin is responsible for maintaining this SharePoint list with records of users. All the users from this SharePoint list are eligible for a ‘Digital Badge’. This is a cloud only Office 365 solution and is not supported on premises.
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/1.png" alt="Digital Badge Screen" style="width: 100%;">
+
 4. After user clicks “Accept”, the app will display a composite image that will look like:
+
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/2.png" alt="Digital Badge Screen" style="width: 100%;">
 
 5. A successful message will look like:
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/3.png" alt="Digital Badge Screen" style="width: 100%;">
+
 6. If a user is not in the SharePoint list, they are notified that they still need to earn their Digital Badge.
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/4.png" alt="Digital Badge Screen" style="width: 100%;">
+
 ## Architecture Overview/ User workflow:
+
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/5.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ### Prerequisites
 
@@ -47,6 +57,7 @@ To begin with, you will need to ensure access to following:
 If desired, Admin can configure to a customized site name OR list name OR Column name in "src/webparts/digitalBadge/config/siteconfig.json". For customization, follow the below steps:
 1. #### Update Config:
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/6.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ```
 · sitename (SharePoint site name)
@@ -72,17 +83,29 @@ When you change the above values in the JSON file, customized SharePoint list is
 
 ### Deploy to your Package to SharePoint
 
-  1. Open your SharePoint with admin account and click on the top left corner dots icon
+  1. Open your SharePoint with admin account and click on the top left corner dots icon.
+  
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/7.png" alt="Digital Badge Screen" style="width: 100%;">
+  
+  2. Select Admin from the below image
+  
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/8.png" alt="Digital Badge Screen" style="width: 100%;">
+  
+  3. Select SharePoint from below image
+  
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/9.png" alt="Digital Badge Screen" style="width: 100%;">
+  
+  4. You will be navigated to the SharePoint admin center as below
+  
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/10.png" alt="Digital Badge Screen" style="width: 100%;">
 
-    Select Admin from the below image
+  5. Click on More features there on the right you can find Apps click on Open there.
+  
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/11.png" alt="Digital Badge Screen" style="width: 100%;">
 
-  2. Select SharePoint from below image
-
-3. You will be navigated to the SharePoint admin center as below
-
-4. Click on More features there on the right you can find Apps click on Open there
-
-5. Select app catalog from below image
+  6. Select app catalog from below image
+  
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
 
 *If you do not find app catalog, go through below docs to create an app catalog Distribute business apps using the App Catalog - SharePoint - SharePoint in Microsoft 365 | Microsoft Docs
 
