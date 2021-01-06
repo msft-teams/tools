@@ -1,19 +1,24 @@
-Digital Badge App
+# Digital Badge App
+
+## Contents
+* [Introduction](#Introduction)
+* [How it works](#How )
+* [Architecture Overview](#Architecture)
+* [Prerequisites](#Prerequisites)
 
 
-Introduction / Overview
+## Introduction / Overview
 
 Digital badge solution is intended to allow Teams Champions to apply a “Champion” badge overlay quickly and easily to their existing profile image and have it populated across Office 365.
 
 The user will be sent a request to accept the badge and update their profile image with digital badge after successful authentication.
 
-How it works
+## How it works
 
-1. The current version of the Digital badge operates as a Teams app installed locally in your tenant by your tenant administrator. Once installed it can be accessed via ‘+Add a tab’ at the top of the channel. Channel >Add a tab >Digital Badge. 2. Users will need to consent and click “Accept” to allow the application to modify their profile image across all O365 applications.
+1. The current version of the Digital badge operates as a Teams app installed locally in your tenant by your tenant administrator. Once installed it can be accessed via ‘+Add a tab’ option at the top of the channel. Channel >Add a tab >Digital Badge. 
+2. Users will need to consent and click “Accept” to allow the application to modify their profile image across all O365 applications.
 
-3. The app installation process will create a SharePoint list, Champions List, to store all users, who are eligible for a digital badge. A local admin is responsible for maintaining this SharePoint list with records of users. All the
-
-users from this SharePoint list are eligible for a ‘Digital Badge’. This is a cloud only Office 365 solution and is not supported on premises.
+3. The app installation process will create a SharePoint list, Champions List, to store all users, who are eligible for a digital badge. A local admin is responsible for maintaining this SharePoint list with records of users. All the users from this SharePoint list are eligible for a ‘Digital Badge’. This is a cloud only Office 365 solution and is not supported on premises.
 
 4. After user clicks “Accept”, the app will display a composite image that will look like:
 
@@ -21,53 +26,57 @@ users from this SharePoint list are eligible for a ‘Digital Badge’. This is 
 
 6. If a user is not in the SharePoint list, they are notified that they still need to earn their Digital Badge.
 
-Architecture Overview/ User workflow:
+## Architecture Overview/ User workflow:
 
-Prerequisites
+### Prerequisites
 
 To begin with, you will need to ensure access to following:
 
-o SharePoint Admin Tenant o Digital Badge URL from Git Hub
+*  SharePoint Admin Tenant 
+*  Digital Badge URL from Git Hub
 
-Install Digital Badge SPFx package 1. Download Code / clone from GitHub.
+### Install Digital Badge SPFx package 
+1. Download Code / clone from GitHub.
 
 2. If using Existing configuration:
 
-a. Navigate to folder solution where you cloned and check for “digital-badge.sppkg” package.
+   a. Navigate to folder solution where you cloned and check for “digital-badge.sppkg” package.
 
-Customize configuration
+### Customize configuration
 
-1. Update Config :
+If desired, Admin can configure to a customized site name OR list name OR Column name in "src/webparts/digitalBadge/config/siteconfig.json". For customization, follow the below steps:
+1. #### Update Config:
 
-If desired Admin can configure to a customized site name OR list name OR Column name in config/siteconfig.json. For customization, follow the below steps:
 
+```
 · sitename (SharePoint site name)
 
 · list (SharePoint list for maintaining Champions)
 
 · CName (Share Point list Column Name for Champions)
-
+```
 When you change the above values in the JSON file, customized SharePoint list is created.
 
-2. SharePoint Package creation: The pkg will help us to run the application in the SharePoint as well as in Microsoft Teams. Run the below commands :
-
-· gulp serve (Note: After successful, please stop and execute remaining commands)
+2. #### SharePoint Package creation: The pkg will help us to run the application in the SharePoint as well as in Microsoft Teams. Run the below commands :
+```
+· gulp serve 
 
 · gulp build
 
 · gulp bundle --ship
 
 · gulp package-solution –ship
+```
 
 · Navigate to folder solution, check for “digital-badge.sppkg” package.
 
-Deploy to your Package to SharePoint
+### Deploy to your Package to SharePoint
 
-1. Open your SharePoint with admin account and click on the top left corner dots icon
+  1. Open your SharePoint with admin account and click on the top left corner dots icon
 
-Select Admin from the below image
+    Select Admin from the below image
 
-2. Select SharePoint from below image
+  2. Select SharePoint from below image
 
 3. You will be navigated to the SharePoint admin center as below
 
