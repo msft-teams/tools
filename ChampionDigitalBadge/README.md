@@ -9,7 +9,7 @@
 * [Customize configuration](#Customize)
 * [Deploy your package to SharePoint](#Deploy)
 * [Add Digital Badge tab in Teams](#Add)
-* [Add Champions](#Add Champions)
+* [Add Champions](#Add)
 * [Legal](#Legal)
 
 
