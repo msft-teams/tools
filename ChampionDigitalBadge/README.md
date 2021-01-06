@@ -3,7 +3,6 @@
 ## Contents
 * [Introduction](#Introduction)
 * [How it works](#How )
-* [Architecture Overview](#Architecture)
 * [Prerequisites](#Prerequisites)
 * [Install Digital Badge SPFx Package](#Install)
 * [Customize configuration](#Customize)
@@ -41,9 +40,6 @@ The user will be sent a request to accept the badge and update their profile ima
 
 <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/4.png" alt="Digital Badge Screen" style="width: 100%;">
 
-## Architecture Overview/ User workflow:
-
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/5.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ### Prerequisites
 
@@ -210,5 +206,5 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 
 instructions provided by the bot. You will only need to do this once across all repos using our CLA. This project has adopted the Microsoft Open Source Code of Conduct. For more information see the Code of Conduct FAQ or contact opencode@microsoft.com with any additional questions or comments.
 
-Disclaimer
+### Disclaimer
 THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
