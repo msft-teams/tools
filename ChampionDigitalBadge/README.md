@@ -59,7 +59,9 @@ If desired, Admin can configure to a customized site name OR list name OR Column
 ```
 When you change the above values in the JSON file, customized SharePoint list is created.
 
-2. #### SharePoint Package creation: The pkg will help us to run the application in the SharePoint as well as in Microsoft Teams. Run the below commands :
+2. #### SharePoint Package creation:
+  The pkg will help us to run the application in the SharePoint as well as in Microsoft Teams. Run the below commands :
+
 ```
 · gulp serve 
 
