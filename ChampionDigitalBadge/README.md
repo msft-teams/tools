@@ -107,25 +107,30 @@ When you change the above values in the JSON file, customized SharePoint list is
   
   <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
 
-*If you do not find app catalog, go through below docs to create an app catalog Distribute business apps using the App Catalog - SharePoint - SharePoint in Microsoft 365 | Microsoft Docs
+*If you do not find app catalog, go through below docs to create an app catalog Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sharepoint/use-app-catalog'>App Catalog - SharePoint - SharePoint in Microsoft 365 | Microsoft Docs</a>
 
 6. Click on distribute apps for share point after clicking on App Catalog
+  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/13.png" alt="Digital Badge Screen" style="width: 100%;">
 7. Click on New after navigating to app’s page
 
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/14.png" alt="Digital Badge Screen" style="width: 100%;">
 8. Click on choose file and select the package you have downloaded and click on OK
-
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/15.png" alt="Digital Badge Screen" style="width: 100%;">
 9. A pop up with confirmation is displayed. click on deploy
-
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/16.png" alt="Digital Badge Screen" style="width: 100%;">
 10. Navigate to SharePoint admin center and under advanced options select API Access there you will find unapproved requests.
-
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/17.png" alt="Digital Badge Screen" style="width: 100%;">
 11. Select the pending request and Approve it. (If there are more than one pending request, Approve all the requests)
-
 12. After Approving all pending requests, navigate again to your app’s page and select the app you uploaded. Click on “Files “tab on the top and click on sync to teams.
 
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/18.png" alt="Digital Badge Screen" style="width: 100%;">
 Add Digital Badge tab in Teams
 
 13. Navigate to Microsoft teams and Select the team for which you want to install digital badge and click on +Add a tab icon and search for Digital Badge in the app list and add that as a tab. *For complete reference how to add Teams tab
 
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/19.jpg" alt="Digital Badge Screen" style="width: 100%;">
+ 
+ 
 Select + Add a tab on the tab bar.
 
 Select the tab, Digital Badge
@@ -148,6 +153,8 @@ Add Champions
 
 · * If you have customized the List name, Find your customized List.
 
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/20.jpg" alt="Digital Badge Screen" style="width: 100%;">
+
 2. Add Champions to the list:
 
 · You can add individual Champions here.
@@ -162,8 +169,10 @@ Add Champions
 
 · Select “Share”
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/21.jpg" alt="Digital Badge Screen" style="width: 100%;">
 · Search for the Group or user you want to share Digital Badge with.
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/22.jpg" alt="Digital Badge Screen" style="width: 100%;">
 · Share site with User/ Group with Read Permissions
 
 Legal This app template is provided under the MIT License terms. In addition to these terms, by using this app template you agree to the following:
