@@ -1,5 +1,6 @@
 # Digital Badge App
 
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/digitalbadge.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ## Introduction / Overview
 
