@@ -173,9 +173,7 @@ Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sha
 3. Grant ***READ permissions*** to User/ Group:
 
   · Select “Share”
-  
- <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/23.jpg" style="width: 100%;">
-  
+   
  · Search for the Group or user you want to share Digital Badge with
  
 <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/21.jpg" alt="Digital Badge Screen" style="width: 100%;">
