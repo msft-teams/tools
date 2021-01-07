@@ -159,13 +159,13 @@ Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sha
 
 2. Add ***Champions*** to the list:
 
-        · You can add individual Champions here.
+      · You can add individual Champions here.
 
-        · By default, Tenant Admin is added to the list.
+      · By default, Tenant Admin is added to the list.
 
-        · *You must give ***Read permissions*** to all the users in the group. For a user to load Digital Badge, ***READ permissions are a MUST.***
+      · *You must give ***Read permissions*** to all the users in the group. For a user to load Digital Badge, ***READ permissions are a MUST.***
 
-        · All the users in this list will be eligible to get a Digital badge. When an eligible user/Champion logs in to their Teams and once they navigate to this app, they will      receive a request to accept their digital badge.
+      · All the users in this list will be eligible to get a Digital badge. When an eligible user/Champion logs in to their Teams and once they navigate to this app, they will receive a request to accept their digital badge.
     
     <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/20.jpg" alt="Digital Badge Screen" style="width: 100%;">
 
