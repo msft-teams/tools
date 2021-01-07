@@ -42,7 +42,7 @@ To begin with, you will need to ensure access to following:
 
 2. If using Existing configuration:
 
-   a. Navigate to folder solution where you cloned and check for “digital-badge.sppkg” package.
+   a. Navigate to folder solution where you cloned and check for ***“digital-badge.sppkg”*** package.
 
 ### Customize configuration
 
@@ -102,6 +102,7 @@ When you change the above values in the JSON file, customized SharePoint list is
   <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
 
 *If you do not find app catalog, go through below docs to create an app catalog*
+
 Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sharepoint/use-app-catalog'>App Catalog - SharePoint - SharePoint in Microsoft 365 | Microsoft Docs</a>
 
 7. Click on ***Distribute apps for SharePoint*** after clicking on App Catalog
@@ -118,9 +119,11 @@ Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sha
  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/16.png" alt="Digital Badge Screen" style="width: 100%;">
  
 11. Navigate to SharePoint ***admin center*** and under ***advanced options*** select ***API Access***  (you will find unapproved requests here.)
+
+12. Select the pending request and Approve it. (If there are more than one pending request, Approve all the requests)
+
  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/17.png" alt="Digital Badge Screen" style="width: 100%;">
  
-12. Select the pending request and Approve it. (If there are more than one pending request, Approve all the requests)
 13. After Approving all pending requests, navigate again to your app’s page and select the app you uploaded. Click on *“Files“* tab on the top and click on ***sync to teams***.
 
  <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/18.png" alt="Digital Badge Screen" style="width: 100%;">
@@ -141,17 +144,17 @@ Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sha
 
 1. Find the ***Champion list***:
 
-· Navigate to SharePoint Admin account
+        · Navigate to SharePoint Admin account
 
-· Go to default URL ***`https://<yourtenant>. sharepoint.com/sites/ChampionDigitalBadge/`***
+        · Go to default URL ***`https://<yourtenant>. sharepoint.com/sites/ChampionDigitalBadge/`***
 
-· *If you have customized the site configuration, navigate to your customized site (instead of above default URL)*
+        · *If you have customized the site configuration, navigate to your customized site (instead of above default URL)*
 
-· Navigate to ***‘site contents’***
+        · Navigate to ***‘site contents’***
 
-· Find ***“Champions List”*** (This will be the list to maintain the records of all the Champions in your organization)
+        · Find ***“Champions List”*** (This will be the list to maintain the records of all the Champions in your organization)
 
-· *If you have customized the List name, Find your customized List.*
+        · *If you have customized the List name, Find your customized List.*
 
 
 2. Add ***Champions*** to the list:
@@ -162,7 +165,7 @@ Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sha
 
     · *You must give ***Read permissions*** to all the users in the group. For a user to load Digital Badge, ***READ permissions are a MUST.***
 
-    · All the users in this list will be eligible to get a Digital badge. When an eligible user/Champion logs in to their Teams and once they navigate to this app, they will receive a request to accept their digital badge.
+    · All the users in this list will be eligible to get a Digital badge. When an eligible user/Champion logs in to their Teams and once they navigate to this app, they will      receive a request to accept their digital badge.
     
     <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/20.jpg" alt="Digital Badge Screen" style="width: 100%;">
 
