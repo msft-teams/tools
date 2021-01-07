@@ -184,15 +184,15 @@ Distribute business apps using the <a href='https://docs.microsoft.com/en-us/sha
   
 
 ### Legal 
-This app template is provided under the [MIT License](https://github.com/msft-teams/tools/blob/master/TeamsSampleHub/LICENSE) terms. In addition to these terms, by using this app template you agree to the following:
+This app template is provided under the MIT License terms. In addition to these terms, by using this app template you agree to the following:
 
 · You are responsible for complying with all applicable privacy and security regulations related to use, collection, and handling of any personal data by your app. This includes complying with all internal privacy and security policies of your organization if your app is developed to be sideloaded internally within your organization.
 
 · Where applicable, you may be responsible for data related incidents or data subject requests for data collected through your app.
 
-· Any trademarks or registered trademarks of Microsoft in the United States and/or other countries and logos included in this repository are the property of Microsoft, and the license for this project does not grant you rights to use any Microsoft names, logos or trademarks outside of this repository. Microsoft's general trademark guidelines can be found here.
+· Any trademarks or registered trademarks of Microsoft in the United States and/or other countries and logos included in this repository are the property of Microsoft, and the license for this project does not grant you rights to use any Microsoft names, logos or trademarks outside of this repository. Microsoft's general trademark guidelines can be found [here](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general.aspx).
 
-· Use of this template does not guarantee acceptance of your app to the Teams app store. To make this app available in the Teams app store, you will have to comply with the submission and validation process, and all associated requirements such as including your own privacy statement and terms of use for your app.
+· Use of this template does not guarantee acceptance of your app to the Teams app store. To make this app available in the Teams app store, you will have to comply with the [submission and validation process](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish), and all associated requirements such as including your own privacy statement and terms of use for your app.
 
 **Contributing**
 
