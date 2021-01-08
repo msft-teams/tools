@@ -87,6 +87,7 @@ export interface IDigitalBadgeState extends ITeamsBaseComponentState {
   siteurl: string;
   userletters: string;
   sitename: string;
+  inclusionpath:string;
 }
 
 /**
@@ -133,6 +134,7 @@ export default class DigitalBadge extends TeamsBaseComponent<IDigitalBadgeProps,
       userletters: '',
       //siteurl: '',
       sitename: siteconfig.sitename,
+      inclusionpath:siteconfig.inclusionPath,
       siteurl: this.props.context.pageContext.web.absoluteUrl.replace(this.props.context.pageContext.web.serverRelativeUrl, '')
     });
     this.forceUpdate();
@@ -150,10 +152,10 @@ export default class DigitalBadge extends TeamsBaseComponent<IDigitalBadgeProps,
       this.props.context.spHttpClient.get(this.state.siteurl + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties", SPHttpClient.configurations.v1).then((responseuser: SPHttpClientResponse) => {
         responseuser.json().then((datauser: any) => {
           //Read users data and find the current users exists or not from provider
-          this.props.context.spHttpClient.get(this.state.siteurl + '/sites/' + this.state.sitename + `/_api/web/lists/GetByTitle('${siteconfig.list}')/Items`, SPHttpClient.configurations.v1)
+          this.props.context.spHttpClient.get(this.state.siteurl + '/'+ this.state.inclusionpath+'/' + this.state.sitename + `/_api/web/lists/GetByTitle('${siteconfig.list}')/Items`, SPHttpClient.configurations.v1)
             .then((response: SPHttpClientResponse) => {
               response.json().then(datada => {
-                const getsitedata: string = this.state.siteurl + "/sites/" + this.state.sitename + '/_api/web/siteusers';
+                const getsitedata: string = this.state.siteurl + '/'+ this.state.inclusionpath+'/' + this.state.sitename + '/_api/web/siteusers';
                 this.props.context.spHttpClient.get(getsitedata, SPHttpClient.configurations.v1).then((user: SPHttpClientResponse) => {
                   user.json().then((dataiduser: any) => {
                     let id = dataiduser.value.find((x: { Email: string; }) => x.Email.toLowerCase() == datauser.Email.toLowerCase()).Id;
@@ -188,7 +190,7 @@ export default class DigitalBadge extends TeamsBaseComponent<IDigitalBadgeProps,
   }
 
   private _createList() {
-    const getListUrl: string = this.state.siteurl + "/sites/" + this.state.sitename + `/_api/web/lists/GetByTitle('${siteconfig.list}')/Items`;
+    const getListUrl: string = this.state.siteurl + '/'+ this.state.inclusionpath+'/' + this.state.sitename + `/_api/web/lists/GetByTitle('${siteconfig.list}')/Items`;
     this.props.context.spHttpClient.get(getListUrl, SPHttpClient.configurations.v1).then((response: SPHttpClientResponse) => {
       if (response.status === 200) {
         this._renderListAsync();
@@ -201,11 +203,11 @@ export default class DigitalBadge extends TeamsBaseComponent<IDigitalBadgeProps,
               const siteDefinition: any = {
                 "request": {
                   "Title": this.state.sitename,
-                  "Url": this.state.siteurl + "/sites/" + this.state.sitename,
+                  "Url":  this.state.siteurl+'/'+ this.state.inclusionpath+'/' + this.state.sitename,
                   "Lcid": 1033,
                   "ShareByEmailEnabled": true,
                   "Description": "Description",
-                  "WebTemplate": "SITEPAGEPUBLISHING#0",
+                  "WebTemplate": "STS#3",
                   "SiteDesignId": "6142d2a0-63a5-4ba0-aede-d9fefca2c767",
                   "Owner": datauser.Email
                 }
@@ -238,7 +240,7 @@ export default class DigitalBadge extends TeamsBaseComponent<IDigitalBadgeProps,
                             if (!err) {
 
                               if (rawresponse.status === 201) {
-                                const getsitedata: string = this.state.siteurl + "/sites/" + this.state.sitename + '/_api/web/siteusers';
+                                const getsitedata: string = this.state.siteurl + '/'+ this.state.inclusionpath+'/' + this.state.sitename + '/_api/web/siteusers';
                                 this.props.context.spHttpClient.get(getsitedata, SPHttpClient.configurations.v1).then((user: SPHttpClientResponse) => {
                                   user.json().then((data: any) => {
                                     let id = data.value.find((x: { Email: string; }) => x.Email.toLowerCase() == datauser.Email.toLowerCase()).Id;
@@ -251,7 +253,7 @@ export default class DigitalBadge extends TeamsBaseComponent<IDigitalBadgeProps,
                                     const spHttpClientOptions: ISPHttpClientOptions = {
                                       "body": JSON.stringify(listDefinition)
                                     };
-                                    const url: string = this.state.siteurl + "/sites/" + this.state.sitename + `/_api/web/lists/GetByTitle('${siteconfig.list}')/Items`;
+                                    const url: string = this.state.siteurl + '/'+ this.state.inclusionpath+'/' + this.state.sitename + `/_api/web/lists/GetByTitle('${siteconfig.list}')/Items`;
 
                                     this.props.context.spHttpClient.post(url, SPHttpClient.configurations.v1, spHttpClientOptions)
                                       .then((responsedata: SPHttpClientResponse) => {
