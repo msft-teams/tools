@@ -51,6 +51,8 @@ If desired the administrator can configure a customized site, list, and/or colum
 <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/6.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ```
+· inclusionPath (SharePoint inclusion path - e.g. sites or teams)
+
 · sitename (SharePoint site name)
 
 · list (SharePoint list for maintaining Champions)
@@ -138,7 +140,7 @@ If desired the administrator can configure a customized site, list, and/or colum
   
     · If you are using the default configuration, this can be found at ***`https://<yourtenant>.sharepoint.com/sites/ChampionDigitalBadge/`***.
     
-    · If you have customized the site configuration, navigate to ***`https://<yourtenant>.sharepoint.com/sites/<sitename>/`*** where <sitename> is the value provided during customization.
+    · If you have customized the site configuration, navigate to ***`https://<yourtenant>.sharepoint.com/<inclusionPath>/<sitename>/`*** where <sitename> and <inclusionPath> are the values provided during customization.
 
   · Navigate to ***Site Contents***
 
