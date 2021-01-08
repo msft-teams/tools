@@ -48,7 +48,7 @@ If desired the administrator can configure a customized site, list, and/or colum
 
 1. Update the ***"src/webparts/digitalBadge/config/siteconfig.json"*** configuration file.  Changing the values in the JSON file will customize the SharePoint list location and/or schema when it is created during deployment.
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/6.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/6.PNG" alt="Digital Badge Screen" style="width: 100%;">
 
 ```
 · inclusionPath (SharePoint inclusion path - e.g. sites or teams)
