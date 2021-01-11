@@ -1,6 +1,6 @@
 # Digital Badge App
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/digitalbadge.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/digitalbadge.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ## Introduction / Overview
 
@@ -14,19 +14,19 @@ The Digital Badge App is intended to allow Teams Champions to apply a "Champion"
 
 3. The app installation process will create a SharePoint list (***Champions List***) to store all users who are eligible for a digital badge. A local administrator is responsible for maintaining this SharePoint list. All users added to this SharePoint list will have permission to apply the Digital Badge. 
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/1.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/1.png" alt="Digital Badge Screen" style="width: 100%;">
 
 4. After the user clicks "Accept", the app will display a composite image that will look like:
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/2.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/2.png" alt="Digital Badge Screen" style="width: 100%;">
 
 5. A successful acceptance will look like:
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/3.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/3.png" alt="Digital Badge Screen" style="width: 100%;">
 
 6. If a user is not included in the SharePoint list they are notified that they are not qualified for Champion Badge program at this time.
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/4.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/4.png" alt="Digital Badge Screen" style="width: 100%;">
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ If desired the administrator can configure a customized site, list, and/or colum
 
 1. Update the ***"src/webparts/digitalBadge/config/siteconfig.json"*** configuration file.  Changing the values in the JSON file will customize the SharePoint list location and/or schema when it is created during deployment.
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/6.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/6.PNG" alt="Digital Badge Screen" style="width: 100%;">
 
 ```
 · inclusionPath (SharePoint inclusion path - e.g. sites or teams)
@@ -78,59 +78,59 @@ If desired the administrator can configure a customized site, list, and/or colum
 
 1. Open SharePoint and sign in using the admininistrator account. Click on the "dots" icon in the top left corner of the banner.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/7.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/7.png" alt="Digital Badge Screen" style="width: 100%;">
   
 2. Select Admin from the menu that appears.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/8.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/8.png" alt="Digital Badge Screen" style="width: 100%;">
   
 3. Select SharePoint from the menu that appears.  You may need to click "... Show all" for the SharePoint entry to appear.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/9.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/9.png" alt="Digital Badge Screen" style="width: 100%;">
   
 4. You will be directed to the SharePoint admin center.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/10.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/10.png" alt="Digital Badge Screen" style="width: 100%;">
 
 5. Click on "More features" menu item.  Locate the Apps section and click the **Open** button.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/11.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/11.png" alt="Digital Badge Screen" style="width: 100%;">
 
 6. Click the ***App Catalog*** link.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
 
 *If you do not see an app catalog available, use the instructions <a href='https://docs.microsoft.com/en-us/sharepoint/use-app-catalog#step-1-create-the-app-catalog-site-collection' target="_blank">here</a> to create a new app catalog before continuing.*
 
 7. Click the ***Distribute apps for SharePoint*** link.
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/13.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/13.png" alt="Digital Badge Screen" style="width: 100%;">
   
 8. Click the ***New*** menu item
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/14.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/14.png" alt="Digital Badge Screen" style="width: 100%;">
  
 9. Click the ***Choose Files*** button, select the digital-badge.sppkg file you downloaded or created earlier, and click on ***OK***
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/15.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/15.png" alt="Digital Badge Screen" style="width: 100%;">
  
 10. A confirmation dialog is displayed. Ensure the checkbox for "Make this solution available to all sites in the organization" is chosen and click ***Deploy***.
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/16.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/16.png" alt="Digital Badge Screen" style="width: 100%;">
  
 11. Return to the ***SharePoint admin center***. Under expand the ***Advanced*** menu in the left navigation and select ***API access***.  Select and approve all pending requests associated with ***digital-badge-client-side-solution***.
 
- <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/17.png" alt="Digital Badge Screen" style="width: 100%;">
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/17.png" alt="Digital Badge Screen" style="width: 100%;">
  
 12. Return to app list in the App Catalog and select the ***digital-badge-client-side-solution*** app. Select the *Files* tab in the ribbon and click the ***Sync to Teams*** button.
 
- <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/18.png" alt="Digital Badge Screen" style="width: 100%;">
+ <img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/18.png" alt="Digital Badge Screen" style="width: 100%;">
  
 ### Add Digital Badge Tab in Teams
 
 1. Navigate to Microsoft teams, select the Team and channel where you want to install digital badge.  Click ***Add a tab***, choose ***DigitalBadge*** from the app list, and Save. 
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/19.jpg" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/19.jpg" alt="Digital Badge Screen" style="width: 100%;">
          
 ### Add Users to the Champions List
 
@@ -156,7 +156,7 @@ If desired the administrator can configure a customized site, list, and/or colum
 
   · Use the ***New*** button to add each additional user that should have access to create the digital badge.
     
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/20.jpg" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/20.jpg" alt="Digital Badge Screen" style="width: 100%;">
 
 3. Grant ***READ permissions*** to the Digital Badge site:
 
@@ -166,11 +166,11 @@ If desired the administrator can configure a customized site, list, and/or colum
    
   · Choose the users and/or groups that should have Digital Badge access.
  
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/21.jpg" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/21.jpg" alt="Digital Badge Screen" style="width: 100%;">
 
   · Share the site with Users and/or Groups with Read Permissions
 
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/readmeimages/22.jpg" alt="Digital Badge Screen" style="width: 100%;">
+<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/22.jpg" alt="Digital Badge Screen" style="width: 100%;">
   
 ### Legal 
 
