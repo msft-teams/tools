@@ -98,7 +98,7 @@ If desired the administrator can configure a customized site, list, and/or colum
 
 6. Click the ***App Catalog*** link.
   
-<img src="https://github.com/msft-teams/tools/blob/ChampionDigitalBadge/ChampionDigitalBadge/Source/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="./Source/readmeimages/12.png" alt="Digital Badge Screen" style="width: 100%;">
 
 *If you do not see an app catalog available, use the instructions <a href='https://docs.microsoft.com/en-us/sharepoint/use-app-catalog#step-1-create-the-app-catalog-site-collection' target="_blank">here</a> to create a new app catalog before continuing.*
 
