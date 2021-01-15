@@ -171,7 +171,10 @@ If desired the administrator can configure a customized site, list, and/or colum
   · Share the site with Users and/or Groups with Read Permissions
 
 <img src="./Source/readmeimages/22.jpg" alt="Digital Badge Screen" style="width: 100%;">
-  
+
+
+<img src="./Source/readmeimages/DB_warning.jpg" alt="Digital Badge Screen" style="width: 100%;">
+
 ### Legal 
 
 This app template is provided under the MIT License terms. In addition to these terms, by using this app template you agree to the following:
