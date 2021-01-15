@@ -172,7 +172,7 @@ If desired the administrator can configure a customized site, list, and/or colum
 
 <img src="./Source/readmeimages/22.jpg" alt="Digital Badge Screen" style="width: 100%;">
 
-<img src="./Source/readmeimages/DB_warning.png" alt="Digital Badge Screen" style="width: 70%;">
+<img src="./Source/readmeimages/DB_warning.png" alt="Digital Badge Screen" style="max-width: 70%;">
 
 ### Legal 
 
