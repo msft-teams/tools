@@ -4,7 +4,9 @@
 
 ## Introduction / Overview
 
-The Digital Badge App is intended to allow Microsoft 365 Champions to apply a "Champion" badge overlay quickly and easily to their existing profile image and have it populated across their Microsoft 365 tenant. This allows for easy identification of Champions around the organization.  
+The Digital Badge App is intended to allow Microsoft 365 Champions to apply a "Champion" badge overlay quickly and easily to their existing profile image and have it populated across their Microsoft 365 tenant. This allows for easy identification of Champions around the organization. The app provides Champion Program Manager and Champion functions.  A Champion administrator owns the Champion program within an organization and may or may not be a tenant administrator in the Microsoft 365 tenant.  
+
+This app package is delivered as a part of the worldwide Microsoft 365 Champion program by the Microsoft Teams Customer Advocacy Group to enable modern management of your Champion program.  For more information about this program visit us at https://aka.ms/M365Champions
 
 ## How It Works
 
@@ -44,7 +46,7 @@ Ensure the administrator who will install the app has access to following:
 
 ### Customize configuration
 
-If desired the administrator can configure a customized site, list, and/or column using following steps:
+If desired the administrator can configure the installation location including the customized site, list, and/or column(s) using following steps:
 
 1. Update the ***"src/webparts/digitalBadge/config/siteconfig.json"*** configuration file.  Changing the values in the JSON file will customize the SharePoint list location and/or schema when it is created during deployment.
 
