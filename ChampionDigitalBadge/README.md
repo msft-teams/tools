@@ -4,15 +4,15 @@
 
 ## Introduction / Overview
 
-The Digital Badge App is intended to allow Teams Champions to apply a "Champion" badge overlay quickly and easily to their existing profile image and have it populated across their Office 365 tenant.
+The Digital Badge App is intended to allow Microsoft 365 Champions to apply a "Champion" badge overlay quickly and easily to their existing profile image and have it populated across their Microsoft 365 tenant. This allows for easy identification of Champions around the organization.  
 
 ## How It Works
 
-1. The current version of the Digital Badge operates as a Teams app installed locally in your tenant by your tenant administrator. This is a cloud only Office 365 solution and is not supported on premises.  Once installed it can be accessed via "+Add a tab" option at the top of the channel. ***Channel > Add a tab > Digital Badge***
+1. The current version of the Digital Badge operates as an app in Microsoft Teams that is installed locally in your tenant by your tenant administrator or any user who has the capability to side load the application. This is a cloud only Microsoft 365 solution and is not supported on premises.  Once installed it can be accessed via "+Add a tab" option at the top of the channel within a team. ***Channel > Add a tab > Digital Badge***
 
 2. Users will need to consent and click "Accept" to allow the application to modify their profile image across all Office 365 applications.
 
-3. The app installation process will create a SharePoint list (***Champions List***) to store all users who are eligible for a digital badge. A local administrator is responsible for maintaining this SharePoint list. All users added to this SharePoint list will have permission to apply the Digital Badge. 
+3. The app installation process will create a SharePoint list (***Champions List***) to store all users who are eligible for a digital badge. A local administrator is responsible for maintaining this SharePoint list. This person can be the individual who manages the Champion program for the organization or his/her delegate.  Tenant administration rights are not required. All users added to this SharePoint list will have permission to apply the Digital Badge. 
 
 <img src="./Source/readmeimages/1.png" alt="Digital Badge Screen" style="width: 100%;">
 
