@@ -3,8 +3,9 @@
 ## Introduction:
 Champion Management Platform is a custom Teams app that enables corporate teams to Onboard and maintain champions/ SME in their organization in Teams, allowing everyone to reach for Champions right where they collaborate. Use this template for multiple scenarios, such as new initiative adoption, Champion onboarding, or to maintain organization-wide Subject Matter Experts.
 
-The app provides an easy interface for designated users to add members to the champion program, preview, collaborate and communicate and build a community of power users and coaches. 
-<img here>                      
+The app provides an easy interface for designated users to add members to the champion program, preview, collaborate and communicate and build a community of power users and coaches. <br/>
+
+<img src="./Images/WelcomeCMP.png" alt="CMP Screen" style="width: 100%;">                    
 
 ## How it works:
 
@@ -17,9 +18,9 @@ The app provides an easy interface for designated users to add members to the ch
 ..b.	Leaderboard 
 ..c.	Digital badging
 6.	The Champions will be earning points for hosting events, writing Blogs, moderating Office hours etc., Leaderboard ranks all the champions based on their points globally, regionally, and even by focus area.
-7.	Point accumulation , ranking logic, Event details are configurable by the Admin based on the organization  needs.
+7.	Point accumulation , ranking logic, Event details are configurable by the Admin based on the organization  needs. <br/>
 
- 
+ <img src="./Images/QuickGuide.png" alt="Quick Start Guide" style="width: 100%;">
 
 
 ### Champion Leaderboard:
@@ -32,7 +33,9 @@ Roles can be categorized as:
 
 ### Admin/Moderator OR Champion view
 In our Champions program, Admin is a Champion by default.  The Champion view is to enable Administrator or Champions to identify all the members of the Champions program. 
-         
+<br/>
+
+ <img src="./Images/Leaderboard.png" alt="Quick Start Guide" style="width: 100%;">         
 
 
 #### An Admin / Champion can do the following: 
@@ -52,12 +55,14 @@ Leader board encourages the employees to get connected to the Champions in their
 1.	 Every employee can access the Champion Leader board.
 2.	Through Champion Leaderboard, an Employee can identify all the Champions globally or can filter by a particular Focus area or by region option.
 3.	Employee can also “Become a Champion” by submitting their information.
- 
+ <br/>
+
+ <img src="./Images/EmpView.png" alt="Quick Start Guide" style="width: 100%;">
      
 ### Add Members 
 Admin and current Champions of the program can nominate(***Add Members***) peers as Champions. Additional responsibility falls on the admin to maintain the Champions SharePoint list. *The approval process stays with the Admin only.*
 
-### Digital Badge 
+### Digital Badge <img src="./Images/Champion_small.png" alt="Champion logo" style="width: 100%;">
 Digital Badge is intended to allow Microsoft 365 Champions to apply a ‘Champion’ badge on their profile image. It provides an easy and seamless process to share the recognition as a champion with the team.
 
 
