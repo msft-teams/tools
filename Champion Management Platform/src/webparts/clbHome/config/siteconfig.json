@@ -1,7 +1,7 @@
 {
   "inclusionPath": "sites",
   "sitename": "ChampionMangementPlatform",
-  "rootSiteId": "3e3592cc-0398-4b77-a9d2-21e3cb326700",
+  "rootSiteId": "<Insert SharePointrootsiteId>",
   "lists": [
     {
       "listName": "Member List",
