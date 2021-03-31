@@ -78,10 +78,7 @@ export interface EventList {
   Title: string;
   Id: number;
 }
-export default class Sidebar extends React.Component<
-  ISidebarStateProps,
-  IState
-> {
+export default class Sidebar extends React.Component<ISidebarStateProps, IState> {
   constructor(props: ISidebarStateProps) {
     super(props);
     sp.setup({
@@ -114,9 +111,8 @@ export default class Sidebar extends React.Component<
       bFlag: true,
       isMember: false,
       emailValue: "",
-      sitename: siteconfig.sitename,
-      inclusionpath: siteconfig.inclusionPath,
-
+      sitename: siteconfig.sitename, //getting from siteconfig
+      inclusionpath: siteconfig.inclusionPath, //getting from siteconfig
       edetails: [],
       edetailsIds: [],
     };
@@ -124,8 +120,10 @@ export default class Sidebar extends React.Component<
     this._createorupdateItem = this._createorupdateItem.bind(this);
     this._getPeoplePickerItems = this._getPeoplePickerItems.bind(this);
     this._getListData = this._getListData.bind(this);
-    this.optionsEventsList=this.optionsEventsList.bind(this);
+    this.optionsEventsList = this.optionsEventsList.bind(this);
   }
+
+  //getting members details from membelist with all columns
   public options = (optionArray: any) => {
     let myoptions = [];
     myoptions.push({ key: "All", text: "All" });
@@ -177,6 +175,7 @@ export default class Sidebar extends React.Component<
           throw new Error("Asynchronous error");
         });
 
+    //getting event details from membelist
     let myOptions = [];
     myOptions.push({ key: "Select Event Type", text: "Select Event Type" });
     this.state.edetails.forEach((element: any) => {
@@ -184,6 +183,7 @@ export default class Sidebar extends React.Component<
     });
     return myOptions;
   }
+
   public dropdownStyles: Partial<IDropdownStyles> = {
     dropdown: { width: "auto" },
   };
@@ -194,6 +194,7 @@ export default class Sidebar extends React.Component<
     this.setState({ currentUser: user });
   }
 
+  //getting Region and Country details from membelist
   public componentDidMount() {
     this.optionsEventsList();
     this.props.context.spHttpClient
@@ -291,17 +292,18 @@ export default class Sidebar extends React.Component<
                     this.setState({
                       emailValue: datauser.Email,
                       isMember: false,
-                      buttonText: "Become a Champion",
+                      buttonText: "Become a Champion", //if employee want to become a champion enabling this button
                       isLoaded: true,
                     });
                   else
                     this.setState({
                       emailValue: datauser.Email,
                       isMember: true,
-                      buttonText: "Champion submission pending",
+                      buttonText: "Champion submission pending", //if employee already raised for a champion enabling this button
                       isLoaded: true,
                     });
-                  localStorage.setItem("memberid", memberData);
+                  localStorage.setItem("memberid", memberData); // storing memberid in local storage
+                  //based on user role (champion or manager) then we are showing champion details
                   let user = this.state.currentUser;
                   user["FirstName"] = datauser.DisplayName.split(" ")[0];
                   user["LastName"] = datauser.DisplayName.split(" ")[1];
@@ -313,11 +315,13 @@ export default class Sidebar extends React.Component<
                   this.setState({ currentUser: user });
                   if (!datada.error) {
                     let totalchamps: number = 0;
-                    totalchamps = datada.value.filter(
-                      (x) =>
-                        (x.Role.toLowerCase() === "champion" ||
-                          x.Role.toLowerCase() === "manager") &&
-                          x.Status!==null && x.Status!==undefined?x.Status.toLowerCase() === "approved":false
+                    totalchamps = datada.value.filter((x) =>
+                      (x.Role.toLowerCase() === "champion" ||
+                        x.Role.toLowerCase() === "manager") &&
+                      x.Status !== null &&
+                      x.Status !== undefined
+                        ? x.Status.toLowerCase() === "approved"
+                        : false
                     ).length;
                     if (
                       this.state.isMember === true &&
@@ -361,11 +365,9 @@ export default class Sidebar extends React.Component<
                                 if (
                                   presentuser.length === 0 &&
                                   memberData !== 0
-                                )
-
-                                {
-                                  let eventItem:EventList=null;
-                                  eventItem=this.state.edetailsIds[0];
+                                ) {
+                                  let eventItem: EventList = null;
+                                  eventItem = this.state.edetailsIds[0];
                                   const listDefinition: any = {
                                     Title: eventItem.Title,
                                     EventId: eventItem.Id,
@@ -456,10 +458,13 @@ export default class Sidebar extends React.Component<
       });
   }
 
+  //getting extra symbol, so using default menthod
+
   public onRenderCaretDown = (): JSX.Element => {
     return <span></span>;
   }
 
+  //when user raised for become a champion then his state would be champion and pending
   public async _createorupdateItem() {
     let usersave = this.state.currentUser;
     usersave.Country = this.state.memberData.country;
@@ -534,7 +539,7 @@ export default class Sidebar extends React.Component<
   }
 
   public addDefaultSrc(ev) {
-    ev.target.src = require("../assets/images/noprofile.png");
+    ev.target.src = require("../assets/images/noprofile.png"); //if no profile then we are showing default image
   }
 
   private _getPeoplePickerItems(items: any[]) {
@@ -566,6 +571,7 @@ export default class Sidebar extends React.Component<
         {this.state.isLoaded && (
           <div className="sidenav">
             <div>
+              {/* user profile image*/}
               <img
                 src={
                   "/_layouts/15/userphoto.aspx?username=" +
@@ -574,14 +580,16 @@ export default class Sidebar extends React.Component<
                 className="profilepic"
                 onError={this.addDefaultSrc}
               />
+              {/* username */}
               <div className="championname">
-                {this.state.currentUser.FirstName+
+                {this.state.currentUser.FirstName +
                   "  " +
-                  this.state.currentUser.LastName }
+                  this.state.currentUser.LastName}
               </div>
             </div>
             {!this.state.bc && !this.state.form && (
               <div>
+                {/* here we are showing rank and points  */}
                 <div className="pointcircle">
                   <div className="insidecircle">
                     <div className="pointsscale">
@@ -620,6 +628,7 @@ export default class Sidebar extends React.Component<
               </div>
             )}
             {this.state.form && this.state.isActive && (
+              // become a champion form
               <div>
                 <div className="bc-form">
                   <label htmlFor="fname" className="bc-label">
@@ -714,6 +723,7 @@ export default class Sidebar extends React.Component<
               </div>
             )}
             <div className="back-btn">
+              {/* back button to home */}
               <button
                 className=" btn btn-primary back"
                 onClick={this.props.onClickCancel}

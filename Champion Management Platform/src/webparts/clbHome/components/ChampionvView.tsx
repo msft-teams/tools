@@ -137,6 +137,7 @@ export interface ChampList {
 export interface EventList {
   Title: string;
   Id: number;
+  Ecount: number;
 }
 export default class ChampionvView extends Component<
   ChampionViewProps,
@@ -230,6 +231,7 @@ export default class ChampionvView extends Component<
                   optionArrayIds.push({
                     Title: responseJSON.value[i].Title,
                     Id: responseJSON.value[i].Id,
+                    Ecount:responseJSON.value[i].Points,
                   });
                   i++;
                 }
@@ -265,11 +267,19 @@ export default class ChampionvView extends Component<
   public createorupdateItem() {
     this.setState({ isShow: true });
     for (let link of this.state.collectionNew) {
+      let tmp: Array<EventList> = null;
+      let selectedVal: any = null;
+      tmp = this.state.edetailsIds;
+      let scount = link.count * 10;
+      let item1 = tmp.filter((i) => i.Id === link.eventid);
+      if (item1.length != 0) {
+        scount = link.count * item1[0].Ecount;
+      }
       let seventid = String(link.eventid);
       let smemberid = String(link.memberid);
       let sdoe = link.DateOfEvent;
       let stype = link.type;
-      let scount = link.count * 10;
+
       if (true) {
         const listDefinition: any = {
           Title: stype,
@@ -491,7 +501,7 @@ export default class ChampionvView extends Component<
       });
     return 0;
   }
-  
+
   public async componentDidMount() {
     setTimeout(() => {
       let memid: number = 0;
