@@ -20,6 +20,11 @@ export default class ClbHomeWebPart extends BaseClientSideWebPart<IClbHomeWebPar
       {
         description: this.properties.description,
         context: this.context,
+        // passing siteUrl here for mutlti tenant.
+        siteUrl: this.context.pageContext.web.absoluteUrl.replace(
+          this.context.pageContext.web.serverRelativeUrl,
+          ""
+        ),
       }
     );
 
@@ -30,6 +35,7 @@ export default class ClbHomeWebPart extends BaseClientSideWebPart<IClbHomeWebPar
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
+  // you can edit property pane based on requriments
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [

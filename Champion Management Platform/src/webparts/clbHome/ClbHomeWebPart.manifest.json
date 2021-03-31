@@ -10,11 +10,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Other" },
-    "title": { "default": "CMP(Champion Management Platform)" },
+    "title": { "default": "Champion Management Platform" },
     "description": { "default": "CMP Home webpart" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "CMP(Champion Management Platform)"
+      "description": "Champion Management Platform"
     }
   }]
 }

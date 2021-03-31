@@ -23,16 +23,19 @@ import { MSGraphClient } from "@microsoft/sp-http";
 initializeIcons();
 
 export interface IClbHomeState {
-  cb: boolean;
-  Clb: boolean;
-  AddMember: boolean;
+  cB: boolean;
+  clB: boolean;
+  addMember: boolean;
   ChampionsList: boolean;
-  Cv: boolean;
+  cV: boolean;
   siteUrl: string;
-  Ev: boolean;
-  db: boolean;
+  eV: boolean;
+  dB: boolean;
   sitename: string;
   inclusionpath: string;
+  siteId: any;
+  isShow: boolean;
+  loggedinUserName: string;
 }
 
 export default class ClbHome extends React.Component<
@@ -42,27 +45,45 @@ export default class ClbHome extends React.Component<
   constructor(_props: any) {
     super(_props);
     this.state = {
-      siteUrl: this.props.context.pageContext.web.absoluteUrl.replace(
-        this.props.context.pageContext.web.serverRelativeUrl,
-        ""
-      ),
-      cb: false,
-      AddMember: false,
+      siteUrl: this.props.siteUrl,
+      cB: false,
+      addMember: false,
       ChampionsList: false,
-      Clb: false,
-      Cv: false,
-      Ev: false,
-      db: false,
+      clB: false,
+      cV: false,
+      eV: false,
+      dB: false,
       sitename: siteconfig.sitename,
       inclusionpath: siteconfig.inclusionPath,
+      siteId: "",
+      isShow: false,
+      loggedinUserName: "",
     };
 
     this._getListData = this._getListData.bind(this);
+    this.rootSiteId = this.rootSiteId.bind(this);
   }
 
   public componentDidMount() {
-    this._createList();
+    this.setState({
+      isShow: true,
+    });
+    this.rootSiteId();
+
+    this.props.context.spHttpClient
+      .get(
+        this.state.siteUrl +
+          "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+        SPHttpClient.configurations.v1
+      )
+      .then((responseuser: SPHttpClientResponse) => {
+        responseuser.json().then((datauser: any) => {
+          this.setState({ loggedinUserName: datauser.DisplayName });
+        });
+      });
   }
+
+  //create lists when you upload package into new tenant.
 
   private _createList() {
     let listname = siteconfig.lists[1].listName;
@@ -156,7 +177,15 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: ["EMEA", "INDIA"],
+                                            choices: [
+                                              "Africa",
+                                              "Asia",
+                                              "Australia / Pacific",
+                                              "Europe",
+                                              "Middle East",
+                                              "North America / Central America / Caribbean",
+                                              "South America",
+                                            ],
                                             displayAs: "dropDownMenu",
                                           },
                                         };
@@ -167,7 +196,10 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: ["INDIA", "USA"],
+                                            choices: [
+                                              "INDIA",
+                                              "USA"
+                                              ],
                                             displayAs: "dropDownMenu",
                                           },
                                         };
@@ -189,10 +221,7 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: [
-                                              "Approved",
-                                              "Un Approved",
-                                            ],
+                                            choices: ["Approved", "Pending"],
                                             displayAs: "dropDownMenu",
                                           },
                                         };
@@ -287,7 +316,7 @@ export default class ClbHome extends React.Component<
                             lists.forEach((item) => {
                               let siteId =
                                 item.displayName === memberListName
-                                  ? siteconfig.rootSiteId
+                                  ? this.state.siteId // siteconfig.rootSiteId
                                   : sitedata.SiteId;
                               if (
                                 item.displayName === memberListName &&
@@ -343,12 +372,15 @@ export default class ClbHome extends React.Component<
                                                   (
                                                     newUserResponse: SPHttpClientResponse
                                                   ) => {
+                                                    this.setState({
+                                                      isShow: false,
+                                                    });
                                                     if (
                                                       newUserResponse.status ===
                                                       201
                                                     ) {
                                                       alert(
-                                                        "You Added as Admin, please refresh the app to setup account successfully"
+                                                        ` ${this.state.loggedinUserName} has been added as a manager to the Champion Management Platform, please refresh the app to complete the setup.`
                                                       );
                                                     } else {
                                                       alert(
@@ -442,12 +474,32 @@ export default class ClbHome extends React.Component<
           .version("v1.0")
           .header("Content-Type", "application/json")
           .responseType("json")
-          .post(item, (err, _res, rawresponse) => {
-            if (!err) {
+          .post(item, (errClbHome, _res, rawresponse) => {
+            if (!errClbHome) {
               if (rawresponse.status === 201) {
               }
             }
           });
+      });
+  }
+
+  private rootSiteId() {
+    let graphSiteRoot = "sites/root";
+    this.props.context.msGraphClientFactory
+      .getClient()
+      .then((garphClient: MSGraphClient) => {
+        garphClient
+          .api(graphSiteRoot)
+          .version("v1.0")
+          .header("Content-Type", "application/json")
+          .responseType("json")
+          .get()
+          .then((data: any) => {
+            this.setState({ siteId: data.id.split(",")[1] }, () => {
+              this._createList();
+            });
+          })
+          .catch((errClbHome) => {});
       });
   }
 
@@ -459,6 +511,9 @@ export default class ClbHome extends React.Component<
       )
       .then(async (response: SPHttpClientResponse) => {
         if (response.status === 200) {
+          this.setState({
+            isShow: false,
+          });
           let flag = 0;
           await response.json().then((responseJSON: any) => {
             let i = 0;
@@ -489,7 +544,7 @@ export default class ClbHome extends React.Component<
           if (!datauser.error) {
             let flag = await this._getListData(datauser.Email.toLowerCase());
             if (flag === 0) {
-              this.setState({ Ev: true });
+              this.setState({ eV: true });
             }
             this.props.context.spHttpClient
               .get(
@@ -507,16 +562,16 @@ export default class ClbHome extends React.Component<
                     if (dataexists) {
                       if (dataexists.Status === "Approved") {
                         if (dataexists.Role === "Manager") {
-                          this.setState({ Clb: true });
+                          this.setState({ clB: true });
                         } else if (dataexists.Role === "Champion") {
-                          this.setState({ Cv: true });
+                          this.setState({ cV: true });
                         }
                       } else if (
                         dataexists.Role === "Employee" ||
                         dataexists.Role === "Champion" ||
                         dataexists.Role === "Manager"
                       ) {
-                        this.setState({ Ev: true });
+                        this.setState({ eV: true });
                       }
                     }
                   }
@@ -530,23 +585,25 @@ export default class ClbHome extends React.Component<
   public render(): React.ReactElement<IClbHomeProps> {
     return (
       <div className={styles.clbHome}>
+        {this.state.isShow && <div className={styles.load}></div>}
         <div className={styles.container}>
           <div>
             <Header
-              showSearch={this.state.cb}
+              showSearch={this.state.cB}
               clickcallback={() =>
                 this.setState({
-                  cb: false,
+                  cB: false,
                   ChampionsList: false,
-                  AddMember: false,
+                  addMember: false,
+                  dB: false,
                 })
               }
             />
           </div>
-          {!this.state.cb &&
+          {!this.state.cB &&
             !this.state.ChampionsList &&
-            !this.state.AddMember &&
-            !this.state.db && (
+            !this.state.addMember &&
+            !this.state.dB && (
               <div>
                 <div className={styles.imgheader}>
                   <h2>Welcome to the Microsoft 365</h2>
@@ -559,11 +616,11 @@ export default class ClbHome extends React.Component<
                     <Col sm={4}>
                       <Media
                         className={styles.cursor}
-                        onClick={() => this.setState({ cb: !this.state.cb })}
+                        onClick={() => this.setState({ cB: !this.state.cB })}
                       >
                         <div className={styles.mb}>
                           <img
-                            src={require("../imgs/leaderboard.jpg")}
+                            src={require("../assets/images/leaderboard.jpg")}
                             alt="Champion Leader Board"
                             title="Champion Leader Board"
                             className={styles.dashboardimgs}
@@ -574,17 +631,19 @@ export default class ClbHome extends React.Component<
                         </div>
                       </Media>
                     </Col>
-                    {(this.state.Cv || this.state.Clb) && (
+                    {(this.state.cV || this.state.clB) && (
                       <Col sm={4}>
                         <Media
                           className={styles.cursor}
                           onClick={() =>
-                            this.setState({ AddMember: !this.state.AddMember })
+                            this.setState({
+                              addMember: !this.state.addMember,
+                            })
                           }
                         >
                           <div className={styles.mb}>
                             <img
-                              src={require("../imgs/addmember.png")}
+                              src={require("../assets/images/addMember.png")}
                               alt="Adding Members Start adding the people you will collaborate with in your..."
                               title="Adding Members Start adding the people you will collaborate with in your..."
                               className={styles.dashboardimgs}
@@ -594,15 +653,15 @@ export default class ClbHome extends React.Component<
                         </Media>
                       </Col>
                     )}
-                    {(this.state.Cv || this.state.Clb) && (
+                    {(this.state.cV || this.state.clB) && (
                       <Col sm={4}>
                         <Media
                           className={styles.cursor}
-                          onClick={() => this.setState({ db: !this.state.db })}
+                          onClick={() => this.setState({ dB: !this.state.dB })}
                         >
                           <div className={styles.mb}>
                             <img
-                              src={require("../imgs/digitalbadge.png")}
+                              src={require("../assets/images/digitalbadge.png")}
                               alt="Digital Badge, Get your Champion Badge"
                               title="Digital Badge, Get your Champion Badge"
                               className={styles.dashboardimgs}
@@ -613,7 +672,7 @@ export default class ClbHome extends React.Component<
                       </Col>
                     )}
                   </Row>
-                  {this.state.Clb && !this.state.Cv && (
+                  {this.state.clB && !this.state.cV && (
                     <Row className="mt-4">
                       <Col sm={4}>
                         <Media className={styles.cursor}>
@@ -623,7 +682,7 @@ export default class ClbHome extends React.Component<
                               target="_blank"
                             >
                               <img
-                                src={require("../imgs/list.jpg")}
+                                src={require("../assets/images/list.jpg")}
                                 alt="Accessing Champions List"
                                 title="Accessing Champions List"
                                 className={styles.dashboardimgs}
@@ -641,7 +700,7 @@ export default class ClbHome extends React.Component<
                               target="_blank"
                             >
                               <img
-                                src={require("../imgs/list.jpg")}
+                                src={require("../assets/images/list.jpg")}
                                 alt="Accessing Events List"
                                 title="Accessing Events List"
                                 className={styles.dashboardimgs}
@@ -659,7 +718,7 @@ export default class ClbHome extends React.Component<
                               target="_blank"
                             >
                               <img
-                                src={require("../imgs/list.jpg")}
+                                src={require("../assets/images/list.jpg")}
                                 alt="Accessing Event Track List"
                                 title="Accessing Event Track List"
                                 className={styles.dashboardimgs}
@@ -676,57 +735,61 @@ export default class ClbHome extends React.Component<
                 </div>
               </div>
             )}
-          {this.state.cb && this.state.Clb && (
+          {this.state.cB && this.state.clB && (
             <ChampionLeaderBoard
+              siteUrl={this.props.siteUrl}
               context={this.props.context}
-              onClickCancel={() => this.setState({ Clb: true, cb: false })}
+              onClickCancel={() => this.setState({ clB: true, cB: false })}
             />
           )}
-          {
-            this.state.cb && this.state.Cv && (
-              <ChampionLeaderBoard
-                context={this.props.context}
-                onClickCancel={() => this.setState({ Clb: false, cb: false })}
-              />
-            )
-          }
-          {this.state.AddMember && (
+          {this.state.cB && this.state.cV && (
+            <ChampionLeaderBoard
+              siteUrl={this.props.siteUrl}
+              context={this.props.context}
+              onClickCancel={() => this.setState({ clB: false, cB: false })}
+            />
+          )}
+          {this.state.addMember && (
             <ClbAddMember
+              siteUrl={this.props.siteUrl}
               context={this.props.context}
               onClickCancel={() =>
-                this.setState({ AddMember: false, ChampionsList: true })
+                this.setState({ addMember: false, ChampionsList: true })
               }
             />
           )}
           {this.state.ChampionsList && (
             <ClbChampionsList
+              siteUrl={this.props.siteUrl}
               context={this.props.context}
-              isEmp={this.state.Cv === true || this.state.Clb === true}
+              isEmp={this.state.cV === true || this.state.clB === true}
               onClickAddmember={() =>
                 this.setState({
-                  cb: false,
+                  cB: false,
                   ChampionsList: false,
-                  AddMember: false,
+                  addMember: false,
                 })
               }
             />
           )}
-          {this.state.cb && this.state.Ev && (
+          {this.state.cB && this.state.eV && (
             <EmployeeView
+              siteUrl={this.props.siteUrl}
               context={this.props.context}
-              onClickCancel={() => this.setState({ Ev: true, cb: false })}
+              onClickCancel={() => this.setState({ eV: true, cB: false })}
             />
           )}
-          {this.state.db && (
+          {this.state.dB && (
             <DigitalBadge
+              siteUrl={this.props.siteUrl}
               context={this.props.context}
               clientId=""
               description=""
               theme={ThemeStyle.Light}
               fontSize={12}
-              clickcallback={() => this.setState({ db: false })}
+              clickcallback={() => this.setState({ dB: false })}
               clickcallchampionview={() =>
-                this.setState({ cb: true, Ev: true })
+                this.setState({ cB: false, eV: false, dB: false })
               }
             />
           )}

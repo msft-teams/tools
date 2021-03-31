@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import "../scss/Championview.scss";
 import Sidebar from "../components/Sidebar";
 import {
@@ -25,6 +24,7 @@ import Alert from "@material-ui/lab/Alert";
 import { DataGrid } from "@material-ui/data-grid";
 import * as moment from "moment";
 import siteconfig from "../config/siteconfig.json";
+import _ from "lodash";
 
 const columns = [
   { field: "DateOfEvent", headerName: "Date of Event", width: 250 },
@@ -95,6 +95,7 @@ export interface ChampionViewProps {
   onClickCancel: () => void;
   showSidebar?: boolean;
   callBack?: Function;
+  siteUrl: string;
 }
 export interface lookUp {
   value: string;
@@ -113,6 +114,7 @@ export interface ChampionViewState {
   collection: Array<ChampList>;
   collectionNew: Array<ChampList>;
   edetails: Array<string>;
+  edetailsIds: Array<EventList>;
   eFlag: boolean;
   optionvalues: Array<string>;
   selectedkey: number;
@@ -132,6 +134,10 @@ export interface ChampList {
   count: number;
   DateOfEvent: Date;
 }
+export interface EventList {
+  Title: string;
+  Id: number;
+}
 export default class ChampionvView extends Component<
   ChampionViewProps,
   ChampionViewState
@@ -141,7 +147,7 @@ export default class ChampionvView extends Component<
     sp.setup({
       spfxContext: this.props.context,
     });
-    this.getListData123 = this.getListData123.bind(this);
+    this.getTrackDetailsData = this.getTrackDetailsData.bind(this);
     this.onChange = this.onChange.bind(this);
     this.getListData = this.getListData.bind(this);
     this.setCount = this.setCount.bind(this);
@@ -150,10 +156,7 @@ export default class ChampionvView extends Component<
     this.removeDevice = this.removeDevice.bind(this);
     this.getMemberId = this.getMemberId.bind(this);
     this.state = {
-      siteUrl: this.props.context.pageContext.web.absoluteUrl.replace(
-        this.props.context.pageContext.web.serverRelativeUrl,
-        ""
-      ),
+      siteUrl: this.props.siteUrl,
       type: "",
       teams: [],
       selectedTeam: "",
@@ -165,6 +168,7 @@ export default class ChampionvView extends Component<
       collection: [],
       collectionNew: [],
       edetails: [],
+      edetailsIds: [],
       eFlag: false,
       optionvalues: [],
       selectedkey: 0,
@@ -201,7 +205,7 @@ export default class ChampionvView extends Component<
   }
   public options() {
     let optionArray = [];
-
+    let optionArrayIds = [];
     if (this.state.edetails.length == 0)
       this.props.context.spHttpClient
         .get(
@@ -223,10 +227,17 @@ export default class ChampionvView extends Component<
                   responseJSON.value[i].hasOwnProperty("Title")
                 ) {
                   optionArray.push(responseJSON.value[i].Title);
+                  optionArrayIds.push({
+                    Title: responseJSON.value[i].Title,
+                    Id: responseJSON.value[i].Id,
+                  });
                   i++;
                 }
               }
-              this.setState({ edetails: optionArray });
+              this.setState({
+                edetails: optionArray,
+                edetailsIds: optionArrayIds,
+              });
             });
           }
         })
@@ -245,7 +256,7 @@ export default class ChampionvView extends Component<
   public removeDevice(type: string, count: number) {
     this.setState((prevState) => ({
       collectionNew: prevState.collectionNew.filter(
-        (d) => d.type !== type,
+        (data) => data.type !== type,
         count
       ),
     }));
@@ -321,7 +332,7 @@ export default class ChampionvView extends Component<
     this.setState({ cb: true });
   }
 
-  private getListData123(memberid: any, eventid: any): boolean {
+  private getTrackDetailsData(memberid: any, eventid: any): boolean {
     let flag = false;
     this.props.context.spHttpClient
       .get(
@@ -349,7 +360,7 @@ export default class ChampionvView extends Component<
     return flag;
   }
 
-  private async getListData(memberid: any, eventid: any): Promise<any> {
+  private async getListData(memberid: any, _eventid: any): Promise<any> {
     this.setState({ collection: [] });
     const response = await this.props.context.spHttpClient.get(
       this.state.siteUrl +
@@ -480,6 +491,7 @@ export default class ChampionvView extends Component<
       });
     return 0;
   }
+  
   public async componentDidMount() {
     setTimeout(() => {
       let memid: number = 0;
@@ -490,56 +502,36 @@ export default class ChampionvView extends Component<
 
   public handleSelect = (evt: any) => {
     let ca: string = evt.target.outerText;
-    switch (true) {
-      case ca.indexOf("Event Moderator") >= 0:
-        this.setState({
-          selectedkey: 1,
-          type: "Event Moderator",
-          eventid: 1,
-          memberid: localStorage["memberid"],
-        });
-        break;
-
-      case ca.indexOf("Office Hours") >= 0:
-        this.setState({
-          selectedkey: 2,
-          type: "Office Hours",
-          eventid: 2,
-          memberid: localStorage["memberid"],
-        });
-        break;
-
-      case ca.indexOf("Blog") >= 0:
-        this.setState({
-          selectedkey: 3,
-          type: "Blog",
-          eventid: 3,
-          memberid: localStorage["memberid"],
-        });
-        break;
-
-      case ca.indexOf("Training") >= 0:
-        this.setState({
-          selectedkey: 4,
-          type: "Training",
-          eventid: 4,
-          memberid: localStorage["memberid"],
-        });
-        break;
-
-      default:
-        this.setState({
-          selectedkey: 0,
-          type: ca,
-          eventid: 0,
-          memberid: localStorage["memberid"],
-        });
-        break;
+    let tmp: Array<EventList> = null;
+    let selectedVal: any = null;
+    tmp = this.state.edetailsIds;
+    let item1 = tmp.filter((i) => i.Title === ca);
+    if (item1.length != 0) {
+      this.setState({
+        selectedkey: 1,
+        type: item1[0].Title,
+        eventid: item1[0].Id,
+        memberid: localStorage["memberid"],
+      });
+    } else {
+      this.setState({
+        selectedkey: 0,
+        type: ca,
+        eventid: 0,
+        memberid: localStorage["memberid"],
+      });
     }
   }
 
   private setCount(e: any): void {
-    this.setState({ count: e.target.value });
+    if (
+      !e.target.value ||
+      (e.target.value.length <= 1 && parseInt(e.target.value) <= 5)
+    ) {
+      this.setState({ count: e.target.value });
+    } else {
+      this.setState({ count: this.state.count });
+    }
   }
 
   public render() {
@@ -553,6 +545,7 @@ export default class ChampionvView extends Component<
           {this.state.isShow && <div className="loader"></div>}
           {!this.state.isShow && this.props.showSidebar && (
             <Sidebar
+              siteUrl={this.props.siteUrl}
               context={this.props.context}
               becomec={false}
               onClickCancel={() => this.props.onClickCancel()}
@@ -582,7 +575,9 @@ export default class ChampionvView extends Component<
                         }}
                       >
                         <DataGrid
-                          rows={this.renderFormateDate(this.state.collection)}
+                          rows={this.renderFormateDate(
+                            _.orderBy(this.state.collection, ["Id"], ["asc"])
+                          )}
                           columns={columns}
                           pageSize={10}
                           loading={this.state.loading}
@@ -632,7 +627,7 @@ export default class ChampionvView extends Component<
                               htmlFor="type"
                               className="col-sm-3 col-form-label"
                             >
-                              Types
+                              Type
                             </label>
                             <div className="col-sm-9">
                               <Dropdown
@@ -672,7 +667,7 @@ export default class ChampionvView extends Component<
                               <div className="float-end">
                                 <DefaultButton
                                   text="Add"
-                                  onClick={(e) =>
+                                  onClick={(_e) =>
                                     this.addDevice(
                                       {
                                         id: 0,
@@ -687,31 +682,39 @@ export default class ChampionvView extends Component<
                                   }
                                 />
                               </div>
+                              <br />
+                              <br />
+                              {this.state.collectionNew !== null &&
+                                this.state.collectionNew.length !== 0 && (
+                                  <div className="mb-3">
+                                    When you are done adding Events, Please
+                                    Click on <b>Submit</b> to save
+                                  </div>
+                                )}
+
+                              {this.state.collectionNew.map((item) => (
+                                <div key={item.eventid} className="m-2 mb-3">
+                                  <Alert
+                                    onClose={() => {
+                                      this.removeDevice(item.type, item.count);
+                                    }}
+                                  >
+                                    {item.type}
+                                    <span className="ml-4">{item.count}</span>
+                                  </Alert>
+                                </div>
+                              ))}
+
+                              {this.state.collectionNew !== null &&
+                                this.state.collectionNew.length !== 0 && (
+                                  <DefaultButton
+                                    text="Submit"
+                                    className="mt-4 float-end"
+                                    onClick={this.createorupdateItem}
+                                  />
+                                )}
                             </div>
                           </div>
-                          {this.state.collectionNew.map((item) => (
-                            <div key={item.eventid} className="m-2 mb-3">
-                              <div className="mb-3">
-                                When you are done adding Events, Please Click on{" "}
-                                <b>Submit</b> to save
-                              </div>
-                              <Alert
-                                onClose={() => {
-                                  this.removeDevice(item.type, item.count);
-                                }}
-                              >
-                                {" "}
-                                {item.type}{" "}
-                                <span className="ml-4">{item.count}</span>{" "}
-                              </Alert>
-                              <DefaultButton
-                                text="Submit"
-                                className="mt-4 float-end"
-                                onClick={this.createorupdateItem}
-                              />
-                            </div>
-                          ))}
-                          <br />
                         </div>
                       </div>
                     </Card.Body>

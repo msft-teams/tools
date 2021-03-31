@@ -2,11 +2,11 @@ import * as React from "react";
 import { WebPartContext } from "@microsoft/sp-webpart-base";
 import { sp } from "@pnp/sp";
 import { SPHttpClient, SPHttpClientResponse } from "@microsoft/sp-http";
-
 export interface IClbChampionsListProps {
   context?: WebPartContext;
   onClickAddmember: Function;
   isEmp: boolean;
+  siteUrl: string;
 }
 export interface ISPLists {
   value: ISPList[];
@@ -23,7 +23,6 @@ export interface ISPList {
   Region: string;
   Points: number;
 }
-
 interface IState {
   list: ISPLists;
   isAddChampion: boolean;
@@ -45,10 +44,7 @@ class ClbChampionsList extends React.Component<IClbChampionsListProps, IState> {
       SuccessMessage: "",
       UserDetails: [],
       selectedusers: [],
-      siteUrl: this.props.context.pageContext.web.absoluteUrl.replace(
-        this.props.context.pageContext.web.serverRelativeUrl,
-        ""
-      ),
+      siteUrl: this.props.siteUrl,
     };
     this._getListData();
   }
@@ -91,7 +87,7 @@ class ClbChampionsList extends React.Component<IClbChampionsListProps, IState> {
               this.state.list.value &&
               this.state.list.value.length > 0 &&
               this.state.list.value.map((item: ISPList) => {
-                if (item.Status === "Approved") {
+                if (item.Status === "Approved") {//showing only approved list
                   return (
                     <tr>
                       <td>

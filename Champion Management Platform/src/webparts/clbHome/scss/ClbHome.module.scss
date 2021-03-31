@@ -11,7 +11,7 @@
       }
     }
     .imgheader {
-      background: url("../imgs/champion.png");
+      background: url("../assets/images/champion.png");
       background-color: #333333;
       height: 300px;
       width: auto;
@@ -76,6 +76,29 @@
         font-size: 20px;
         vertical-align: middle;
       }
+    }
+  }
+  .load {
+    border: 16px solid #dde2eb;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
