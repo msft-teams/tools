@@ -22,7 +22,6 @@ The app provides an easy interface for designated users to add members to the ch
 
  <img src="./Images/QuickGuide.png" alt="Quick Start Guide" style="width: 100%;">
 
-
 ### Champion Leaderboard:
 
 Leaderboard solution is intended to add a gaming aspect to the Teams Champions program by allowing champions to earn points for the various ways they are promoting and supporting the internal adoption of their areas of interest. This also gives an opportunity to reflect their activity in comparison to other champs. Leaderboard has mainly 2 different views based on the role of that employee.
