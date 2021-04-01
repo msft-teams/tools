@@ -35,7 +35,7 @@ export interface IClbHomeState {
   inclusionpath: string;
   siteId: any;
   isShow: boolean;
-  loggedinUserName:string;
+  loggedinUserName: string;
 }
 
 export default class ClbHome extends React.Component<
@@ -57,7 +57,7 @@ export default class ClbHome extends React.Component<
       inclusionpath: siteconfig.inclusionPath,
       siteId: "",
       isShow: false,
-      loggedinUserName:'',
+      loggedinUserName: "",
     };
 
     this._getListData = this._getListData.bind(this);
@@ -71,22 +71,21 @@ export default class ClbHome extends React.Component<
     this.rootSiteId();
 
     this.props.context.spHttpClient
-    .get(
-      this.state.siteUrl +
-        "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
-      SPHttpClient.configurations.v1
-    )
-    .then((responseuser: SPHttpClientResponse) => {
-    
-      responseuser.json().then((datauser: any) => {
-        this.setState({loggedinUserName: datauser.DisplayName});
+      .get(
+        this.state.siteUrl +
+          "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+        SPHttpClient.configurations.v1
+      )
+      .then((responseuser: SPHttpClientResponse) => {
+        responseuser.json().then((datauser: any) => {
+          this.setState({ loggedinUserName: datauser.DisplayName });
+        });
       });
-    });
   }
 
   //create lists when you upload package into new tenant.
 
-  private _createList() { 
+  private _createList() {
     let listname = siteconfig.lists[1].listName;
     const getListUrl: string =
       this.state.siteUrl +
@@ -178,7 +177,15 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: ["EMEA", "INDIA","Africa","Asia","Australia / Pacific","Europe","Middle East","North America / Central America / Caribbean","South America"],
+                                            choices: [
+                                              "Africa",
+                                              "Asia",
+                                              "Australia / Pacific",
+                                              "Europe",
+                                              "Middle East",
+                                              "North America / Central America / Caribbean",
+                                              "South America",
+                                            ],
                                             displayAs: "dropDownMenu",
                                           },
                                         };
@@ -189,7 +196,10 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: ["INDIA", "USA","Africa","Asia","Australia / Pacific","Europe","Middle East","North America / Central America / Caribbean","South America"],
+                                            choices: [
+                                              "INDIA",
+                                              "USA"
+                                              ],
                                             displayAs: "dropDownMenu",
                                           },
                                         };
@@ -211,10 +221,7 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: [
-                                              "Approved",
-                                              "Un Approved",
-                                            ],
+                                            choices: ["Approved", "Pending"],
                                             displayAs: "dropDownMenu",
                                           },
                                         };
@@ -504,9 +511,9 @@ export default class ClbHome extends React.Component<
       )
       .then(async (response: SPHttpClientResponse) => {
         if (response.status === 200) {
-           this.setState({
-             isShow: false,
-           });
+          this.setState({
+            isShow: false,
+          });
           let flag = 0;
           await response.json().then((responseJSON: any) => {
             let i = 0;
@@ -587,8 +594,8 @@ export default class ClbHome extends React.Component<
                 this.setState({
                   cB: false,
                   ChampionsList: false,
-                  addMember: false
-                  , dB:false,
+                  addMember: false,
+                  dB: false,
                 })
               }
             />
@@ -765,7 +772,7 @@ export default class ClbHome extends React.Component<
               }
             />
           )}
-          {this.state.cB && this.state.eV && ( 
+          {this.state.cB && this.state.eV && (
             <EmployeeView
               siteUrl={this.props.siteUrl}
               context={this.props.context}
@@ -780,10 +787,10 @@ export default class ClbHome extends React.Component<
               description=""
               theme={ThemeStyle.Light}
               fontSize={12}
-              clickcallback={() => this.setState({ dB: false})}
+              clickcallback={() => this.setState({ dB: false })}
               clickcallchampionview={() =>
-                this.setState({ cB: false, eV: false ,dB: false})  
-              } 
+                this.setState({ cB: false, eV: false, dB: false })
+              }
             />
           )}
         </div>
