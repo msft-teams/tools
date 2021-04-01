@@ -8,8 +8,11 @@ node_modules
 
 # Build generated files
 dist
-lib 
-temp 
+lib
+solution
+temp
+*.sppkg
+
 # Coverage directory used by tools like istanbul
 coverage
 
