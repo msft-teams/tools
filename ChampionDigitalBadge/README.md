@@ -114,7 +114,7 @@ If desired the administrator can configure the installation location including t
  
 9. Click the ***Choose Files*** button, select the digital-badge.sppkg file you downloaded or created earlier, and click on ***OK***
 
-<img src=./Source/readmeimages/15.png" alt="Digital Badge Screen" style="width: 100%;">
+<img src="./Source/readmeimages/15.png" alt="Digital Badge Screen" style="width: 100%;">
  
 10. A confirmation dialog is displayed. Ensure the checkbox for "Make this solution available to all sites in the organization" is chosen and click ***Deploy***.
 
@@ -140,7 +140,7 @@ If desired the administrator can configure the installation location including t
 
   · Navigate to the URL for the list, signing in as the administrator account when prompted.
   
-    · If you are using the default configuration, this can be found at ***`https://<yourtenant>.sharepoint.com/sites/ChampionDigitalBadge/`***.
+    · If you are using the default configuration, this can be found at ***`https://<yourtenant>.sharepoint.com/teams/ChampionDigitalBadge/Lists/Champions%20List/AllItems.aspx`***.
     
     · If you have customized the site configuration, navigate to ***`https://<yourtenant>.sharepoint.com/<inclusionPath>/<sitename>/`*** where <sitename> and <inclusionPath> are the values provided during customization.
 
