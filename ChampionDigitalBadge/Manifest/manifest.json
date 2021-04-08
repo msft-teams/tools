@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "packageName": "DigitalBadgeWebPart",
+  "id": "5a2a9905-37a5-416f-b123-dc979a418ac6",
+  "version": "0.1",
+  "developer": {
+    "name": "Microsoft Coporation",
+    "websiteUrl": "https://aka.ms/MicrosoftAdoption",
+    "privacyUrl": "https://aka.ms/privacy",
+    "termsOfUseUrl": "https://aka.ms/m365lpdocs",
+    "mpnId": "CA01101011"
+  },
+  "name": {
+    "short": "DigitalBadge"
+  },
+  "description": {
+    "short": "DigitalBadge for champions who are eligible",
+    "full": "DigitalBadge for champions who are eligible"
+  },
+  "icons": {
+    "outline": "5a2a9905-37a5-416f-b123-dc979a418ac6_outline.png",
+    "color": "5a2a9905-37a5-416f-b123-dc979a418ac6_color.png"
+  },
+  "accentColor": "#004578",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://m365x304637.sharepoint.com/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/teamshostedapp.aspx%3FopenPropertyPane=true%26teams%26componentId=5a2a9905-37a5-416f-b123-dc979a418ac6%26forceLocale={locale}",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "validDomains": [
+    "*.login.microsoftonline.com",
+    "*.sharepoint.com",
+    "spoprod-a.akamaihd.net",
+    "resourceseng.blob.core.windows.net"
+  ],
+  "webApplicationInfo": {
+    "resource": "https://m365x304637.sharepoint.com",
+    "id": "00000003-0000-0ff1-ce00-000000000000"
+  }
+}

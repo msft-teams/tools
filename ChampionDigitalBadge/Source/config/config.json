@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "digital-badge-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/digitalBadge/DigitalBadgeWebPart.js",
+          "manifest": "./src/webparts/digitalBadge/DigitalBadgeWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DigitalBadgeWebPartStrings": "lib/webparts/digitalBadge/loc/{locale}.js"
+  }
+}
