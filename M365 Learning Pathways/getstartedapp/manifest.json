@@ -57,15 +57,9 @@
         "identity",
         "messageTeamMembers"
     ],
-    "validDomains": [
-        "*.login.microsoftonline.com",
-        "*.sharepoint.com",
-        "*.sharepoint-df.com",
-        "spoppe-a.akamaihd.net",
-        "spoprod-a.akamaihd.net",
-        "resourceseng.blob.core.windows.net",
-        "msft.spoppe.com"
-      ],
+    "validDomains": [       
+        "<YOUR TENANT>.sharepoint.com"
+              ],
       "webApplicationInfo": {
         "id": "00000003-0000-0ff1-ce00-000000000000",
         "resource": "https://<YOUR TENANT>.sharepoint.com"
