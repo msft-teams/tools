@@ -196,7 +196,10 @@ export default class ClbHome extends React.Component<
                                           name: element.name,
                                           choice: {
                                             allowTextEntry: false,
-                                            choices: ["INDIA", "USA"],
+                                            choices: [
+                                              "INDIA",
+                                              "USA"
+                                              ],
                                             displayAs: "dropDownMenu",
                                           },
                                         };

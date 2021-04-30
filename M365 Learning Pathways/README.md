@@ -24,10 +24,6 @@ Follow the instructions for uploading a custom app to Microsoft Teams here:  htt
 Further reference for modern SharePoint page embedding can be found here:
 https://docs.microsoft.com/sharepoint/dev/features/embed-pages-to-teams
 
-# Installation & Configuration
-For more  detailed [installation and configuration instructions](./getstartedapp/installandconfig.md) or a  [step by step](./getstartedapp/installandconfig.md) see the installandconfig.md file in the /gettingstartedapp directory.
-
-
 # Questions and Issues
 
 For questions or issues please file an issue within this repo and our team and the community will respond as we are available.  This repo does not have a response SLA. 
