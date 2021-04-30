@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "6df47bd5-d84a-41ab-8c4a-9352076e8b6c", // SpFx component  id should not be changed it is reference across the deployment
+  "id": "6df47bd5-d84a-41ab-8c4a-9352076e8b6c",
   "alias": "CMPHomeWebPart",
   "componentType": "WebPart",
   "version": "*",
@@ -8,7 +8,7 @@
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart","TeamsTab","SharePointFullPage"],
   "preconfiguredEntries": [{
-    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Share SpFx generated groupid. It should not be changed
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Other" },
     "title": { "default": "Champion Management Platform" },
     "description": { "default": "CMP Home webpart" },

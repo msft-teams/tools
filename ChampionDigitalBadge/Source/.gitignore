@@ -10,7 +10,7 @@ node_modules
 dist
 lib
 temp
-*.sppkg
+.vscode
 
 # Coverage directory used by tools like istanbul
 coverage
