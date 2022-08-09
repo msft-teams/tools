@@ -28,30 +28,38 @@
         {
             "entityId": "201911011330",
             "name": "Training Portal",
-            "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>",
-            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/<LEARNING PATHWAYS SITE>",
+            "contentUrl": "https://eversourceenergy.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/O365Training",
+            "websiteUrl": "https://eversourceenergy.sharepoint.com/sites/O365Training",
             "scopes": [
                 "personal"
             ]
         },
         {
             "entityId": "201911011335",
-            "name": "Teams Training",
-            "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-Microsoft-Teams.aspx",
-            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "name": "Microsoft Teams",
+            "contentUrl": "https://eversourceenergy.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/O365Training/SitePages/Get-started-with-Microsoft-Teams.aspx",
+            "websiteUrl": "https://eversourceenergy.sharepoint.com/sites/O365Training/SitePages/Microsoft-Teams-Training.aspx",
+            "scopes": [
+                "personal"
+            ]
+ 	{
+            "entityId": "201911011330",
+            "name": "Sharepoint",
+            "contentUrl": "https://eversourceenergy.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/O365Training",
+            "websiteUrl": "hhttps://eversourceenergy.sharepoint.com/sites/O365Training/SitePages/SharePoint-Training.aspx",
             "scopes": [
                 "personal"
             ]
         },
-        {
-            "entityId": "201911011340",
-            "name": "OneDrive Basics",
-            "contentUrl": "https://<YOUR TENANT>.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-OneDrive.aspx",
-            "websiteUrl": "https://<YOUR TENANT>.sharepoint.com/sites/<LEARNING PATHWAYS SITE>/SitePages/Get-started-with-OneDrive.aspx",
+	{
+            "entityId": "201911011330",
+            "name": "Power Platform",
+            "contentUrl": "https://eversourceenergy.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/O365Training",
+            "websiteUrl": "https://eversourceenergy.sharepoint.com/sites/O365Training/SitePages/Power-Platform-Best.aspx",
             "scopes": [
                 "personal"
             ]
-        }
+        },    
     ],
     "permissions": [
         "identity",
@@ -68,6 +76,6 @@
       ],
       "webApplicationInfo": {
         "id": "00000003-0000-0ff1-ce00-000000000000",
-        "resource": "https://<YOUR TENANT>.sharepoint.com"
+        "resource": "https://eversourceenergy.sharepoint.com"
     }
 }
