@@ -24,10 +24,10 @@
     "react-native": "^0.63.0",
     "react-native-unordered-list": "^1.0.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "react-tabs": "^3.1.1",
     "reactjs-popup": "^1.5.0",
-    "resolve-url-loader": "^3.1.1",
+    "resolve-url-loader": "^5.0.0",
     "save": "^2.4.0",
     "typescript": "^3.7.5"
   },
